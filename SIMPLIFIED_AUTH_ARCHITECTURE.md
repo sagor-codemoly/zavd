@@ -1,6 +1,6 @@
-# Simplified Authentication Architecture - Synos Medical
+# Simplified Authentication Architecture - Zavd Medical
 
-**Project:** Synos Medical Web Application
+**Project:** Zavd Medical Web Application
 **Date:** December 3, 2025
 **Status:** ✅ **PRODUCTION READY**
 
@@ -8,7 +8,7 @@
 
 ## 📋 Executive Summary
 
-This document describes the **simplified authentication architecture** for Synos Medical after resolving the user data fetching issues. The new architecture eliminates unnecessary complexity by using Better Auth's `_id` field directly, removing the need for a separate `betterAuthUserId` field.
+This document describes the **simplified authentication architecture** for Zavd Medical after resolving the user data fetching issues. The new architecture eliminates unnecessary complexity by using Better Auth's `_id` field directly, removing the need for a separate `betterAuthUserId` field.
 
 ---
 
@@ -38,7 +38,7 @@ After user registration and login, the application was unable to fetch user data
 ### Database Collections
 
 ```
-MongoDB Database: synos-db
+MongoDB Database: zavd-db
 ├── user (Better Auth managed)
 │   ├── _id: ObjectId (PRIMARY KEY)
 │   ├── email: string
@@ -120,8 +120,8 @@ Profiles Collection
    }
    ↓
 5. Better Auth sets HTTP-only cookies
-   - synos.session_token
-   - synos.session_data (optional cache)
+   - zavd.session_token
+   - zavd.session_data (optional cache)
    ↓
 6. Frontend calls POST /api/auth/sync-user
    ↓
@@ -169,8 +169,8 @@ Profiles Collection
    }
    ↓
 6. Better Auth sets HTTP-only cookies
-   - synos.session_token
-   - synos.session_data
+   - zavd.session_token
+   - zavd.session_data
    ↓
 7. User redirected to /dashboard
    ↓
@@ -197,8 +197,8 @@ Profiles Collection
 
 ```typescript
 1. Request arrives with cookies:
-   - synos.session_token: "random_token"
-   - synos.session_data: "cached_data"
+   - zavd.session_token: "random_token"
+   - zavd.session_data: "cached_data"
 
 2. Better Auth validates session:
    const session = await auth.api.getSession({ headers })
@@ -515,7 +515,7 @@ Session {
 
 ```typescript
 advanced: {
-  cookiePrefix: "synos",  console.logCreates "synos.session_token"
+  cookiePrefix: "zavd",  console.logCreates "zavd.session_token"
   useSecureCookies: process.env.NODE_ENV === "production"
 }
 
@@ -531,8 +531,8 @@ session: {
 
 ### Cookies Set
 
-1. **`synos.session_token`** - Primary session token (HTTP-only, secure in production)
-2. **`synos.session_data`** - Cached session data (optional, for performance)
+1. **`zavd.session_token`** - Primary session token (HTTP-only, secure in production)
+2. **`zavd.session_data`** - Cached session data (optional, for performance)
 
 ---
 
@@ -572,7 +572,7 @@ session: {
 
 ```bash
 # Clear database
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.user.deleteMany({});
   db.profiles.deleteMany({});
   db.session.deleteMany({});
@@ -588,16 +588,16 @@ curl -X POST http://localhost:3000/api/auth/sign-up \
   }'
 
 # Verify user created
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.user.findOne({ email: 'test@example.com' })
 "
 
 # Call sync to create profile
 curl -X POST http://localhost:3000/api/auth/sync-user \
-  -H "Cookie: synos.session_token=..."
+  -H "Cookie: zavd.session_token=..."
 
 # Verify profile created
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.profiles.findOne()
 "
 ```
@@ -615,7 +615,7 @@ curl -X POST http://localhost:3000/api/auth/sign-in \
 
 # Fetch user data
 curl http://localhost:3000/api/user/me \
-  -H "Cookie: synos.session_token=..."
+  -H "Cookie: zavd.session_token=..."
 
 # Expected response:
 {
@@ -643,17 +643,17 @@ curl http://localhost:3000/api/user/me \
 
 ```bash
 # Check user exists in Better Auth collection
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.user.findOne({ email: 'test@example.com' })
 "
 
 # Check profile exists
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.profiles.findOne()
 "
 
 # Verify userId matches user._id
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   const user = db.user.findOne({ email: 'test@example.com' });
   const profile = db.profiles.findOne({ userId: user._id });
   printjson({ user, profile });
@@ -702,7 +702,7 @@ catch (error) {
 **Solution:**
 
 1. Check cookies in browser DevTools
-2. Verify `synos.session_token` exists
+2. Verify `zavd.session_token` exists
 3. Check session expiry: `db.session.findOne({ token: "..." })`
 4. Re-login if session expired
 
@@ -759,7 +759,7 @@ async getUserWithProfile(userId: string) {
 
 ```bash
 # Run migration script
-mongosh mongodb://127.0.0.1:27017/synos-db
+mongosh mongodb://127.0.0.1:27017/zavd-db
 
 console.logFor each old user, copy betterAuthUserId to _id
 db.users.find({ betterAuthUserId: { $exists: true } }).forEach(user => {
@@ -834,4 +834,4 @@ Profile (userId: ObjectId("692fbcb9..."))
 **Document Version:** 2.0
 **Last Updated:** December 3, 2025
 **Author:** Claude (Anthropic AI Assistant)
-**Project:** Synos Medical - Simplified Auth Architecture
+**Project:** Zavd Medical - Simplified Auth Architecture

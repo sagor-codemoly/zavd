@@ -1,6 +1,6 @@
 # Profile, Password & Image Update Documentation
 
-**Project:** Synos Medical Web Application
+**Project:** Zavd Medical Web Application
 **Date:** December 3, 2025
 **Status:** ✅ **PRODUCTION READY**
 
@@ -8,7 +8,7 @@
 
 ## 📋 Overview
 
-This document describes the complete profile management system for the Synos Medical application, including profile updates, password changes, and image uploads with base64 storage.
+This document describes the complete profile management system for the Zavd Medical application, including profile updates, password changes, and image uploads with base64 storage.
 
 ---
 

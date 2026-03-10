@@ -1,4 +1,4 @@
-# Synos.se Page Requirements Analysis
+# Zavd.se Page Requirements Analysis
 
 > **Document Purpose**: Analysis of PDF requirements vs current project implementation
 > **Date**: 2025-12-15
@@ -19,7 +19,7 @@
 ## 1. Cookie Consent (Cookiebot)
 
 ### Requirement
-> The current synos.se website is using Cookiebot plugin, are we going to use the same or we going to use a built-in function?
+> The current zavd.se website is using Cookiebot plugin, are we going to use the same or we going to use a built-in function?
 
 ### Current Status: **NOT IMPLEMENTED**
 
@@ -233,7 +233,7 @@
 
 ### Requirement
 > Inspire from: https://wdtbullish.wpengine.com/our-careers/acquisition-advisor/
-> Adding a button to https://synos.academy/
+> Adding a button to https://zavd.academy/
 
 ### Current Status: **EXISTS - Needs Enhancement**
 
@@ -246,10 +246,10 @@
 **Mismatches:**
 | Aspect | Required | Current |
 |--------|----------|---------|
-| External Link | Button to synos.academy | Not present |
+| External Link | Button to zavd.academy | Not present |
 
 **Action Required:**
-- [ ] Add prominent button/CTA linking to https://synos.academy/
+- [ ] Add prominent button/CTA linking to https://zavd.academy/
 - [ ] Review design against inspiration
 - [ ] Refactor if needed
 
@@ -275,7 +275,7 @@
 
 ---
 
-## 13. Varför Välja Synos (Why Choose Synos)
+## 13. Varför Välja Zavd (Why Choose Zavd)
 
 ### Requirement
 > Inspire from: https://wdtbullish.wpengine.com/our-careers/revenue-analyst/
@@ -284,12 +284,12 @@
 ### Current Status: **NOT IMPLEMENTED**
 
 **What exists:**
-- Navigation link to `/starta-eget/varfor-valja-synos`
+- Navigation link to `/starta-eget/varfor-valja-zavd`
 - **Page does NOT exist**
 
 **Action Required:**
-- [ ] Create `/app/(client)/starta-eget/varfor-valja-synos/page.tsx`
-- [ ] Add content about why choose Synos
+- [ ] Create `/app/(client)/starta-eget/varfor-valja-zavd/page.tsx`
+- [ ] Add content about why choose Zavd
 - [ ] Add contact form
 
 ---
@@ -485,7 +485,7 @@ navItems = [
 - `/nyheter` - New blog route (keep `/blogg` as separate page)
 - `/utrustning` - Equipment overview page
 - `/kategori` - New category route (keep `/klinikutrustning`)
-- `/starta-eget/varfor-valja-synos` - Why choose Synos
+- `/starta-eget/varfor-valja-zavd` - Why choose Zavd
 - `/starta-eget/kopguide` - Buying guide
 - `/starta-eget/miniutbildning` - Mini training
 - `/om-oss/lediga-tjanster` - Job vacancies
@@ -497,7 +497,7 @@ navItems = [
 - Contact page - design review
 - About page - design review
 - FAQ page - design review
-- Utbildningar - add synos.academy button
+- Utbildningar - add zavd.academy button
 
 ### P3 - Low Priority (Polish)
 
@@ -511,7 +511,7 @@ navItems = [
 | Page | Route | Status |
 |------|-------|--------|
 | Utrustning (Equipment) | `/utrustning` | **CREATE** |
-| Varför Välja Synos | `/starta-eget/varfor-valja-synos` | **CREATE** |
+| Varför Välja Zavd | `/starta-eget/varfor-valja-zavd` | **CREATE** |
 | Köpguide | `/starta-eget/kopguide` | **CREATE** |
 | Miniutbildning | `/starta-eget/miniutbildning` | **CREATE** |
 | Lediga Tjänster | `/om-oss/lediga-tjanster` | **CREATE** |

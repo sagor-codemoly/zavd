@@ -91,7 +91,7 @@ const helpTypeLabels: Record<HelpType, string> = {
 const trainingInterestTypeLabels: Record<TrainingInterestType, string> = {
 	machine_purchase: "I plan to buy a machine and want to learn more about the training",
 	already_customer: "I am already a customer and want to book training",
-	certification_info: "I want to learn more about certification as a Synos therapist",
+	certification_info: "I want to learn more about certification as a Zavd therapist",
 	general_info: "I want general information about your training programs",
 };
 

@@ -1621,7 +1621,7 @@ export default function StartsidaPage() {
 													<Input
 														{...field}
 														value={field.value || ""}
-														placeholder="Fresh Artisan Cheese"
+														placeholder="Fresh Artisan Zavd"
 													/>
 												</FormControl>
 												<FormMessage />
@@ -2533,7 +2533,7 @@ export default function StartsidaPage() {
 													<Input
 														{...field}
 														value={field.value || ""}
-														placeholder="Why choose Synos"
+														placeholder="Why choose Zavd"
 													/>
 												</FormControl>
 												<FormMessage />
@@ -2588,7 +2588,7 @@ export default function StartsidaPage() {
 													<Textarea
 														{...field}
 														value={field.value || ""}
-														placeholder="At Synos Medical we bridge..."
+														placeholder="At Zavd Medical we bridge..."
 														rows={4}
 													/>
 												</FormControl>
@@ -3314,7 +3314,7 @@ export default function StartsidaPage() {
 														<Input
 															{...field}
 															value={field.value || ""}
-															placeholder="Synos Medical - Medical Equipment"
+															placeholder="Zavd Medical - Medical Equipment"
 														/>
 													</FormControl>
 													<FormDescription>
@@ -3390,14 +3390,14 @@ export default function StartsidaPage() {
 											data={{
 												title:
 													form.watch("seo.title") ||
-													"Synos Medical - Medical Equipment",
+													"Zavd Medical - Medical Equipment",
 												description:
 													form.watch("seo.description") ||
 													"Add a description",
 												slug: "",
 												ogImage: form.watch("seo.ogImage") || null,
-												siteName: "Synos Medical",
-												siteUrl: "www.synos.se",
+												siteName: "Zavd Medical",
+												siteUrl: "www.zavd.se",
 											}}
 										/>
 									</CardContent>

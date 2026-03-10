@@ -28,11 +28,11 @@ export async function getAuth() {
 		try {
 			// Get MongoDB client
 			const client = await getMongoClient();
-			const db = client.db(process.env.MONGODB_DB || "synos-db");
+			const db = client.db(process.env.MONGODB_DB || "zavd-db");
 
 			// Create Better Auth instance
 			authInstance = betterAuth({
-				appName: "Synos Medical",
+				appName: "Zavd Medical",
 				baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000",
 				secret: process.env.BETTER_AUTH_SECRET!,
 
@@ -59,7 +59,7 @@ export async function getAuth() {
 
 				// Cookie configuration
 				advanced: {
-					cookiePrefix: "synos",
+					cookiePrefix: "zavd",
 					crossSubDomainCookies: {
 						enabled: false,
 					},

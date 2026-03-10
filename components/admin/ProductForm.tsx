@@ -1844,7 +1844,7 @@ export function ProductForm({
 										<Input
 											id="heroSettings.badge"
 											{...register("heroSettings.badge")}
-											placeholder="e.g., 2025 WORLD CHEESE AWARDS"
+											placeholder="e.g., 2025 WORLD ZAVD AWARDS"
 											disabled={isLoading}
 										/>
 										<p className="text-xs text-muted-foreground">
@@ -1922,7 +1922,7 @@ export function ProductForm({
 													<Label>URL</Label>
 													<Input
 														{...register(`productVariants.${index}.url`)}
-														placeholder="e.g., /products/category/cheese/baby-loaf"
+														placeholder="e.g., /products/category/zavd/baby-loaf"
 														disabled={isLoading}
 													/>
 												</div>
@@ -2220,8 +2220,8 @@ export function ProductForm({
 													watch("overviewImage") ||
 													watch("productImages")?.[0] ||
 													null,
-												siteUrl: "synos.se",
-												siteName: "Synos",
+												siteUrl: "zavd.se",
+												siteName: "Zavd",
 												productTitle: watch("title") || "",
 											}}
 										/>

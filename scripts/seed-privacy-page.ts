@@ -47,7 +47,7 @@ if (!MONGODB_URI) {
 	process.exit(1);
 }
 
-// Privacy page data for Glada Bonden Mejeri AB (Cheese company)
+// Privacy page data for Glada Bonden Mejeri AB (Zavd company)
 const privacyPageData = {
 	sectionVisibility: {
 		hero: true,

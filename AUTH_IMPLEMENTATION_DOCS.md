@@ -1,6 +1,6 @@
-# 📚 Synos Medical - Authentication System Implementation Documentation
+# 📚 Zavd Medical - Authentication System Implementation Documentation
 
-**Project:** Synos Medical Web Application
+**Project:** Zavd Medical Web Application
 **Feature:** MongoDB + Mongoose + Better Auth Integration
 **Date:** December 2025
 **Version:** 1.0
@@ -27,7 +27,7 @@
 
 ### 1.1 Purpose
 
-Implement a complete authentication system for Synos Medical's web application using:
+Implement a complete authentication system for Zavd Medical's web application using:
 
 -  **MongoDB** as the database
 -  **Mongoose** for ODM (Object Document Mapping)
@@ -418,7 +418,7 @@ Login Flow:
 │                      MONGODB                                 │
 │  (Database Server)                                           │
 │                                                              │
-│  - localhost:27017/synos-db                                  │
+│  - localhost:27017/zavd-db                                  │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -497,7 +497,7 @@ export function getUserModelSync() {
 ### 5.3 Folder Structure
 
 ```
-synos/
+zavd/
 ├── app/                          # Next.js App Router
 │   ├── (auth)/                   # Auth pages (separate layout)
 │   │   ├── login/
@@ -678,7 +678,7 @@ synos/
 **Request Headers:**
 
 ```
-Cookie: synos_session=session_token
+Cookie: zavd_session=session_token
 ```
 
 **Response (200 OK):**
@@ -699,7 +699,7 @@ Cookie: synos_session=session_token
 **Request Headers:**
 
 ```
-Cookie: synos_session=session_token
+Cookie: zavd_session=session_token
 ```
 
 **Response (200 OK):**
@@ -735,7 +735,7 @@ Cookie: synos_session=session_token
 **Request Headers:**
 
 ```
-Cookie: synos_session=session_token
+Cookie: zavd_session=session_token
 ```
 
 **Response (200 OK):**
@@ -786,7 +786,7 @@ Cookie: synos_session=session_token
 **Request Headers:**
 
 ```
-Cookie: synos_session=session_token
+Cookie: zavd_session=session_token
 ```
 
 **Response (200 OK):**
@@ -821,7 +821,7 @@ Cookie: synos_session=session_token
 **Request Headers:**
 
 ```
-Cookie: synos_session=session_token
+Cookie: zavd_session=session_token
 Content-Type: application/json
 ```
 
@@ -885,7 +885,7 @@ Content-Type: application/json
 		"timestamp": "2025-12-02T12:00:00.000Z",
 		"database": {
 			"connected": true,
-			"name": "synos-db"
+			"name": "zavd-db"
 		}
 	}
 }
@@ -1093,7 +1093,7 @@ Content-Type: application/json
 ### 7.4 Session Management
 
 ```
-Session Cookie: synos_session
+Session Cookie: zavd_session
 ├── HTTP-only: true (prevents JavaScript access)
 ├── Secure: true (HTTPS only in production)
 ├── SameSite: Lax (CSRF protection)
@@ -1330,7 +1330,7 @@ Session Lifecycle:
 
 ```bash
 # Connect to MongoDB
-mongosh mongodb://127.0.0.1:27017/synos-db
+mongosh mongodb://127.0.0.1:27017/zavd-db
 
 # Check Better Auth collections
 db.user.find().pretty()
@@ -1457,7 +1457,7 @@ curl -X POST http://localhost:3000/api/auth/sign-out \
 ```bash
 # Database
 MONGODB_URI=mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000
-MONGODB_DB=synos-db
+MONGODB_DB=zavd-db
 
 # Better Auth
 BETTER_AUTH_SECRET=your_secret_here_generate_with_openssl
@@ -1475,7 +1475,7 @@ NODE_ENV=development
 mongod --dbpath /path/to/data
 
 # Connect to MongoDB
-mongosh mongodb://127.0.0.1:27017/synos-db
+mongosh mongodb://127.0.0.1:27017/zavd-db
 
 # Generate Better Auth secret
 openssl rand -base64 32
@@ -1495,6 +1495,6 @@ npm start
 **Document Version:** 1.0
 **Last Updated:** December 2, 2025
 **Author:** Claude (Anthropic AI Assistant)
-**Project:** Synos Medical Authentication System
+**Project:** Zavd Medical Authentication System
 
 ---

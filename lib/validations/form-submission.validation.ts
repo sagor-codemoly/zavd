@@ -45,7 +45,7 @@ export const helpTypeLabels: Record<(typeof helpTypes)[number], string> = {
  * Training interest type options for training inquiry
  */
 export const trainingInterestTypes = [
-	"cheese_making",
+	"zavd_making",
 	"already_customer",
 	"tasting_event",
 	"general_info",
@@ -58,7 +58,7 @@ export const trainingInterestTypeLabels: Record<
 	(typeof trainingInterestTypes)[number],
 	string
 > = {
-	cheese_making: "Jag vill lära mig mer om osttillverkning",
+	zavd_making: "Jag vill lära mig mer om osttillverkning",
 	already_customer: "Jag är redan kund och vill boka provning",
 	tasting_event: "Jag vill veta mer om ostprovningar och event",
 	general_info: "Jag vill ha allmän information om era produkter",

@@ -53,7 +53,7 @@ export function FAQSidebar() {
 
 					{/* Email */}
 					<a
-						href="mailto:info@synos.se"
+						href="mailto:info@zavd.se"
 						className="flex items-start gap-3 p-3 rounded-xl hover:bg-tertiary transition-colors duration-300 group"
 					>
 						<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
@@ -64,7 +64,7 @@ export function FAQSidebar() {
 								E-post
 							</div>
 							<div className="font-semibold text-secondary">
-								info@synos.se
+								info@zavd.se
 							</div>
 						</div>
 					</a>

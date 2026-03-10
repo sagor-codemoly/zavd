@@ -235,16 +235,16 @@ export async function revalidateStartaEgetPage(): Promise<void> {
 	// Also revalidate sub-pages
 	revalidatePath(PATHS.KOPGUIDE);
 	revalidatePath(PATHS.MINIUTBILDNING);
-	revalidatePath(PATHS.VARFOR_VALJA_SYNOS);
+	revalidatePath(PATHS.VARFOR_VALJA_ZAVD);
 }
 
 /**
- * Revalidate Varför Välja Synos page
+ * Revalidate Varför Välja Zavd page
  * Call this when the page content is updated
  */
-export async function revalidateVarforValjaSynosPage(): Promise<void> {
-	revalidateTag(CACHE_TAGS.VARFOR_VALJA_SYNOS_PAGE, "default");
-	revalidatePath(PATHS.VARFOR_VALJA_SYNOS);
+export async function revalidateVarforValjaZavdPage(): Promise<void> {
+	revalidateTag(CACHE_TAGS.VARFOR_VALJA_ZAVD_PAGE, "default");
+	revalidatePath(PATHS.VARFOR_VALJA_ZAVD);
 }
 
 /**

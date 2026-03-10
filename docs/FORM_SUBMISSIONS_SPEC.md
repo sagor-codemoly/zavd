@@ -281,7 +281,7 @@ Rate limit data stored in the same collection via metadata.ipAddress index.
 
 ### Admin Notification
 
-Sent to: `info@synos.se`
+Sent to: `info@zavd.se`
 
 Subject: `Ny produktförfrågan: {productName} - {firstName} {lastName}`
 
@@ -295,7 +295,7 @@ Content:
 
 ### Customer Auto-Reply
 
-Subject: `Tack för din förfrågan - Synos Medical AB`
+Subject: `Tack för din förfrågan - Zavd Medical AB`
 
 Content:
 

@@ -3,7 +3,7 @@ import { z } from "zod";
 // ============================================================================
 // SECTION VISIBILITY
 // ============================================================================
-export const varforValjaSynosSectionVisibilitySchema = z.object({
+export const varforValjaZavdSectionVisibilitySchema = z.object({
 	hero: z.boolean(),
 	reasons: z.boolean(),
 	benefits: z.boolean(),
@@ -15,7 +15,7 @@ export const varforValjaSynosSectionVisibilitySchema = z.object({
 // ============================================================================
 // HERO SECTION
 // ============================================================================
-export const varforValjaSynosHeroSectionSchema = z.object({
+export const varforValjaZavdHeroSectionSchema = z.object({
 	badge: z.string().max(100).optional(),
 	title: z.string().max(200).optional(),
 	titleHighlight: z.string().max(200).optional(),
@@ -25,7 +25,7 @@ export const varforValjaSynosHeroSectionSchema = z.object({
 // ============================================================================
 // REASON CARD
 // ============================================================================
-export const varforValjaSynosReasonCardSchema = z.object({
+export const varforValjaZavdReasonCardSchema = z.object({
 	icon: z.string().max(50).optional(),
 	title: z.string().max(200).optional(),
 	description: z.string().max(500).optional(),
@@ -34,7 +34,7 @@ export const varforValjaSynosReasonCardSchema = z.object({
 // ============================================================================
 // BENEFITS SECTION
 // ============================================================================
-export const varforValjaSynosBenefitsSectionSchema = z.object({
+export const varforValjaZavdBenefitsSectionSchema = z.object({
 	title: z.string().max(200).optional(),
 	subtitle: z.string().max(500).optional(),
 	items: z.array(z.string().max(200)).optional(),
@@ -43,7 +43,7 @@ export const varforValjaSynosBenefitsSectionSchema = z.object({
 // ============================================================================
 // CTA SECTION
 // ============================================================================
-export const varforValjaSynosCtaSectionSchema = z.object({
+export const varforValjaZavdCtaSectionSchema = z.object({
 	title: z.string().max(200).optional(),
 	subtitle: z.string().max(500).optional(),
 	primaryButtonText: z.string().max(100).optional(),
@@ -55,44 +55,44 @@ export const varforValjaSynosCtaSectionSchema = z.object({
 // ============================================================================
 // SEO
 // ============================================================================
-export const varforValjaSynosPageSeoSchema = z.object({
+export const varforValjaZavdPageSeoSchema = z.object({
 	title: z.string().max(100).optional(),
 	description: z.string().max(300).optional(),
 	ogImage: z.string().max(500).optional(),
 });
 
 // ============================================================================
-// UPDATE VARFOR VALJA SYNOS PAGE SCHEMA
+// UPDATE VARFOR VALJA ZAVD PAGE SCHEMA
 // ============================================================================
-export const updateVarforValjaSynosPageSchema = z.object({
-	sectionVisibility: varforValjaSynosSectionVisibilitySchema.optional(),
-	hero: varforValjaSynosHeroSectionSchema.optional(),
-	reasons: z.array(varforValjaSynosReasonCardSchema).optional(),
-	benefitsSection: varforValjaSynosBenefitsSectionSchema.optional(),
-	ctaSection: varforValjaSynosCtaSectionSchema.optional(),
+export const updateVarforValjaZavdPageSchema = z.object({
+	sectionVisibility: varforValjaZavdSectionVisibilitySchema.optional(),
+	hero: varforValjaZavdHeroSectionSchema.optional(),
+	reasons: z.array(varforValjaZavdReasonCardSchema).optional(),
+	benefitsSection: varforValjaZavdBenefitsSectionSchema.optional(),
+	ctaSection: varforValjaZavdCtaSectionSchema.optional(),
 	richContent: z.string().optional(),
-	seo: varforValjaSynosPageSeoSchema.optional(),
+	seo: varforValjaZavdPageSeoSchema.optional(),
 });
 
 // Type exports
-export type VarforValjaSynosSectionVisibilityInput = z.infer<
-	typeof varforValjaSynosSectionVisibilitySchema
+export type VarforValjaZavdSectionVisibilityInput = z.infer<
+	typeof varforValjaZavdSectionVisibilitySchema
 >;
-export type VarforValjaSynosHeroSectionInput = z.infer<
-	typeof varforValjaSynosHeroSectionSchema
+export type VarforValjaZavdHeroSectionInput = z.infer<
+	typeof varforValjaZavdHeroSectionSchema
 >;
-export type VarforValjaSynosReasonCardInput = z.infer<
-	typeof varforValjaSynosReasonCardSchema
+export type VarforValjaZavdReasonCardInput = z.infer<
+	typeof varforValjaZavdReasonCardSchema
 >;
-export type VarforValjaSynosBenefitsSectionInput = z.infer<
-	typeof varforValjaSynosBenefitsSectionSchema
+export type VarforValjaZavdBenefitsSectionInput = z.infer<
+	typeof varforValjaZavdBenefitsSectionSchema
 >;
-export type VarforValjaSynosCtaSectionInput = z.infer<
-	typeof varforValjaSynosCtaSectionSchema
+export type VarforValjaZavdCtaSectionInput = z.infer<
+	typeof varforValjaZavdCtaSectionSchema
 >;
-export type VarforValjaSynosPageSeoInput = z.infer<
-	typeof varforValjaSynosPageSeoSchema
+export type VarforValjaZavdPageSeoInput = z.infer<
+	typeof varforValjaZavdPageSeoSchema
 >;
-export type UpdateVarforValjaSynosPageInput = z.infer<
-	typeof updateVarforValjaSynosPageSchema
+export type UpdateVarforValjaZavdPageInput = z.infer<
+	typeof updateVarforValjaZavdPageSchema
 >;

@@ -198,7 +198,7 @@ class AuthService {
 	}): Promise<IUser> {
 		try {
 			const mongoClient = await getMongoClient();
-			const db = mongoClient.db(process.env.MONGODB_DB || "synos-db");
+			const db = mongoClient.db(process.env.MONGODB_DB || "zavd-db");
 
 			// Generate ObjectId for the user (Better Auth's MongoDB adapter uses ObjectId for _id)
 			const userObjectId = new ObjectId();

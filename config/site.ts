@@ -31,6 +31,7 @@ export interface SiteConfigType {
 		linkedin?: string;
 		twitter?: string;
 		youtube?: string;
+		pinterest?: string;
 	};
 	company: {
 		name: string;

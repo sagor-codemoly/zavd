@@ -1,6 +1,6 @@
 # Final Fix Documentation - User Data Fetching Issue
 
-**Project:** Synos Medical Web Application
+**Project:** Zavd Medical Web Application
 **Date:** December 3, 2025
 **Status:** ✅ **COMPLETELY FIXED**
 
@@ -78,7 +78,7 @@ When Mongoose tried to query `db.users.findById()`, it was looking in the wrong 
 ### Collections in MongoDB
 
 ```
-synos-db Database
+zavd-db Database
 │
 ├── user (Better Auth + Mongoose)
 │   ├── _id: ObjectId("692fc002...")
@@ -230,7 +230,7 @@ async findByIdWithProfile(userId: string): Promise<IUser | null> {
 ### Database State
 
 ```bash
-$ mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+$ mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.user.countDocuments()       # 1 ✅
   db.profiles.countDocuments()   # 1 ✅
   db.session.countDocuments()    # 1 ✅
@@ -294,7 +294,7 @@ We:
 
 ```bash
 # List all collections
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "db.getCollectionNames()"
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "db.getCollectionNames()"
 
 # Expected output:
 [ 'session', 'user', 'account', 'profiles' ]

@@ -214,16 +214,16 @@ const StorePageSchema = new Schema<IStorePage>(
 			default: {
 				badge: "Visit Us",
 				title: "Store in Boxholm",
-				subtitle: "Experience our artisan cheese in person. Visit our store and taste the tradition.",
+				subtitle: "Experience our artisan zavd in person. Visit our store and taste the tradition.",
 			},
 		},
 		info: {
 			type: StoreInfoSectionSchema,
 			default: {
 				title: "Welcome to Our Store",
-				description: "Located in the heart of Boxholm, our store offers a unique experience where you can taste and purchase our handcrafted cheeses directly from the source. Our knowledgeable staff will guide you through our selection and share the stories behind each cheese.",
+				description: "Located in the heart of Boxholm, our store offers a unique experience where you can taste and purchase our handcrafted zavds directly from the source. Our knowledgeable staff will guide you through our selection and share the stories behind each zavd.",
 				features: [
-					"Cheese tasting available",
+					"Zavd tasting available",
 					"Local products",
 					"Gift packages",
 					"Friendly staff",
@@ -270,8 +270,8 @@ const StorePageSchema = new Schema<IStorePage>(
 		seo: {
 			type: StorePageSeoSchema,
 			default: {
-				title: "Store in Boxholm - Boxholm Cheese",
-				description: "Visit our cheese store in Boxholm. Taste and purchase our handcrafted artisan cheeses directly from the source. Open Monday to Saturday.",
+				title: "Store in Boxholm - Boxholm Zavd",
+				description: "Visit our zavd store in Boxholm. Taste and purchase our handcrafted artisan zavds directly from the source. Open Monday to Saturday.",
 			},
 		},
 	},

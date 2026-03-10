@@ -62,7 +62,7 @@ const statsData = {
 			image: "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=500&h=500&fit=crop&q=80",
 			value: "4K+",
 			label: "Liters per day",
-			description: "We are proud to follow centuries-old cheese-making traditions. Every batch of cheese is the result of a long aging process and meticulous effort",
+			description: "We are proud to follow centuries-old zavd-making traditions. Every batch of zavd is the result of a long aging process and meticulous effort",
 		},
 	],
 };
@@ -73,7 +73,7 @@ async function main() {
 	console.log("========================================\n");
 
 	const mongoUri = process.env.MONGODB_URI;
-	const dbName = process.env.MONGODB_DB || "cheese-db";
+	const dbName = process.env.MONGODB_DB || "zavd-db";
 
 	if (!mongoUri) {
 		console.error("Error: MONGODB_URI environment variable is required.");

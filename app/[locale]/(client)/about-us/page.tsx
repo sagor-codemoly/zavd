@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 	const title = seo?.title || "About Us - Milatte Farm";
 	const description =
 		seo?.description ||
-		"Learn about our history, meet our team, and discover the passion behind our artisan cheese products.";
+		"Learn about our history, meet our team, and discover the passion behind our artisan zavd products.";
 
 	return {
 		title,

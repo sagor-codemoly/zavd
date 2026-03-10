@@ -104,8 +104,8 @@ export async function proxy(request: NextRequest) {
 	if (!isExcluded) {
 		// Check auth - authenticated admins bypass coming soon
 		const sessionToken =
-			request.cookies.get("synos.session_token")?.value ||
-			request.cookies.get("__Secure-synos.session_token")?.value;
+			request.cookies.get("zavd.session_token")?.value ||
+			request.cookies.get("__Secure-zavd.session_token")?.value;
 		if (!sessionToken) {
 			const baseUrl = `${request.nextUrl.protocol}//${request.nextUrl.host}`;
 			const comingSoon = await isComingSoonEnabled(baseUrl);
@@ -123,8 +123,8 @@ export async function proxy(request: NextRequest) {
 		// For protected paths, check authentication
 		if (pathStartsWith(pathname, protectedPaths)) {
 			const sessionToken =
-				request.cookies.get("synos.session_token")?.value ||
-				request.cookies.get("__Secure-synos.session_token")?.value;
+				request.cookies.get("zavd.session_token")?.value ||
+				request.cookies.get("__Secure-zavd.session_token")?.value;
 			const isAuthenticated = !!sessionToken;
 
 			// Handle API routes - return 401 JSON instead of redirect

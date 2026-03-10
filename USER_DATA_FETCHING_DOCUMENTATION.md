@@ -1,6 +1,6 @@
 # User Data Fetching from MongoDB - Complete Documentation
 
-**Project:** Synos Medical Web Application
+**Project:** Zavd Medical Web Application
 **Feature:** User Registration, Authentication, and Data Fetching
 **Date:** December 3, 2025
 **Version:** 1.0
@@ -26,7 +26,7 @@
 
 ### 1.1 Purpose
 
-This document provides a comprehensive guide to understanding and implementing the user data fetching mechanism in the Synos Medical application. It covers the complete flow from user registration to authenticated data retrieval.
+This document provides a comprehensive guide to understanding and implementing the user data fetching mechanism in the Zavd Medical application. It covers the complete flow from user registration to authenticated data retrieval.
 
 ### 1.2 Key Components
 
@@ -446,7 +446,7 @@ db.profiles.createIndex({ userId: 1 }, { unique: true });
     │      password: "$2a$10$hashed..."              │
     │    }                                            │
     │ 5. Create session in 'session' collection       │
-    │ 6. Set HTTP-only cookie: synos.session_token   │
+    │ 6. Set HTTP-only cookie: zavd.session_token   │
     │ 7. Return user object with user.id              │
     └────────────┬────────────────────────────────────┘
                  │
@@ -642,8 +642,8 @@ export const authService = new AuthService();
     │    - Create new session in 'session' collection  │
     │    - Generate session token                      │
     │    - Set cookies:                                │
-    │      * synos.session_token                       │
-    │      * synos.session_data                        │
+    │      * zavd.session_token                       │
+    │      * zavd.session_data                        │
     │    - Return session + user object                │
     └────────────┬─────────────────────────────────────┘
                  │
@@ -688,14 +688,14 @@ export const authService = new AuthService();
 
 ### 5.2 Session Cookie Structure
 
-**Cookie Name:** `synos.session_token` (primary session identifier)
-**Cookie Name:** `synos.session_data` (encrypted session data)
+**Cookie Name:** `zavd.session_token` (primary session identifier)
+**Cookie Name:** `zavd.session_data` (encrypted session data)
 
 **Properties:**
 
 ```javascript
 {
-  name: "synos.session_token",
+  name: "zavd.session_token",
   value: "encrypted_token_string",
   httpOnly: true,      console.logPrevents JavaScript access (XSS protection)
   secure: true,        console.logHTTPS only in production
@@ -727,7 +727,7 @@ export const authService = new AuthService();
     └────────────┬─────────────────────────┘
                  │
                  │ GET /api/user/me
-                 │ Headers: Cookie: synos.session_token=...
+                 │ Headers: Cookie: zavd.session_token=...
                  ▼
 ┌─────────────────────────────────────────────────────────────┐
 │  STEP 2: API Route Validates Session                        │
@@ -951,8 +951,8 @@ export const authService = new AuthService();
     │      userAgent: request.userAgent                    │
     │    }                                                 │
     │ 4. Set HTTP-only cookies:                            │
-    │    - synos.session_token (main token)                │
-    │    - synos.session_data (encrypted user data)        │
+    │    - zavd.session_token (main token)                │
+    │    - zavd.session_data (encrypted user data)        │
     └──────────────────────────────────────────────────────┘
                      │
                      ▼
@@ -1008,8 +1008,8 @@ export const authService = new AuthService();
     │ 1. Delete from 'session' collection:                  │
     │    db.session.deleteOne({ token: sessionToken })     │
     │ 2. Clear cookies:                                     │
-    │    - synos.session_token (set maxAge=0)              │
-    │    - synos.session_data (set maxAge=0)               │
+    │    - zavd.session_token (set maxAge=0)              │
+    │    - zavd.session_data (set maxAge=0)               │
     │ 3. Redirect to /login or homepage                     │
     └──────────────────────────────────────────────────────┘
 ```
@@ -1022,7 +1022,7 @@ export const authService = new AuthService();
 export async function getAuth() {
 	authInstance = betterAuth({
 		advanced: {
-			cookiePrefix: "synos", console.logResults in "synos.session_token"
+			cookiePrefix: "zavd", console.logResults in "zavd.session_token"
 			useSecureCookies: process.env.NODE_ENV === "production",
 		},
 		session: {
@@ -1039,7 +1039,7 @@ export async function getAuth() {
 
 **Resulting Cookies:**
 
-1. **synos.session_token**
+1. **zavd.session_token**
 
    -  Contains: Encrypted session token
    -  HttpOnly: Yes (JavaScript cannot access)
@@ -1047,7 +1047,7 @@ export async function getAuth() {
    -  SameSite: Lax
    -  MaxAge: 604800 seconds (7 days)
 
-2. **synos.session_data** (Optional)
+2. **zavd.session_data** (Optional)
    -  Contains: Encrypted user data for quick access
    -  Same security properties as session_token
    -  Reduces database queries for basic user info
@@ -1070,10 +1070,10 @@ import { getMongoClient } from "./mongo";
 
 export async function getAuth() {
 	const client = await getMongoClient();
-	const db = client.db(process.env.MONGODB_DB || "synos-db");
+	const db = client.db(process.env.MONGODB_DB || "zavd-db");
 
 	authInstance = betterAuth({
-		appName: "Synos Medical",
+		appName: "Zavd Medical",
 		baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000",
 		secret: process.env.BETTER_AUTH_SECRET!,
 
@@ -1091,7 +1091,7 @@ export async function getAuth() {
 		},
 
 		advanced: {
-			cookiePrefix: "synos", console.logCreates "synos.session_token"
+			cookiePrefix: "zavd", console.logCreates "zavd.session_token"
 			useSecureCookies: process.env.NODE_ENV === "production",
 		},
 
@@ -1106,7 +1106,7 @@ export async function getAuth() {
 
 -  Uses MongoDB native driver (not Mongoose) for Better Auth tables
 -  Singleton pattern prevents multiple instances
--  Cookie prefix creates `synos.session_token` and `synos.session_data`
+-  Cookie prefix creates `zavd.session_token` and `zavd.session_data`
 
 #### 2. User Repository
 
@@ -1324,7 +1324,7 @@ console.loguser is null
 
    ```bash
    mongosh
-   use synos-db
+   use zavd-db
    db.users.find().pretty()
    ```
 
@@ -1404,7 +1404,7 @@ console.loguser is null
 
 3. **Check Browser Cookies**
    -  Open DevTools → Application → Cookies
-   -  Look for `synos.session_token` and `synos.session_data`
+   -  Look for `zavd.session_token` and `zavd.session_data`
    -  Verify they have correct domain and expiration
 
 ### 9.3 Issue: Profile Not Found
@@ -1618,7 +1618,7 @@ When user data fetching fails, check in this order:
 | **Better Auth user.id** | Primary authentication identifier (e.g., "user_clx7k8j9f0000") |
 | **Mongoose users.\_id** | Application user document ID (ObjectId)                        |
 | **betterAuthUserId**    | Field linking Mongoose user to Better Auth user                |
-| **Session Cookie**      | `synos.session_token` - HTTP-only, secure, 7-day expiry        |
+| **Session Cookie**      | `zavd.session_token` - HTTP-only, secure, 7-day expiry        |
 | **Profile**             | Extended user data linked to Mongoose user.\_id                |
 
 ### A.2 Common Queries
@@ -1661,7 +1661,7 @@ db.session.deleteMany({ expiresAt: { $lt: new Date() } });
 ```bash
 # MongoDB
 MONGODB_URI=mongodb://127.0.0.1:27017/?directConnection=true
-MONGODB_DB=synos-db
+MONGODB_DB=zavd-db
 
 # Better Auth
 BETTER_AUTH_SECRET=your_secret_key_here_32_chars_minimum
@@ -1677,6 +1677,6 @@ NODE_ENV=development
 **Document Version:** 1.0
 **Last Updated:** December 3, 2025
 **Author:** Claude (Anthropic AI Assistant)
-**Project:** Synos Medical - User Data Fetching Documentation
+**Project:** Zavd Medical - User Data Fetching Documentation
 
 ---

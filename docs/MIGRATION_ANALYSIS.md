@@ -1,5 +1,5 @@
 # WordPress to Next.js Migration Analysis
-## Synos Medical Website (www.synos.se)
+## Zavd Medical Website (www.zavd.se)
 
 **Date:** October 28, 2025  
 **Current Site:** WordPress 6.8.3  
@@ -10,7 +10,7 @@
 ## 1. SITE ANALYSIS
 
 ### 1.1 Business Overview
-**Synos Medical AB** is Sweden's leading supplier of MDR-certified medical laser equipment for clinics and beauty salons. The company specializes in:
+**Zavd Medical AB** is Sweden's leading supplier of MDR-certified medical laser equipment for clinics and beauty salons. The company specializes in:
 - Medical laser equipment sales
 - Professional training and certification
 - Support for entrepreneurs starting their own clinics
@@ -18,7 +18,7 @@
 
 **Organization Number:** 556871-8075  
 **Locations:** Stockholm & Linköping  
-**Contact:** 010-205 15 01, info@synos.se
+**Contact:** 010-205 15 01, info@zavd.se
 
 ### 1.2 Site Structure & Navigation
 
@@ -36,7 +36,7 @@
    - Ytliga blodkärl/angiom (Superficial Blood Vessels)
    - Kirurgi (Surgery)
 3. **Starta eget** (Start Your Own Business)
-   - Varför välja Synos Medical?
+   - Varför välja Zavd Medical?
    - Köpguide
    - Miniutbildning
 4. **Utbildningar** (Training)
@@ -164,7 +164,7 @@
 
 #### WordPress:
 - **Version:** 6.8.3
-- **Theme:** Custom theme "synos"
+- **Theme:** Custom theme "zavd"
 - **Page Builder:** Elementor
 - **Forms:** Ninja Forms
 - **Language:** Swedish (sv_SE)

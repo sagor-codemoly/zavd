@@ -62,7 +62,7 @@ async function main() {
 	console.log("========================================\n");
 
 	const mongoUri = process.env.MONGODB_URI;
-	const dbName = process.env.MONGODB_DB || "cheese-db";
+	const dbName = process.env.MONGODB_DB || "zavd-db";
 
 	if (!mongoUri) {
 		console.error("Error: MONGODB_URI environment variable is required.");

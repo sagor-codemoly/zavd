@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Search, X, Menu } from "lucide-react";
-import { FaFacebookF, FaYoutube } from "react-icons/fa";
+import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 import {
@@ -17,6 +16,7 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { mainNavNew } from "@/config/navigation-new";
+import { useNavbarVariant } from "@/lib/context/navbar-variant-context";
 import { cn } from "@/lib/utils";
 import type { SiteConfigType } from "@/config/site";
 import Logo from "../common/logo";
@@ -43,10 +43,12 @@ interface NavbarProps {
 export function Navbar({ config, logoUrl, companyName, socialMedia }: NavbarProps) {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMounted, setIsMounted] = useState(false);
-	const [searchOpen, setSearchOpen] = useState(false);
-	const [searchQuery, setSearchQuery] = useState("");
 	const t = useTranslations("navigation");
 	const { data: session } = authClient.useSession();
+	const { variant } = useNavbarVariant();
+
+	// "dark-hero": glass over hero image | "default": solid navy
+	const isDarkHero = variant === "dark-hero";
 
 	useEffect(() => {
 		setIsMounted(true);
@@ -60,29 +62,22 @@ export function Navbar({ config, logoUrl, companyName, socialMedia }: NavbarProp
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-	const handleSearch = (e: React.FormEvent) => {
-		e.preventDefault();
-		if (searchQuery.trim().length >= 2) {
-			window.location.href = `/aktuelles?s=${encodeURIComponent(searchQuery.trim())}`;
-			setSearchOpen(false);
-			setSearchQuery("");
-		}
-	};
-
-	const navClassName = cn(
-		"w-full transition-all duration-300",
-		isScrolled
-			? "bg-black/70 backdrop-blur-md shadow-lg"
-			: "bg-black/30 backdrop-blur-md"
+	const panelClassName = cn(
+		"transition-all duration-300",
+		isDarkHero
+			? isScrolled
+				? "bg-black/80 backdrop-blur-md shadow-lg"
+				: "bg-transparent"
+			: "bg-secondary shadow-md"
 	);
 
 	// Skeleton for SSR
 	if (!isMounted) {
 		return (
 			<div className="w-full">
-				<nav className="w-full bg-black/30 backdrop-blur-md py-3">
+				<nav className="w-full">
 					<div className="_container">
-						<div className="flex items-center justify-between gap-2">
+						<div className="flex items-center justify-between gap-2 py-3 bg-secondary">
 							<Logo logoUrl={logoUrl} companyName={companyName} />
 							<div className="hidden lg:flex items-center justify-center flex-1" />
 							<div className="hidden lg:flex items-center gap-3" />
@@ -98,9 +93,9 @@ export function Navbar({ config, logoUrl, companyName, socialMedia }: NavbarProp
 
 	return (
 		<div className="w-full">
-			<nav className={navClassName}>
+			<nav className="w-full">
 				<div className="_container">
-					<div className="flex items-center justify-between gap-1 lg:gap-2 py-2 sm:py-3">
+					<div className={cn(panelClassName, "flex items-center justify-between gap-1 lg:gap-2 py-2 sm:py-3")}>
 
 						{/* Logo */}
 						<Logo logoUrl={logoUrl} companyName={companyName} />
@@ -158,37 +153,7 @@ export function Navbar({ config, logoUrl, companyName, socialMedia }: NavbarProp
 						</div>
 
 						{/* Right Actions */}
-						<div className="hidden lg:flex items-center gap-3 shrink-0">
-							{/* Search */}
-							{searchOpen ? (
-								<form onSubmit={handleSearch} className="flex items-center gap-1">
-									<input
-										type="text"
-										value={searchQuery}
-										onChange={(e) => setSearchQuery(e.target.value)}
-										placeholder={t("searchPlaceholder")}
-										autoFocus
-										className="bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm rounded px-2 py-1 w-36 outline-none focus:border-white/40"
-									/>
-									<button
-										type="button"
-										onClick={() => { setSearchOpen(false); setSearchQuery(""); }}
-										className="text-white/70 hover:text-white transition-colors"
-										aria-label="Close search"
-									>
-										<X className="h-4 w-4" />
-									</button>
-								</form>
-							) : (
-								<button
-									onClick={() => setSearchOpen(true)}
-									className="text-white/70 hover:text-white transition-colors border border-white/30 rounded p-1.5"
-									aria-label="Search"
-								>
-									<Search className="h-4 w-4" />
-								</button>
-							)}
-
+						<div className="hidden lg:flex items-center gap-2 shrink-0">
 							{/* Language Switcher */}
 							<LanguageSwitcher variant="compact" />
 

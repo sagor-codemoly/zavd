@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGODB_URI = 'mongodb+srv://synos-admin:Xc0v778jCOOOElHq@synos-cluster.alvjobm.mongodb.net/synos-db';
+const MONGODB_URI = 'mongodb+srv://zavd-admin:Xc0v778jCOOOElHq@zavd-cluster.alvjobm.mongodb.net/zavd-db';
 
 async function updateHeroBackground() {
 	try {

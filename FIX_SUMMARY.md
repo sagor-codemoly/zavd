@@ -1,6 +1,6 @@
 # User Data Fetching Fix - Summary
 
-**Project:** Synos Medical Web Application
+**Project:** Zavd Medical Web Application
 **Date:** December 3, 2025
 **Status:** ✅ **FIXED AND OPTIMIZED**
 
@@ -290,7 +290,7 @@ Benefits:
 1. User submits form → authClient.signUp.email()
 2. Better Auth creates user in 'user' collection with _id
 3. Better Auth creates session with userId = user._id
-4. Better Auth sets cookies (synos.session_token)
+4. Better Auth sets cookies (zavd.session_token)
 5. Frontend calls POST /api/auth/sync-user
 6. Endpoint creates profile with userId = session.user.id
 7. User redirected to /dashboard
@@ -330,7 +330,7 @@ mongosh --eval "db.user.deleteMany({}); db.profiles.deleteMany({});"
 # Register new user via UI
 ✅ Better Auth creates user in 'user' collection
 ✅ Session created with userId = user._id
-✅ Cookies set: synos.session_token
+✅ Cookies set: zavd.session_token
 ✅ Profile created via /api/auth/sync-user
 ✅ User data fetched successfully
 
@@ -525,13 +525,13 @@ db.profiles.deleteMany({});
 
    ```bash
    # Browser DevTools → Application → Cookies
-   # Verify: synos.session_token exists
+   # Verify: zavd.session_token exists
    ```
 
 2. **Check Database:**
 
    ```bash
-   mongosh mongodb://127.0.0.1:27017/synos-db
+   mongosh mongodb://127.0.0.1:27017/zavd-db
    db.user.findOne({ email: "your-email@example.com" })
    db.profiles.findOne()
    ```
@@ -548,7 +548,7 @@ db.profiles.deleteMany({});
    ```bash
    # Call sync endpoint manually
    curl -X POST http://localhost:3000/api/auth/sync-user \
-     -H "Cookie: synos.session_token=YOUR_TOKEN"
+     -H "Cookie: zavd.session_token=YOUR_TOKEN"
    ```
 
 5. **Clear Database and Re-test:**
@@ -603,4 +603,4 @@ The system is now ready for user testing and production deployment.
 **Document Version:** 1.0
 **Last Updated:** December 3, 2025
 **Author:** Claude (Anthropic AI Assistant)
-**Project:** Synos Medical - User Data Fetching Fix
+**Project:** Zavd Medical - User Data Fetching Fix

@@ -17,7 +17,7 @@ import Link from "next/link";
  *
  * Custom error page displayed when runtime errors occur in the application.
  * Must be a Client Component with error boundary functionality.
- * Uses hardcoded colors from Synos Medical design system.
+ * Uses hardcoded colors from Zavd Medical design system.
  * Colors: Primary #0C2C46, Accent #00949E, Accent Hover #007A82
  *
  * @param {Object} props - Component props

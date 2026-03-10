@@ -35,7 +35,7 @@ interface CookieConsentContextType {
 	closeSettings: () => void;
 }
 
-const COOKIE_CONSENT_KEY = "synos_cookie_consent";
+const COOKIE_CONSENT_KEY = "zavd_cookie_consent";
 
 const defaultPreferences: CookiePreferences = {
 	necessary: true,

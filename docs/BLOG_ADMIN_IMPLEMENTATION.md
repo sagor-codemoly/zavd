@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document outlines the implementation plan for adding a dynamic blog management system to the Synos admin dashboard. The system will allow administrators to create, edit, and manage blog posts through a WordPress-like interface.
+This document outlines the implementation plan for adding a dynamic blog management system to the Zavd admin dashboard. The system will allow administrators to create, edit, and manage blog posts through a WordPress-like interface.
 
 ## Current State
 
@@ -245,7 +245,7 @@ Script to:
 ## File Structure (New Files)
 
 ```
-synos/
+zavd/
 ├── models/
 │   ├── blog-category.model.ts       # NEW
 │   └── blog-post.model.ts           # NEW

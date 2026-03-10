@@ -714,7 +714,7 @@ export default function LegalPageAdmin() {
 														<Input
 															{...field}
 															value={field.value || ""}
-															placeholder="t.ex. Synos Medical AB"
+															placeholder="t.ex. Zavd Medical AB"
 														/>
 													</FormControl>
 												</FormItem>
@@ -781,7 +781,7 @@ export default function LegalPageAdmin() {
 															{...field}
 															value={field.value || ""}
 															type="email"
-															placeholder="info@synosmedical.se"
+															placeholder="info@zavdmedical.se"
 														/>
 													</FormControl>
 												</FormItem>
@@ -1276,7 +1276,7 @@ export default function LegalPageAdmin() {
 															<Input
 																{...field}
 																value={field.value || ""}
-																placeholder="t.ex. info@synosmedical.se"
+																placeholder="t.ex. info@zavdmedical.se"
 															/>
 														</FormControl>
 													</FormItem>
@@ -1292,7 +1292,7 @@ export default function LegalPageAdmin() {
 															<Input
 																{...field}
 																value={field.value || ""}
-																placeholder="mailto:info@synosmedical.se"
+																placeholder="mailto:info@zavdmedical.se"
 															/>
 														</FormControl>
 													</FormItem>
@@ -1322,7 +1322,7 @@ export default function LegalPageAdmin() {
 														<Input
 															{...field}
 															value={field.value || ""}
-															placeholder="t.ex. Juridisk Information | Synos Medical"
+															placeholder="t.ex. Juridisk Information | Zavd Medical"
 														/>
 													</FormControl>
 													<FormDescription>
@@ -1384,12 +1384,12 @@ export default function LegalPageAdmin() {
 									<CardContent>
 										<SeoPreview
 											data={{
-												title: form.watch("seo.title") || "Juridisk Information - Synos Medical",
+												title: form.watch("seo.title") || "Juridisk Information - Zavd Medical",
 												description: form.watch("seo.description") || "Add a description",
 												ogImage: form.watch("seo.ogImage") || null,
 												slug: "om-oss/juridisk-information",
-												siteName: "Synos Medical",
-												siteUrl: "www.synos.se",
+												siteName: "Zavd Medical",
+												siteUrl: "www.zavd.se",
 											}}
 										/>
 									</CardContent>

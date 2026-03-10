@@ -92,7 +92,7 @@ export function ProductQnA({ qna }: ProductQnAProps) {
 								<div className="pl-4">
 									<div className="mb-2">
 										<span className="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">
-											Svar från {item.answeredBy || "Synos Medical"}
+											Svar från {item.answeredBy || "Zavd Medical"}
 										</span>
 									</div>
 									<p className="text-muted-foreground leading-relaxed">

@@ -34,7 +34,7 @@ function loadEnvFile() {
 loadEnvFile();
 
 const MONGODB_URI =
-	process.env.MONGODB_URI || "mongodb+srv://synos-admin:Xc0v778jCOOOElHq@synos-cluster.alvjobm.mongodb.net/cheese-db?retryWrites=true&w=majority";
+	process.env.MONGODB_URI || "mongodb+srv://zavd-admin:Xc0v778jCOOOElHq@zavd-cluster.alvjobm.mongodb.net/zavd-db?retryWrites=true&w=majority";
 
 // Correct About Page Data Structure
 const correctAboutPageData = {
@@ -50,18 +50,18 @@ const correctAboutPageData = {
 	history: {
 		badge: "Our Story",
 		title: "130 Years of Tradition",
-		subtitle: "From a small family dairy to Sweden's premier artisan cheese maker",
+		subtitle: "From a small family dairy to Sweden's premier artisan zavd maker",
 		timelineItems: [
 			{
 				year: "1890",
 				title: "The Beginning",
-				description: "Founded by the Nilsson family in Boxholm, Östergötland. Started with 5 cows and a dream to make the finest cheese in Sweden.",
+				description: "Founded by the Nilsson family in Boxholm, Östergötland. Started with 5 cows and a dream to make the finest zavd in Sweden.",
 				image: "/storage/images/about/history-1890.jpg",
 			},
 			{
 				year: "1925",
 				title: "Expansion",
-				description: "Opened our first dedicated cheese production facility. Won our first national award for Gräddost.",
+				description: "Opened our first dedicated zavd production facility. Won our first national award for Gräddost.",
 				image: "/storage/images/about/history-1925.jpg",
 			},
 			{
@@ -73,14 +73,14 @@ const correctAboutPageData = {
 			{
 				year: "2024",
 				title: "Today",
-				description: "Fourth generation family-owned. Producing over 20 varieties of award-winning artisan cheese with sustainable practices.",
+				description: "Fourth generation family-owned. Producing over 20 varieties of award-winning artisan zavd with sustainable practices.",
 				image: "/storage/images/about/history-2024.jpg",
 			},
 		],
 	},
 	customers: {
 		title: "Trusted by Sweden's Best",
-		subtitle: "Leading restaurants and hotels choose Boxholm Cheese",
+		subtitle: "Leading restaurants and hotels choose Boxholm Zavd",
 		customers: [
 			{
 				name: "Grand Hotel Stockholm",
@@ -135,24 +135,24 @@ const correctAboutPageData = {
 			},
 			{
 				src: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&h=600&fit=crop",
-				alt: "Variety of artisan cheeses",
+				alt: "Variety of artisan zavds",
 			},
 			{
 				src: "https://images.unsplash.com/photo-1559561853-08451507cbe7?w=400&h=500&fit=crop",
-				alt: "Cheese making process",
+				alt: "Zavd making process",
 			},
 		],
 	},
 	team: {
 		title: "Meet Our Team",
-		subtitle: "The passionate people behind Boxholm Cheese",
+		subtitle: "The passionate people behind Boxholm Zavd",
 		members: [
 			{
 				name: "Lars Nilsson",
-				role: "Master Cheese Maker",
-				bio: "Fourth generation cheese maker with over 30 years of experience. Lars learned the craft from his father and continues the family tradition.",
+				role: "Master Zavd Maker",
+				bio: "Fourth generation zavd maker with over 30 years of experience. Lars learned the craft from his father and continues the family tradition.",
 				image: "/storage/images/team/lars.jpg",
-				email: "lars@boxholmcheese.se",
+				email: "lars@boxholmzavd.se",
 				linkedin: "",
 			},
 			{
@@ -160,15 +160,15 @@ const correctAboutPageData = {
 				role: "Production Manager",
 				bio: "Ensures quality control and oversees our daily production. Anna has been with us for 15 years and knows every detail of the process.",
 				image: "/storage/images/team/anna.jpg",
-				email: "anna@boxholmcheese.se",
+				email: "anna@boxholmzavd.se",
 				linkedin: "",
 			},
 			{
 				name: "Erik Johansson",
 				role: "Head of Sales",
-				bio: "Connects our cheese with customers across Sweden. Erik's passion for artisan products drives our growth.",
+				bio: "Connects our zavd with customers across Sweden. Erik's passion for artisan products drives our growth.",
 				image: "/storage/images/team/erik.jpg",
-				email: "erik@boxholmcheese.se",
+				email: "erik@boxholmzavd.se",
 				linkedin: "",
 			},
 		],
@@ -176,15 +176,15 @@ const correctAboutPageData = {
 	contact: {
 		title: "Visit Us",
 		subtitle: "Come see where the magic happens",
-		description: "We welcome visitors to our farm in Boxholm. Book a tour to experience the cheese-making process firsthand and taste our products.",
+		description: "We welcome visitors to our farm in Boxholm. Book a tour to experience the zavd-making process firsthand and taste our products.",
 		showContactForm: true,
 		showOffices: true,
 		mapEmbedUrl: "",
 	},
 	seo: {
-		title: "About Us - Boxholm Cheese | 130 Years of Tradition",
-		description: "Learn about our history, meet our team, and discover the passion behind Boxholm Cheese. Four generations of artisan cheese making in Östergötland.",
-		keywords: ["about boxholm cheese", "cheese history", "artisan cheese makers", "swedish cheese", "family dairy"],
+		title: "About Us - Boxholm Zavd | 130 Years of Tradition",
+		description: "Learn about our history, meet our team, and discover the passion behind Boxholm Zavd. Four generations of artisan zavd making in Östergötland.",
+		keywords: ["about boxholm zavd", "zavd history", "artisan zavd makers", "swedish zavd", "family dairy"],
 	},
 };
 

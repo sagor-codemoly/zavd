@@ -3,7 +3,7 @@ import { Article } from "@/types/article";
 /**
  * Sample Blog Articles Data
  *
- * This file contains sample blog posts for the Synos Medical blog.
+ * This file contains sample blog posts for the Zavd Medical blog.
  * In production, this would be replaced with a CMS or database.
  */
 
@@ -86,9 +86,9 @@ export const blogArticles: Article[] = [
 </strong>
 <pre><code class="not-prose rounded bg-gray-100 px-1 py-0.5 font-mono text-sm text-gray-800">Elektrod → Långt glasrör → Elektrod
 (Ström måste färdas långt = långsam respons)</code></pre>
-<strong><img class="alignnone size-full wp-image-3721" src="https://www.synos.se/wp-content/uploads/2025/10/DC-co2-laser.jpg" alt="" width="2556" height="1428" />
+<strong><img class="alignnone size-full wp-image-3721" src="https://www.zavd.se/wp-content/uploads/2025/10/DC-co2-laser.jpg" alt="" width="2556" height="1428" />
 </strong>
-<h2 data-start="3279" data-end="3329"><a href="https://www.synos.se/klinikutrustning/hudforyngring/tetra-pro/">RF-stimulerad CO2-laser</a> – framtidens standard</h2>
+<h2 data-start="3279" data-end="3329"><a href="https://www.zavd.se/klinikutrustning/hudforyngring/tetra-pro/">RF-stimulerad CO2-laser</a> – framtidens standard</h2>
 <p data-start="3331" data-end="3613">RF-stimulerad CO2-laser använder <strong data-start="3364" data-end="3387">radiofrekvensenergi</strong> för att excitera lasergasen direkt i resonatorn. Till skillnad från strömstimulerade system sker moduleringen lokalt och extremt snabbt. Därför kan lasern slås på och av med mycket kort puls och exakt kontroll över energin.</p>
 
 <h3 data-start="3615" data-end="3638">Kliniska fördelar</h3>
@@ -114,8 +114,8 @@ export const blogArticles: Article[] = [
 <div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx"><strong>Visuell Förklaring:</strong></div>
 <div data-sentry-component="P" data-sentry-source-file="p.tsx">
 <pre><code class="not-prose rounded bg-gray-100 px-1 py-0.5 font-mono text-sm text-gray-800">RF-energi → Snabb pulsering (MHz) → Stabil stråle
-(Energi pulseras lokalt = snabb respons)</code> <img class="alignnone size-full wp-image-3720" src="https://www.synos.se/wp-content/uploads/2025/10/RF-fardig.jpg" alt="" width="2557" height="1439" /></pre>
-<h2 data-start="4220" data-end="4267"><a href="https://www.synos.se/klinikutrustning/hudforyngring/tetra-pro/">CoolPeel</a> – kort downtime med CO2-teknologi</h2>
+(Energi pulseras lokalt = snabb respons)</code> <img class="alignnone size-full wp-image-3720" src="https://www.zavd.se/wp-content/uploads/2025/10/RF-fardig.jpg" alt="" width="2557" height="1439" /></pre>
+<h2 data-start="4220" data-end="4267"><a href="https://www.zavd.se/klinikutrustning/hudforyngring/tetra-pro/">CoolPeel</a> – kort downtime med CO2-teknologi</h2>
 <p data-start="4269" data-end="4580"><strong data-start="4269" data-end="4281">CoolPeel</strong> är ett protokoll framtaget för RF-stimulerade CO2-lasrar (t.ex. DEKA Tetra). Det använder mycket korta CO2-pulser med hög toppeffekt men minimal termisk påverkan på omgivande vävnad. Därför kan man erbjuda hudförbättring med betydligt kortare återhämtningstid än vid traditionell CO2-resurfacing.</p>
 <p data-start="4582" data-end="4831"><strong data-start="4582" data-end="4595">Downtime:</strong> vanligen 24–72 timmar, ibland något längre beroende på hudtyp och energi.<br data-start="4669" data-end="4672" /><strong data-start="4672" data-end="4685">Resultat:</strong> synligt förbättrad hudstruktur och lyster redan inom några dagar.<br data-start="4751" data-end="4754" /><strong data-start="4754" data-end="4770">Affärsvärde:</strong> en premiumbehandling med hög efterfrågan och god marginal.</p>
 
@@ -275,7 +275,7 @@ export const blogArticles: Article[] = [
 <hr data-start="9039" data-end="9042" />
 
 <h2 data-start="9044" data-end="9065">Kontakt och demo</h2>
-<p data-start="9067" data-end="9248">Vill du se hur en RF-stimulerad CO2-plattform kan förbättra både resultat och lönsamhet i din klinik?<br data-start="9168" data-end="9171" />Kontakta oss på <strong data-start="9187" data-end="9204"><a class="decorated-link cursor-pointer" rel="noopener" data-start="9189" data-end="9202">info@synos.se</a></strong> eller boka en kostnadsfri genomgång idag.</p>
+<p data-start="9067" data-end="9248">Vill du se hur en RF-stimulerad CO2-plattform kan förbättra både resultat och lönsamhet i din klinik?<br data-start="9168" data-end="9171" />Kontakta oss på <strong data-start="9187" data-end="9204"><a class="decorated-link cursor-pointer" rel="noopener" data-start="9189" data-end="9202">info@zavd.se</a></strong> eller boka en kostnadsfri genomgång idag.</p>
 
 
 <hr data-start="9250" data-end="9253" />
@@ -292,7 +292,7 @@ export const blogArticles: Article[] = [
 		publishedAt: "2025-10-20T18:18:49+00:00",
 		updatedAt: "2025-10-21T19:58:40+00:00",
 		featuredImage: {
-			url: "https://www.synos.se/wp-content/uploads/2025/10/Tetrapro-och-DUOglide-2-e1761076707185-2000x450.jpg",
+			url: "https://www.zavd.se/wp-content/uploads/2025/10/Tetrapro-och-DUOglide-2-e1761076707185-2000x450.jpg",
 			alt: "RF-stimulerad CO2 laser teknologi",
 			width: 1200,
 			height: 630,
@@ -319,7 +319,7 @@ export const blogArticles: Article[] = [
 				"fraktionerad laser",
 			],
 			ogImage:
-				"https://www.synos.se/wp-content/uploads/2025/10/Tetrapro-och-DUOglide-2-e1761076707185-2000x450.jpg",
+				"https://www.zavd.se/wp-content/uploads/2025/10/Tetrapro-och-DUOglide-2-e1761076707185-2000x450.jpg",
 		},
 	},
 	{
@@ -433,9 +433,9 @@ export const blogArticles: Article[] = [
  	<li>Möjlighet att behandla medicinska indikationer</li>
  	<li>Konkurrensfördel mot icke-certifierade maskiner</li>
 </ul>
-<h2><strong>Synos Medical - Din Partner för Framgång</strong></h2>
-<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Oavsett om du väljer TORO eller QTERRA Q10 får du samma professionella support, utbildning och service från Synos Medical. <strong>Framför allt</strong> säkerställer vår 20+ års erfarenhet optimal implementation och resultat. <strong>Dessutom</strong> erbjuder vi flexibla finansieringsalternativ för båda maskinerna. <strong>Därmed</strong> blir din investering i tatueringsborttagning både trygg och lönsam.</div>
-<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Läs mer om <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/">professionell tatueringsborttagning</a> och <a href="https://www.synos.se/blogg/deka-ett-av-de-forsta-foretagen-i-varlden-att-mdr-certifieras/">MDR-certifierade lasersystem</a> på vår webbplats.</div>
+<h2><strong>Zavd Medical - Din Partner för Framgång</strong></h2>
+<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Oavsett om du väljer TORO eller QTERRA Q10 får du samma professionella support, utbildning och service från Zavd Medical. <strong>Framför allt</strong> säkerställer vår 20+ års erfarenhet optimal implementation och resultat. <strong>Dessutom</strong> erbjuder vi flexibla finansieringsalternativ för båda maskinerna. <strong>Därmed</strong> blir din investering i tatueringsborttagning både trygg och lönsam.</div>
+<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Läs mer om <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/">professionell tatueringsborttagning</a> och <a href="https://www.zavd.se/blogg/deka-ett-av-de-forsta-foretagen-i-varlden-att-mdr-certifieras/">MDR-certifierade lasersystem</a> på vår webbplats.</div>
 <h2><strong>Slutsats: Vilket Är Rätt Val?</strong></h2>
 <div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx"><strong>Välj Pico</strong> om du vill bygga en premiumklinik med senaste teknologin och är beredd att investera i differentiering.</div>
 <div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx"><strong>Välj Q-Switch</strong> om du prioriterar snabb ROI, högt volym och mångsidiga behandlingsmöjligheter.</div>
@@ -443,9 +443,9 @@ export const blogArticles: Article[] = [
 <hr />
 
 <div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx"><strong>Kontakta våra specialister för personlig rådgivning:</strong> 📞 010-205 15 01
-📧 <a href="mailto:info@synos.se" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">info@synos.se</a>
-🌐 <a href="http://www.synos.se/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">www.synos.se</a></div>
-<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Läs mer om <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/toro/">TORO Pico Laser</a> och <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/q-terra-q10/">QTERRA Q10 Q-Switch</a>. Upptäck vårt<a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/"> kompletta sortiment</a> av tatueringsborttagningslasrar.</div>
+📧 <a href="mailto:info@zavd.se" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">info@zavd.se</a>
+🌐 <a href="http://www.zavd.se/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">www.zavd.se</a></div>
+<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Läs mer om <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/toro/">TORO Pico Laser</a> och <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/q-terra-q10/">QTERRA Q10 Q-Switch</a>. Upptäck vårt<a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/"> kompletta sortiment</a> av tatueringsborttagningslasrar.</div>
 		`,
 		author: {
 			name: "Andreas Tanzi",
@@ -454,7 +454,7 @@ export const blogArticles: Article[] = [
 		publishedAt: "2025-09-29T10:00:00+00:00",
 		updatedAt: "2025-09-29T10:00:00+00:00",
 		featuredImage: {
-			url: "https://www.synos.se/wp-content/uploads/2022/03/iStock-1159670941-scaled-e1648554685222-2000x450.jpg",
+			url: "https://www.zavd.se/wp-content/uploads/2022/03/iStock-1159670941-scaled-e1648554685222-2000x450.jpg",
 			alt: "Pico laser vs Q-Switch laser jämförelse",
 			width: 1200,
 			height: 630,
@@ -492,7 +492,7 @@ export const blogArticles: Article[] = [
 <div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx"><strong>Termomekanisk Fragmentering:</strong>
 Tatueringsbläck absorberar laserenergi vilket skapar snabb temperaturökning. Bläckpartiklarna expanderar och fragmenteras genom termisk chock. Därefter eliminerar kroppens naturliga processer fragmenten över tid. Följaktligen levererar denna beprövade metodik säker och effektiv Q-switch tatueringsborttagning.</div>
 </div>
-<h2><strong>Varför <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/q-terra-q10/">QTERRA Q10</a> är Marknadsledande Q-Switch Laser 2025</strong></h2>
+<h2><strong>Varför <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/q-terra-q10/">QTERRA Q10</a> är Marknadsledande Q-Switch Laser 2025</strong></h2>
 <div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">
 
 QTERRA Q10 <strong><a href="https://pubmed.ncbi.nlm.nih.gov/34668826/">Q-switch laser </a></strong>representerar den mest avancerade Q-switch tatueringsborttagningen som finns tillgänglig i Sverige idag. QTERRA Q10 kombinerar revolutionerande Twin Pulse-teknologi med fyra våglängder för komplett färgtäckning. Systemet levererar optimal pulsbredd (5-6 nanosekunder) och hög energidensitet, överlägsen prestanda jämfört med konkurrenternas Q-switch laser system. Därmed får kliniker den mest effektiva Q-switch tatueringsborttagningen som möjliggör snabbare resultat och högre patienttillfredsställelse.
@@ -586,9 +586,9 @@ QTERRA Q10 <strong><a href="https://pubmed.ncbi.nlm.nih.gov/34668826/">Q-switch 
 
 <div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx"><strong>Kontakta oss för mer information om Q-switch tatueringsborttagning:</strong>
 📞 <strong>010-205 15 01</strong>
-📧 <strong><a href="mailto:info@synos.se" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">info@synos.se</a></strong>
-🌐 <strong><a href="http://www.synos.se/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">www.synos.se</a></strong></div>
-<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Läs mer om <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/qterra-q10/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">QTERRA Q10 Twin Pulse teknologi</a> och <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/toro/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">jämför med TORO Pico Laser</a>. Upptäck vårt <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">kompletta sortiment av tatueringsborttagningslasrar</a>.</div>
+📧 <strong><a href="mailto:info@zavd.se" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">info@zavd.se</a></strong>
+🌐 <strong><a href="http://www.zavd.se/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">www.zavd.se</a></strong></div>
+<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Läs mer om <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/qterra-q10/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">QTERRA Q10 Twin Pulse teknologi</a> och <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/toro/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">jämför med TORO Pico Laser</a>. Upptäck vårt <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">kompletta sortiment av tatueringsborttagningslasrar</a>.</div>
 </div>
 		`,
 		author: {
@@ -598,7 +598,7 @@ QTERRA Q10 <strong><a href="https://pubmed.ncbi.nlm.nih.gov/34668826/">Q-switch 
 		publishedAt: "2025-09-15T09:00:00+00:00",
 		updatedAt: "2025-09-15T09:00:00+00:00",
 		featuredImage: {
-			url: "https://www.synos.se/wp-content/uploads/2025/09/qterra-q10-ny-1000x360.jpg",
+			url: "https://www.zavd.se/wp-content/uploads/2025/09/qterra-q10-ny-1000x360.jpg",
 			alt: "Q-Switch laser tatueringsborttagning",
 			width: 1200,
 			height: 630,
@@ -624,7 +624,7 @@ QTERRA Q10 <strong><a href="https://pubmed.ncbi.nlm.nih.gov/34668826/">Q-switch 
 		title: "Pico Laser Tatueringsborttagning – Guide 2025 Del 1",
 		excerpt:
 			"Pico laser tatueringsborttagning representerar den senaste utvecklingen inom professionell tatueringsborttagning. Upptäck fördelarna med pikosekund-teknologi.",
-		content: `<h2>Pico Laser <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/toro/">Tatueringsborttagning</a> - Revolutionerande Teknologi 2025</h2>
+		content: `<h2>Pico Laser <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/toro/">Tatueringsborttagning</a> - Revolutionerande Teknologi 2025</h2>
 <div class="mb-2 whitespace-pre-line last:mb-0" data-sentry-component="P" data-sentry-source-file="p.tsx">
 <div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Pico laser tatueringsborttagning representerar den senaste utvecklingen inom professionell tatueringsborttagning. Framför allt levererar picosekund-teknologi dramatiskt snabbare resultat med minimal återhämtningstid. Dessutom erbjuder denna avancerade teknologi säkrare behandlingar för alla hudtyper. Därmed har pico laser blivit förstahandsvalet för premiumkliniker som vill erbjuda bästa möjliga resultat.</div>
 <h2>Vad är Pico Laser Teknologi?</h2>
@@ -717,9 +717,9 @@ En professionell picolaser för tatueringsborttagning måste uppfylla flera avg�
 
 <div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx"><strong>Kontakta oss för mer information om pico laser tatueringsborttagning:</strong>
 📞 <strong>010-205 15 01</strong>
-📧 <strong><a href="mailto:info@synos.se" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">info@synos.se</a></strong>
-🌐 <strong><a href="http://www.synos.se/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">www.synos.se</a></strong></div>
-<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Läs mer om <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/toro/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">TORO Pico Laser</a> och <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/qterra-q10/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">jämför med QTERRA Q10 Q-Switch</a>. Upptäck också vårt <a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">kompletta sortiment av tatueringsborttagningslasrar</a>.</div>
+📧 <strong><a href="mailto:info@zavd.se" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">info@zavd.se</a></strong>
+🌐 <strong><a href="http://www.zavd.se/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">www.zavd.se</a></strong></div>
+<div class="mb-1 mt-2 whitespace-pre-line leading-relaxed first:mt-0" data-sentry-component="P" data-sentry-source-file="p.tsx">Läs mer om <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/toro/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">TORO Pico Laser</a> och <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/qterra-q10/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">jämför med QTERRA Q10 Q-Switch</a>. Upptäck också vårt <a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/" target="_blank" rel="noopener noreferrer" data-sentry-component="A" data-sentry-source-file="a.tsx">kompletta sortiment av tatueringsborttagningslasrar</a>.</div>
 </div>
 		`,
 		author: {
@@ -729,7 +729,7 @@ En professionell picolaser för tatueringsborttagning måste uppfylla flera avg�
 		publishedAt: "2025-09-01T08:00:00+00:00",
 		updatedAt: "2025-09-01T08:00:00+00:00",
 		featuredImage: {
-			url: "https://www.synos.se/wp-content/uploads/2025/09/toro-1-kopiera-e1757929293456-1000x360.jpg",
+			url: "https://www.zavd.se/wp-content/uploads/2025/09/toro-1-kopiera-e1757929293456-1000x360.jpg",
 			alt: "Pico laser tatueringsborttagning teknologi",
 			width: 1200,
 			height: 630,
@@ -768,7 +768,7 @@ Den huvudsakliga tekniken för tatueringsborttagning idag är <strong>laserbehan
  	<li><strong>Pikosekundlasrar:</strong> Detta är en nyare och säkrare teknik med ännu kortare pulser (pikosekunder). Den extremt korta pulstiden minimerar värmeskada på huden, vilket minskar risken för pigmentförändringar och ärrbildning.</li>
 </ul>
 Framtiden ligger troligen i kombinationer av dessa teknologier i en och samma maskin, för att kunna dra nytta av båda pulslängdernas fördelar. Ett exempel på en sådan maskin är <strong>Dekas Torro</strong>.
-<a href="https://www.synos.se/klinikutrustning/tatueringsborttagning/toro/">https://www.synos.se/klinikutrustning/tatueringsborttagning/toro/</a>
+<a href="https://www.zavd.se/klinikutrustning/tatueringsborttagning/toro/">https://www.zavd.se/klinikutrustning/tatueringsborttagning/toro/</a>
 
 Äldre metoder som kirurgi, dermabrasion (hudslipning) och kemiska peelingar används sällan idag på grund av hög risk för ärrbildning och sämre resultat.
 <ol start="2">
@@ -858,7 +858,7 @@ Välj en klinik med omsorg:
 		publishedAt: "2025-06-05T10:00:00+00:00",
 		updatedAt: "2025-06-05T10:00:00+00:00",
 		featuredImage: {
-			url: "https://www.synos.se/wp-content/uploads/2024/04/Toro-2-1000x360.png",
+			url: "https://www.zavd.se/wp-content/uploads/2024/04/Toro-2-1000x360.png",
 			alt: "Tatueringsborttagning guide 2025",
 			width: 1200,
 			height: 630,
@@ -884,12 +884,12 @@ Välj en klinik med omsorg:
 
 <a href="https://sv.wikipedia.org/wiki/F%C3%B6rordningen_om_medicintekniska_produkter">Förordningen om medicintekniska produkter</a> (på engelska Medical Device Regulation – förkortat MDR) trädde i kraft i mars 2017 och syftar till att förbättra patientsäkerheten genom att förebygga att maskiner som är osäkra eller av låg kvalitet kommer ut på marknaden. Förordningen innebär en skärpning av de regler som gällde tidigare, och än så länge har få företag/produkter lyckats bli MDR-certifierade.
 
-För dig som driver klinik eller salong innebär det här att du kan känna dig helt trygg när du behandlar med en maskin från DEKA. Certifieringen innebär, svart på vitt, att DEKAs <a href="https://www.synos.se/klinikutrustning/">utrustning</a> är av högsta kvalitet och bra mycket säkrare än de lågbudgetalternativ som andra leverantörer importerar från Kina.
+För dig som driver klinik eller salong innebär det här att du kan känna dig helt trygg när du behandlar med en maskin från DEKA. Certifieringen innebär, svart på vitt, att DEKAs <a href="https://www.zavd.se/klinikutrustning/">utrustning</a> är av högsta kvalitet och bra mycket säkrare än de lågbudgetalternativ som andra leverantörer importerar från Kina.
 
-[caption id="attachment_3441" align="aligncenter" width="1024"]<img class="wp-image-3441 size-large" src="https://www.synos.se/wp-content/uploads/2024/07/TS-PR-24115-PS-consegna-deka-mdr-1024x684.jpg" alt="Bild från certifieringsceremonin då DEKA mottog MDR-certrifikat" width="1024" height="684" /> Bild från certifieringsceremonin[/caption]
+[caption id="attachment_3441" align="aligncenter" width="1024"]<img class="wp-image-3441 size-large" src="https://www.zavd.se/wp-content/uploads/2024/07/TS-PR-24115-PS-consegna-deka-mdr-1024x684.jpg" alt="Bild från certifieringsceremonin då DEKA mottog MDR-certrifikat" width="1024" height="684" /> Bild från certifieringsceremonin[/caption]
 		`,
 		author: {
-			name: "Synos Medical",
+			name: "Zavd Medical",
 			role: "Redaktion",
 		},
 		publishedAt: "2024-07-22T12:00:00+00:00",

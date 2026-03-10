@@ -51,7 +51,7 @@ Nyheter | Utrustning | Kategori | Starta Eget | Utbildningar | Om Oss | Kontakt
 | # | Page | Route | File Path | Status | Notes |
 |---|------|-------|-----------|--------|-------|
 | 11 | Starta Eget | `/starta-eget` | `app/(client)/starta-eget/page.tsx` | IMPLEMENTED | Start your own business |
-| 12 | Varfor Valja Synos | `/starta-eget/varfor-valja-synos` | `app/(client)/starta-eget/varfor-valja-synos/page.tsx` | IMPLEMENTED | Why choose Synos + contact form |
+| 12 | Varfor Valja Zavd | `/starta-eget/varfor-valja-zavd` | `app/(client)/starta-eget/varfor-valja-zavd/page.tsx` | IMPLEMENTED | Why choose Zavd + contact form |
 | 13 | Kopguide | `/starta-eget/kopguide` | `app/(client)/starta-eget/kopguide/page.tsx` | IMPLEMENTED | Buying guide + contact form |
 | 14 | Miniutbildning | `/starta-eget/miniutbildning` | `app/(client)/starta-eget/miniutbildning/page.tsx` | IMPLEMENTED | Mini training + contact form |
 
@@ -59,7 +59,7 @@ Nyheter | Utrustning | Kategori | Starta Eget | Utbildningar | Om Oss | Kontakt
 
 | # | Page | Route | File Path | Status | Notes |
 |---|------|-------|-----------|--------|-------|
-| 15 | Om Oss | `/om-oss` | `app/(client)/om-oss/page.tsx` | IMPLEMENTED | About Synos Medical |
+| 15 | Om Oss | `/om-oss` | `app/(client)/om-oss/page.tsx` | IMPLEMENTED | About Zavd Medical |
 | 16 | Lediga Tjanster | `/om-oss/lediga-tjanster` | `app/(client)/om-oss/lediga-tjanster/page.tsx` | IMPLEMENTED | Job vacancies + contact form |
 | 17 | Juridisk Information | `/om-oss/juridisk-information` | `app/(client)/om-oss/juridisk-information/page.tsx` | IMPLEMENTED | Legal info, terms, GDPR rights |
 | 18 | Team | `/om-oss/team` | `app/(client)/om-oss/team/page.tsx` | IMPLEMENTED | Team members with dummy data |
@@ -176,7 +176,7 @@ navItems = [
 
 ## Next Steps (Optional Enhancements)
 
-1. **Add synos.academy button** - Add to Utbildningar page as specified in requirements
+1. **Add zavd.academy button** - Add to Utbildningar page as specified in requirements
 2. **Design review** - Compare pages against inspiration URLs from PDF
 3. **Replace team dummy data** - Add real team member photos and bios
 4. **CMS integration** - Consider integrating team data with CMS for easy updates
@@ -190,7 +190,7 @@ navItems = [
 - `app/(client)/nyheter/` - News route
 - `app/(client)/kategori/` - Category route
 - `app/(client)/utrustning/` - Equipment overview
-- `app/(client)/starta-eget/varfor-valja-synos/`
+- `app/(client)/starta-eget/varfor-valja-zavd/`
 - `app/(client)/starta-eget/kopguide/`
 - `app/(client)/starta-eget/miniutbildning/`
 - `app/(client)/om-oss/lediga-tjanster/`

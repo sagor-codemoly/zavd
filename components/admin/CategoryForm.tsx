@@ -387,8 +387,8 @@ export function CategoryForm({
 										description: seoDescription || "",
 										slug: slug || "",
 										ogImage: seoOgImage || image || null,
-										siteUrl: "synos.se",
-										siteName: "Synos",
+										siteUrl: "zavd.se",
+										siteName: "Zavd",
 										productTitle: name || "",
 									}}
 								/>

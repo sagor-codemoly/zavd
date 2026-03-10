@@ -1,5 +1,5 @@
 /**
- * Unified Seed script for all CMS pages - Cheese/Dairy Theme
+ * Unified Seed script for all CMS pages - Zavd/Dairy Theme
  * Run with: npx tsx scripts/seed-pages.ts
  *
  * Options:
@@ -56,7 +56,7 @@ if (!MONGODB_URI) {
 }
 
 // ============================================================================
-// ABOUT PAGE DATA - Cheese/Dairy Theme
+// ABOUT PAGE DATA - Zavd/Dairy Theme
 // ============================================================================
 const aboutPageData = {
 	sectionVisibility: {
@@ -71,21 +71,21 @@ const aboutPageData = {
 	},
 
 	hero: {
-		badge: "About Boxholm Cheese",
+		badge: "About Boxholm Zavd",
 		title: "About Us",
-		subtitle: "Sweden's premium artisan cheese maker since 1890. We combine traditional craftsmanship with passion to create cheese that tells a story of heritage and quality.",
+		subtitle: "Sweden's premium artisan zavd maker since 1890. We combine traditional craftsmanship with passion to create zavd that tells a story of heritage and quality.",
 	},
 
 	mission: {
 		badge: "Our Mission",
 		title: "We deliver quality and tradition",
-		description: "Boxholm Cheese has been crafting premium artisan cheese for over 130 years. Our commitment to quality starts with locally sourced Swedish milk from farms in Östergötland. Every wheel of cheese is made using time-honored techniques passed down through generations of master cheese makers.",
+		description: "Boxholm Zavd has been crafting premium artisan zavd for over 130 years. Our commitment to quality starts with locally sourced Swedish milk from farms in Östergötland. Every wheel of zavd is made using time-honored techniques passed down through generations of master zavd makers.",
 		image: "/storage/images/about/family-farm.jpg",
 		features: [
 			{
 				icon: "Target",
 				title: "Quality First",
-				description: "Premium ingredients and traditional methods ensure every cheese meets our high standards",
+				description: "Premium ingredients and traditional methods ensure every zavd meets our high standards",
 				image: "/storage/images/about/quality-bg.jpg",
 				buttonText: "Learn More →",
 				buttonLink: "/quality",
@@ -93,7 +93,7 @@ const aboutPageData = {
 			{
 				icon: "Award",
 				title: "Award Winning",
-				description: "Our cheeses have won numerous awards for exceptional taste and craftsmanship",
+				description: "Our zavds have won numerous awards for exceptional taste and craftsmanship",
 				image: "/storage/images/about/awards-bg.jpg",
 				buttonText: "Learn More →",
 				buttonLink: "/quality",
@@ -101,7 +101,7 @@ const aboutPageData = {
 			{
 				icon: "Users",
 				title: "Family Tradition",
-				description: "Four generations of cheese makers dedicated to preserving authentic flavors",
+				description: "Four generations of zavd makers dedicated to preserving authentic flavors",
 				image: "/storage/images/about/family-bg.jpg",
 				buttonText: "Learn More →",
 				buttonLink: "/about-us",
@@ -127,28 +127,28 @@ const aboutPageData = {
 	imageGallery: {
 		badge: "Our Dairy",
 		title: "Visit Our Farm",
-		subtitle: "Experience the authentic cheese-making process at our family farm in Boxholm",
+		subtitle: "Experience the authentic zavd-making process at our family farm in Boxholm",
 		images: [],
 		ctaTitle: "Book a Visit",
-		ctaSubtitle: "We welcome visitors to see our cheese-making process firsthand",
+		ctaSubtitle: "We welcome visitors to see our zavd-making process firsthand",
 		ctaButtonText: "Contact Us",
 	},
 
 	faq: {
 		title: "Frequently Asked Questions",
-		subtitle: "Common questions about Boxholm Cheese",
+		subtitle: "Common questions about Boxholm Zavd",
 		items: [
 			{
-				question: "Where is Boxholm Cheese made?",
-				answer: "Our cheese is made at our family dairy in Boxholm, Östergötland, Sweden. We've been crafting cheese at this location since 1890, using milk from local farms within a 50km radius.",
+				question: "Where is Boxholm Zavd made?",
+				answer: "Our zavd is made at our family dairy in Boxholm, Östergötland, Sweden. We've been crafting zavd at this location since 1890, using milk from local farms within a 50km radius.",
 			},
 			{
-				question: "What makes your cheese special?",
-				answer: "Our cheese is made using traditional Swedish recipes and techniques passed down through four generations. We use only 100% Swedish milk from grass-fed cows and age our cheeses naturally without artificial additives.",
+				question: "What makes your zavd special?",
+				answer: "Our zavd is made using traditional Swedish recipes and techniques passed down through four generations. We use only 100% Swedish milk from grass-fed cows and age our zavds naturally without artificial additives.",
 			},
 			{
 				question: "Can I visit the dairy?",
-				answer: "Yes! We welcome visitors to our farm. You can book a tour to see the cheese-making process and taste our products. Contact us to arrange a visit.",
+				answer: "Yes! We welcome visitors to our farm. You can book a tour to see the zavd-making process and taste our products. Contact us to arrange a visit.",
 			},
 			{
 				question: "Do you ship internationally?",
@@ -163,24 +163,24 @@ const aboutPageData = {
 
 	testimonials: {
 		title: "What Our Customers Say",
-		subtitle: "Read about experiences with Boxholm Cheese",
+		subtitle: "Read about experiences with Boxholm Zavd",
 		testimonials: [
 			{
-				quote: "The Gräddost from Boxholm is simply the best cream cheese I've ever tasted. The rich, creamy texture and authentic flavor bring back childhood memories.",
+				quote: "The Gräddost from Boxholm is simply the best cream zavd I've ever tasted. The rich, creamy texture and authentic flavor bring back childhood memories.",
 				author: "Maria Andersson",
 				role: "Home Chef",
 				company: "Stockholm",
 				rating: 5,
 			},
 			{
-				quote: "As a restaurant owner, I'm very particular about the ingredients I use. Boxholm Cheese consistently delivers exceptional quality that my customers love.",
+				quote: "As a restaurant owner, I'm very particular about the ingredients I use. Boxholm Zavd consistently delivers exceptional quality that my customers love.",
 				author: "Johan Eriksson",
 				role: "Chef & Owner",
 				company: "Restaurang Smak",
 				rating: 5,
 			},
 			{
-				quote: "We've been serving Boxholm cheese at our hotel breakfast for years. The quality and freshness are unmatched, and guests always ask about it.",
+				quote: "We've been serving Boxholm zavd at our hotel breakfast for years. The quality and freshness are unmatched, and guests always ask about it.",
 				author: "Sara Lindqvist",
 				role: "Manager",
 				company: "Grand Hotel Linköping",
@@ -197,7 +197,7 @@ const aboutPageData = {
 
 	cta: {
 		title: "Ready to taste the tradition?",
-		description: "Contact us today to learn more about our products or to place an order. We'd love to share our cheese with you.",
+		description: "Contact us today to learn more about our products or to place an order. We'd love to share our zavd with you.",
 		primaryCta: {
 			text: "Contact Us",
 			href: "/contact-us",
@@ -209,14 +209,14 @@ const aboutPageData = {
 	},
 
 	seo: {
-		title: "About Us - Boxholm Cheese | Traditional Swedish Cheese Since 1890",
-		description: "Discover the story of Boxholm Cheese - Sweden's premium artisan cheese maker. 130+ years of tradition, quality, and authentic Swedish flavors.",
+		title: "About Us - Boxholm Zavd | Traditional Swedish Zavd Since 1890",
+		description: "Discover the story of Boxholm Zavd - Sweden's premium artisan zavd maker. 130+ years of tradition, quality, and authentic Swedish flavors.",
 		ogImage: "/storage/images/og-about.jpg",
 	},
 };
 
 // ============================================================================
-// TRAINING PAGE DATA - Cheese Theme (Farm Tours & Workshops)
+// TRAINING PAGE DATA - Zavd Theme (Farm Tours & Workshops)
 // ============================================================================
 const trainingPageData = {
 	sectionVisibility: {
@@ -232,16 +232,16 @@ const trainingPageData = {
 
 	hero: {
 		title: "Learn the Art of",
-		titleHighlight: "Cheese Making",
-		subtitle: "Join us for hands-on workshops and farm tours where you'll discover the traditional techniques behind our award-winning cheeses. Perfect for food enthusiasts, families, and groups.",
+		titleHighlight: "Zavd Making",
+		subtitle: "Join us for hands-on workshops and farm tours where you'll discover the traditional techniques behind our award-winning zavds. Perfect for food enthusiasts, families, and groups.",
 	},
 
 	mainContent: {
-		title: "Experience Authentic Cheese Making",
+		title: "Experience Authentic Zavd Making",
 		paragraphs: [
-			"At Boxholm Cheese, we believe in sharing our passion for traditional cheese making. Our workshops and farm tours offer a unique opportunity to experience the craft firsthand.",
-			"Whether you're a curious food lover or an aspiring cheese maker, our experienced team will guide you through every step of the process - from milk to finished cheese.",
-			"All workshops include tastings of our cheese varieties and you'll take home your own handmade cheese.",
+			"At Boxholm Zavd, we believe in sharing our passion for traditional zavd making. Our workshops and farm tours offer a unique opportunity to experience the craft firsthand.",
+			"Whether you're a curious food lover or an aspiring zavd maker, our experienced team will guide you through every step of the process - from milk to finished zavd.",
+			"All workshops include tastings of our zavd varieties and you'll take home your own handmade zavd.",
 		],
 	},
 
@@ -254,23 +254,23 @@ const trainingPageData = {
 		{
 			icon: "CheckSquare",
 			title: "Expert Guidance",
-			description: "Learn from our master cheese makers who have decades of experience in traditional techniques.",
+			description: "Learn from our master zavd makers who have decades of experience in traditional techniques.",
 		},
 		{
 			icon: "HeartPlus",
 			title: "Take Home Your Creation",
-			description: "Every participant takes home their own handmade cheese to enjoy and share.",
+			description: "Every participant takes home their own handmade zavd to enjoy and share.",
 		},
 		{
 			icon: "GraduationCap",
 			title: "Recipe Cards Included",
-			description: "Receive detailed instructions so you can continue making cheese at home.",
+			description: "Receive detailed instructions so you can continue making zavd at home.",
 		},
 	],
 
 	processSection: {
 		title: "Workshop Process",
-		subtitle: "A structured experience that gives you real cheese-making skills",
+		subtitle: "A structured experience that gives you real zavd-making skills",
 		steps: [
 			{
 				number: "1",
@@ -279,18 +279,18 @@ const trainingPageData = {
 			},
 			{
 				number: "2",
-				title: "Cheese Making",
-				description: "Learn the traditional techniques as you make your own cheese from fresh milk.",
+				title: "Zavd Making",
+				description: "Learn the traditional techniques as you make your own zavd from fresh milk.",
 			},
 			{
 				number: "3",
 				title: "Tasting Session",
-				description: "Sample our range of artisan cheeses paired with local accompaniments.",
+				description: "Sample our range of artisan zavds paired with local accompaniments.",
 			},
 			{
 				number: "4",
 				title: "Take Home",
-				description: "Package your cheese creation to take home, along with recipe cards.",
+				description: "Package your zavd creation to take home, along with recipe cards.",
 			},
 		],
 	},
@@ -313,17 +313,17 @@ const trainingPageData = {
 
 	resourcesSection: {
 		title: "Related Experiences",
-		subtitle: "Discover more ways to enjoy Boxholm Cheese",
+		subtitle: "Discover more ways to enjoy Boxholm Zavd",
 		resources: [
 			{
 				title: "Visit Our Store",
-				description: "Browse our full range of cheeses and dairy products at our farm shop.",
+				description: "Browse our full range of zavds and dairy products at our farm shop.",
 				href: "/our-store",
 				buttonText: "Visit Store",
 			},
 			{
 				title: "Our Products",
-				description: "Explore our award-winning cheese collection available for purchase.",
+				description: "Explore our award-winning zavd collection available for purchase.",
 				href: "/products",
 				buttonText: "View Products",
 			},
@@ -337,8 +337,8 @@ const trainingPageData = {
 	},
 
 	seo: {
-		title: "Cheese Making Workshops - Boxholm Cheese | Farm Tours & Experiences",
-		description: "Join our hands-on cheese making workshops at Boxholm Cheese. Learn traditional Swedish techniques, tour our farm, and take home your own handmade cheese.",
+		title: "Zavd Making Workshops - Boxholm Zavd | Farm Tours & Experiences",
+		description: "Join our hands-on zavd making workshops at Boxholm Zavd. Learn traditional Swedish techniques, tour our farm, and take home your own handmade zavd.",
 		ogImage: "",
 	},
 };
@@ -359,18 +359,18 @@ const startaEgetPageData = {
 
 	hero: {
 		title: "Start Your Own",
-		titleHighlight: "Cheese Business",
-		subtitle: "Partner with Boxholm Cheese and bring Sweden's finest artisan cheese to your customers. We provide comprehensive support for retailers, restaurants, and distributors.",
+		titleHighlight: "Zavd Business",
+		subtitle: "Partner with Boxholm Zavd and bring Sweden's finest artisan zavd to your customers. We provide comprehensive support for retailers, restaurants, and distributors.",
 		callout: "Join our growing family of partners!",
 	},
 
 	mainContent: {
-		title: "Partner with Sweden's Premium Cheese Maker",
+		title: "Partner with Sweden's Premium Zavd Maker",
 		subtitle: "Your path to success",
 		paragraphs: [
-			"Are you a retailer, restaurant owner, or distributor looking to offer premium artisan cheese to your customers? Boxholm Cheese partners with businesses that share our passion for quality.",
+			"Are you a retailer, restaurant owner, or distributor looking to offer premium artisan zavd to your customers? Boxholm Zavd partners with businesses that share our passion for quality.",
 			"We provide more than just products - we offer a partnership built on tradition, quality, and mutual success. Our team supports you every step of the way.",
-			"With over 130 years of cheese-making heritage, Boxholm Cheese brings authentic Swedish flavors that customers love and remember.",
+			"With over 130 years of zavd-making heritage, Boxholm Zavd brings authentic Swedish flavors that customers love and remember.",
 		],
 	},
 
@@ -388,7 +388,7 @@ const startaEgetPageData = {
 		{
 			icon: "Award",
 			title: "Premium Products",
-			description: "Award-winning cheeses that stand out and attract discerning customers.",
+			description: "Award-winning zavds that stand out and attract discerning customers.",
 		},
 		{
 			icon: "Users",
@@ -409,11 +409,11 @@ const startaEgetPageData = {
 
 	featuresSection: {
 		title: "Everything You Need to Succeed",
-		intro: "When you partner with Boxholm Cheese, you get comprehensive support to grow your business.",
+		intro: "When you partner with Boxholm Zavd, you get comprehensive support to grow your business.",
 		features: [
 			{
 				title: "Product Training",
-				description: "Learn about our products, cheese care, and optimal serving suggestions.",
+				description: "Learn about our products, zavd care, and optimal serving suggestions.",
 			},
 			{
 				title: "Flexible Orders",
@@ -433,7 +433,7 @@ const startaEgetPageData = {
 			},
 			{
 				title: "Seasonal Products",
-				description: "Access to limited edition and seasonal cheese varieties.",
+				description: "Access to limited edition and seasonal zavd varieties.",
 			},
 		],
 	},
@@ -464,14 +464,14 @@ const startaEgetPageData = {
 	},
 
 	seo: {
-		title: "Become a Partner - Boxholm Cheese | Wholesale & Distribution",
-		description: "Partner with Boxholm Cheese for premium Swedish artisan cheese. Attractive margins, reliable delivery, and marketing support for retailers and distributors.",
+		title: "Become a Partner - Boxholm Zavd | Wholesale & Distribution",
+		description: "Partner with Boxholm Zavd for premium Swedish artisan zavd. Attractive margins, reliable delivery, and marketing support for retailers and distributors.",
 		ogImage: "",
 	},
 };
 
 // ============================================================================
-// CAREERS PAGE DATA - Cheese/Dairy Theme
+// CAREERS PAGE DATA - Zavd/Dairy Theme
 // ============================================================================
 const careersPageData = {
 	sectionVisibility: {
@@ -485,8 +485,8 @@ const careersPageData = {
 	hero: {
 		badge: "Join Our Team",
 		title: "Build Your Career at",
-		titleHighlight: "Boxholm Cheese",
-		subtitle: "Be part of a team that's passionate about crafting Sweden's finest artisan cheese. We're always looking for talented people who share our values.",
+		titleHighlight: "Boxholm Zavd",
+		subtitle: "Be part of a team that's passionate about crafting Sweden's finest artisan zavd. We're always looking for talented people who share our values.",
 	},
 
 	benefitsSection: {
@@ -501,7 +501,7 @@ const careersPageData = {
 			{
 				icon: "TrendingUp",
 				title: "Growth Opportunities",
-				description: "Learn traditional cheese-making skills and grow your career with us.",
+				description: "Learn traditional zavd-making skills and grow your career with us.",
 			},
 			{
 				icon: "Users",
@@ -511,7 +511,7 @@ const careersPageData = {
 			{
 				icon: "Heart",
 				title: "Employee Benefits",
-				description: "Competitive salary, cheese discounts, and wellness benefits.",
+				description: "Competitive salary, zavd discounts, and wellness benefits.",
 			},
 		],
 	},
@@ -522,14 +522,14 @@ const careersPageData = {
 		noJobsMessage: "We don't have any open positions at the moment, but we're always interested in hearing from talented people. Send your CV to karriar@boxholmsost.se",
 		jobOpenings: [
 			{
-				slug: "cheese-maker-assistant",
-				title: "Cheese Maker Assistant",
+				slug: "zavd-maker-assistant",
+				title: "Zavd Maker Assistant",
 				location: "Boxholm, Sweden",
 				workType: "On-site",
 				employmentType: "Full-time",
-				shortDescription: "Join our production team and learn the art of traditional Swedish cheese making from our master cheese makers.",
+				shortDescription: "Join our production team and learn the art of traditional Swedish zavd making from our master zavd makers.",
 				featuredImage: "",
-				description: "<p>We're looking for an enthusiastic person to join our cheese-making team. This is a unique opportunity to learn traditional cheese-making techniques from experienced craftspeople.</p><p>No prior experience required - we value passion and a willingness to learn. You'll work alongside our master cheese makers, learning every aspect of artisan cheese production.</p>",
+				description: "<p>We're looking for an enthusiastic person to join our zavd-making team. This is a unique opportunity to learn traditional zavd-making techniques from experienced craftspeople.</p><p>No prior experience required - we value passion and a willingness to learn. You'll work alongside our master zavd makers, learning every aspect of artisan zavd production.</p>",
 				requirements: [
 					"Passion for food and quality craftsmanship",
 					"Ability to work early mornings",
@@ -538,13 +538,13 @@ const careersPageData = {
 					"Team player with positive attitude",
 				],
 				responsibilities: [
-					"Assist in daily cheese production",
-					"Monitor cheese aging process",
+					"Assist in daily zavd production",
+					"Monitor zavd aging process",
 					"Maintain cleanliness and hygiene standards",
 					"Help with packaging and quality control",
-					"Learn traditional cheese-making techniques",
+					"Learn traditional zavd-making techniques",
 				],
-				applyLink: "mailto:karriar@boxholmsost.se?subject=Application: Cheese Maker Assistant",
+				applyLink: "mailto:karriar@boxholmsost.se?subject=Application: Zavd Maker Assistant",
 				isActive: true,
 				publishedAt: new Date(),
 			},
@@ -554,12 +554,12 @@ const careersPageData = {
 				location: "Boxholm, Sweden",
 				workType: "On-site",
 				employmentType: "Part-time",
-				shortDescription: "Help us share our passion for artisan cheese with visitors at our farm shop.",
+				shortDescription: "Help us share our passion for artisan zavd with visitors at our farm shop.",
 				featuredImage: "",
-				description: "<p>We're seeking a friendly and knowledgeable person to join our farm shop team. You'll be the face of Boxholm Cheese, helping customers discover our products.</p><p>This role is perfect for someone who loves cheese, enjoys meeting people, and wants to work in a beautiful farm setting.</p>",
+				description: "<p>We're seeking a friendly and knowledgeable person to join our farm shop team. You'll be the face of Boxholm Zavd, helping customers discover our products.</p><p>This role is perfect for someone who loves zavd, enjoys meeting people, and wants to work in a beautiful farm setting.</p>",
 				requirements: [
 					"Excellent customer service skills",
-					"Knowledge of or interest in cheese and dairy products",
+					"Knowledge of or interest in zavd and dairy products",
 					"Swedish and English language skills",
 					"Weekend availability",
 					"Friendly and approachable personality",
@@ -568,7 +568,7 @@ const careersPageData = {
 					"Assist customers and provide product recommendations",
 					"Handle sales and cash register",
 					"Maintain shop displays and inventory",
-					"Conduct cheese tastings for visitors",
+					"Conduct zavd tastings for visitors",
 					"Support farm tour activities",
 				],
 				applyLink: "mailto:karriar@boxholmsost.se?subject=Application: Farm Shop Assistant",
@@ -582,8 +582,8 @@ const careersPageData = {
 		title: "Our Values",
 		subtitle: "What drives us every day",
 		values: [
-			"Quality without compromise - every wheel of cheese is crafted with care",
-			"Respect for tradition - honoring 130+ years of cheese-making heritage",
+			"Quality without compromise - every wheel of zavd is crafted with care",
+			"Respect for tradition - honoring 130+ years of zavd-making heritage",
 			"Sustainability - caring for our land, animals, and community",
 			"Teamwork - supporting each other like family",
 		],
@@ -601,18 +601,18 @@ const careersPageData = {
 	expertCta: {
 		badge: "Questions?",
 		title: "Want to Know More?",
-		subtitle: "Contact us if you have questions about working at Boxholm Cheese. We're happy to tell you more about life on the farm.",
+		subtitle: "Contact us if you have questions about working at Boxholm Zavd. We're happy to tell you more about life on the farm.",
 	},
 
 	seo: {
-		title: "Careers - Boxholm Cheese | Join Our Team",
-		description: "Explore career opportunities at Boxholm Cheese. Join our team of passionate cheese makers and be part of Sweden's cheese-making tradition since 1890.",
+		title: "Careers - Boxholm Zavd | Join Our Team",
+		description: "Explore career opportunities at Boxholm Zavd. Join our team of passionate zavd makers and be part of Sweden's zavd-making tradition since 1890.",
 		ogImage: "",
 	},
 };
 
 // ============================================================================
-// LEGAL PAGE DATA - Cheese/Dairy Theme
+// LEGAL PAGE DATA - Zavd/Dairy Theme
 // ============================================================================
 const legalPageData = {
 	sectionVisibility: {
@@ -627,7 +627,7 @@ const legalPageData = {
 	hero: {
 		badge: "Legal Information",
 		title: "Legal Information",
-		subtitle: "Important information about our terms, privacy policy, and your rights as a customer of Boxholm Cheese.",
+		subtitle: "Important information about our terms, privacy policy, and your rights as a customer of Boxholm Zavd.",
 	},
 
 	legalCards: [
@@ -773,8 +773,8 @@ const legalPageData = {
 	},
 
 	seo: {
-		title: "Legal Information - Boxholm Cheese | Terms & Privacy",
-		description: "Read about Boxholm Cheese's terms and conditions, privacy policy, and your GDPR rights. Transparent and trustworthy.",
+		title: "Legal Information - Boxholm Zavd | Terms & Privacy",
+		description: "Read about Boxholm Zavd's terms and conditions, privacy policy, and your GDPR rights. Transparent and trustworthy.",
 		ogImage: "",
 	},
 };
@@ -927,7 +927,7 @@ async function main() {
 		if (seedLegal) await seedLegalPage(db);
 
 		console.log("\n========================================");
-		console.log("CHEESE THEME PAGE DATA SEEDED SUCCESSFULLY!");
+		console.log("ZAVD THEME PAGE DATA SEEDED SUCCESSFULLY!");
 		console.log("========================================");
 		console.log("\nSeeded pages:");
 		if (seedAbout) console.log("  ✓ About Page");

@@ -1,14 +1,14 @@
 # WordPress Pages Mapping to New CMS
 
-This document maps all WordPress admin pages (from reference synos.se) to our new Next.js + MongoDB CMS system.
+This document maps all WordPress admin pages (from reference zavd.se) to our new Next.js + MongoDB CMS system.
 
 ## Pages Analysis from WP Admin (22 Published Pages)
 
 | # | WP Page Title | Route | CMS Status | Action Required |
 |---|---------------|-------|------------|-----------------|
-| 1 | Säljande hudterapeut till Synos Medical | Job posting | **N/A** | Blog post or job listing |
-| 2 | Synos Medical söker säljare till Malmö | Job posting | **N/A** | Blog post or job listing |
-| 3 | Säljare Synos Medical Stockholm | Job posting | **N/A** | Blog post or job listing |
+| 1 | Säljande hudterapeut till Zavd Medical | Job posting | **N/A** | Blog post or job listing |
+| 2 | Zavd Medical söker säljare till Malmö | Job posting | **N/A** | Blog post or job listing |
+| 3 | Säljare Zavd Medical Stockholm | Job posting | **N/A** | Blog post or job listing |
 | 4 | upsales | `/upsales` | **N/A** | Password protected - skip |
 | 5 | Vill du erbjuda det senaste inom microneedling på din klinik? | Landing page | **N/A** | Blog post or landing page |
 | 6 | cookiebot test | Test page | **N/A** | Skip |
@@ -16,9 +16,9 @@ This document maps all WordPress admin pages (from reference synos.se) to our ne
 | 8 | **FAQ** | `/faq` | **✅ DONE** | Seeded via seed-faq-page.ts |
 | 9 | **Kontakt** | `/kontakt` | **✅ DONE** | Seeded via seed-kontakt-page.ts |
 | 10 | **Om oss** | `/om-oss` | **✅ DONE** | Seeded via seed-about-page.ts |
-| 11 | — Varför välja Synos Medical? | `/starta-eget/varfor-valja-synos` | **🔄 NEEDS CMS** | Sub-page of Starta Eget |
+| 11 | — Varför välja Zavd Medical? | `/starta-eget/varfor-valja-zavd` | **🔄 NEEDS CMS** | Sub-page of Starta Eget |
 | 12 | — Lediga tjänster | `/om-oss/lediga-tjanster` | **🔄 NEEDS CMS** | Careers/Jobs page |
-| 13 | — — Säljare till Synos Medical Linköping | Job posting | **N/A** | Individual job listing |
+| 13 | — — Säljare till Zavd Medical Linköping | Job posting | **N/A** | Individual job listing |
 | 14 | — Juridisk information — Privacy Policy Page | `/om-oss/juridisk-information` | **✅ DONE** | Seeded via seed-legal-page.ts |
 | 15 | Nyheter och artiklar — Posts Page | `/nyheter` or `/blogg` | **✅ DONE** | Blog listing page |
 | 16 | **Starta eget** | `/starta-eget` | **🔄 NEEDS SEED** | Has model, needs data |
@@ -41,7 +41,7 @@ This document maps all WordPress admin pages (from reference synos.se) to our ne
 ### Need Data Seeding (🔄)
 
 1. **Starta Eget** (`/starta-eget`) - Model exists, needs seed script
-2. **Varför välja Synos** (`/starta-eget/varfor-valja-synos`) - Existing page, may need CMS
+2. **Varför välja Zavd** (`/starta-eget/varfor-valja-zavd`) - Existing page, may need CMS
 3. **Köpguide** (`/starta-eget/kopguide`) - Existing page, may need CMS
 4. **Miniutbildning** (`/starta-eget/miniutbildning`) - Existing page, may need CMS
 5. **Lediga tjänster** (`/om-oss/lediga-tjanster`) - Careers page
@@ -58,7 +58,7 @@ This document maps all WordPress admin pages (from reference synos.se) to our ne
 | `/kontakt` | app/(client)/kontakt/page.tsx | kontakt-page.model.ts |
 | `/faq` | app/(client)/faq/page.tsx | faq-page.model.ts |
 | `/starta-eget` | app/(client)/starta-eget/page.tsx | starta-eget-page.model.ts |
-| `/starta-eget/varfor-valja-synos` | app/(client)/starta-eget/varfor-valja-synos/page.tsx | **Static** |
+| `/starta-eget/varfor-valja-zavd` | app/(client)/starta-eget/varfor-valja-zavd/page.tsx | **Static** |
 | `/starta-eget/kopguide` | app/(client)/starta-eget/kopguide/page.tsx | **Static** |
 | `/starta-eget/miniutbildning` | app/(client)/starta-eget/miniutbildning/page.tsx | **Static** |
 | `/om-oss/lediga-tjanster` | app/(client)/om-oss/lediga-tjanster/page.tsx | careers-page.model.ts |

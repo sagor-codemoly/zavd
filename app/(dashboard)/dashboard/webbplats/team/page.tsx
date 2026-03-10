@@ -737,7 +737,7 @@ export default function TeamPageAdmin() {
 																<Input
 																	{...field}
 																	type="email"
-																	placeholder="namn@synosmedical.se"
+																	placeholder="namn@zavdmedical.se"
 																/>
 															</FormControl>
 														</FormItem>
@@ -1116,7 +1116,7 @@ export default function TeamPageAdmin() {
 															{...field}
 															value={field.value || ""}
 															type="email"
-															placeholder="info@synosmedical.se"
+															placeholder="info@zavdmedical.se"
 														/>
 													</FormControl>
 												</FormItem>
@@ -1148,7 +1148,7 @@ export default function TeamPageAdmin() {
 														<Input
 															{...field}
 															value={field.value || ""}
-															placeholder="Vårt Team - Synos Medical"
+															placeholder="Vårt Team - Zavd Medical"
 														/>
 													</FormControl>
 													<FormDescription>
@@ -1213,12 +1213,12 @@ export default function TeamPageAdmin() {
 									<CardContent>
 										<SeoPreview
 											data={{
-												title: form.watch("seo.title") || "Vårt Team - Synos Medical",
+												title: form.watch("seo.title") || "Vårt Team - Zavd Medical",
 												description: form.watch("seo.description") || "Add a description",
 												slug: "om-oss/team",
 												ogImage: form.watch("seo.ogImage") || null,
-												siteName: "Synos Medical",
-												siteUrl: "www.synos.se",
+												siteName: "Zavd Medical",
+												siteUrl: "www.zavd.se",
 											}}
 										/>
 									</CardContent>

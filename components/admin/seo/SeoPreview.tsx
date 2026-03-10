@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
 
 // Default site URL for SEO preview - used at build time
-const DEFAULT_SITE_URL = "https://www.synos.se";
+const DEFAULT_SITE_URL = "https://www.zavd.se";
 
 // Extract domain from URL for display
 function extractDomain(url: string): string {
@@ -14,7 +14,7 @@ function extractDomain(url: string): string {
 		const parsed = new URL(url);
 		return parsed.hostname.replace("www.", "");
 	} catch {
-		return "synos.se";
+		return "zavd.se";
 	}
 }
 
@@ -77,7 +77,7 @@ function GoogleMobilePreview({
 					</div>
 					<div className="min-w-0">
 						<div className="text-sm text-slate-700 font-medium truncate">
-							{data.siteName || "Synos"}
+							{data.siteName || "Zavd"}
 						</div>
 						<div className="text-xs text-slate-500 truncate">
 							{displayUrl}
@@ -147,7 +147,7 @@ function GoogleDesktopPreview({
 					</div>
 					<div className="min-w-0">
 						<div className="text-sm text-slate-800">
-							{data.siteName || "Synos"}
+							{data.siteName || "Zavd"}
 						</div>
 						<div className="text-xs text-slate-600 truncate">
 							{displayUrl}

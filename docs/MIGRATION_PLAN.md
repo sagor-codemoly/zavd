@@ -1,5 +1,5 @@
 # Migration Plan: WordPress to Next.js
-## Synos Medical Website
+## Zavd Medical Website
 
 **Date:** October 28, 2025  
 **Estimated Timeline:** 8-12 weeks  

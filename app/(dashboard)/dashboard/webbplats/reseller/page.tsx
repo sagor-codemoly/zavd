@@ -573,7 +573,7 @@ export default function ResellerPageCMS() {
 										description: form.watch("seo.description") || "Add a description",
 										slug: "become-our-reseller",
 										ogImage: form.watch("seo.ogImage") || null,
-										siteName: "Boxholm Cheese",
+										siteName: "Boxholm Zavd",
 										siteUrl: "www.example.com",
 									}}
 								/>

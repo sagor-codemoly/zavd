@@ -10,7 +10,7 @@ const testimonials = [
 		name: "Anna Svensson",
 		role: "Klinikägare, Stockholm",
 		content:
-			"Synos Medical har varit en fantastisk partner. Deras utrustning är av högsta kvalitet och supporten är exceptionell. Kan varmt rekommendera!",
+			"Zavd Medical har varit en fantastisk partner. Deras utrustning är av högsta kvalitet och supporten är exceptionell. Kan varmt rekommendera!",
 		rating: 5,
 	},
 	{

@@ -158,7 +158,7 @@ export function Features() {
 						Why Choose Us
 					</motion.div>
 					<h2 className="text-3xl font-medium tracking-tight text-secondary-dark sm:text-4xl lg:text-5xl mb-6">
-						Why Choose Synos Medical?
+						Why Choose Zavd Medical?
 					</h2>
 					<p className="text-lg text-secondary-light/80 leading-relaxed">
 						We are your reliable partner for medical equipment of the

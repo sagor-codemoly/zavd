@@ -47,7 +47,7 @@ if (!MONGODB_URI) {
 	process.exit(1);
 }
 
-// Legal page data based on Synos Medical
+// Legal page data based on Zavd Medical
 const legalPageData = {
 	sectionVisibility: {
 		hero: true,
@@ -63,7 +63,7 @@ const legalPageData = {
 		badge: "Juridisk Information",
 		title: "Villkor & Policyer",
 		subtitle:
-			"Här hittar du all juridisk information om Synos Medical AB, inklusive integritetspolicy, villkor och GDPR-information.",
+			"Här hittar du all juridisk information om Zavd Medical AB, inklusive integritetspolicy, villkor och GDPR-information.",
 	},
 
 	// Legal Cards (Quick links to different policies)
@@ -84,7 +84,7 @@ const legalPageData = {
 			icon: "FileText",
 			title: "Köpvillkor",
 			description:
-				"Våra allmänna villkor för köp av produkter och tjänster från Synos Medical.",
+				"Våra allmänna villkor för köp av produkter och tjänster från Zavd Medical.",
 			href: "#terms",
 			highlights: [
 				"Betalning",
@@ -108,7 +108,7 @@ const legalPageData = {
 
 	// Company Info
 	companyInfo: {
-		companyName: "Synos Medical AB",
+		companyName: "Zavd Medical AB",
 		organizationNumber: "556871-8075",
 		vatNumber: "SE556871807501",
 		registeredSeat: "Stockholm",
@@ -122,7 +122,7 @@ const legalPageData = {
 				address: "Brigadgatan 16, 587 58 Linköping",
 			},
 		],
-		email: "info@synosmedical.se",
+		email: "info@zavdmedical.se",
 		phone: "010-205 15 01",
 	},
 
@@ -158,12 +158,12 @@ const legalPageData = {
 			{
 				title: "6. Ansvarsbegränsning",
 				content:
-					"Synos Medical ansvarar inte för indirekta skador, produktionsbortfall eller utebliven vinst. Vårt totala ansvar är begränsat till produktens inköpspris.",
+					"Zavd Medical ansvarar inte för indirekta skador, produktionsbortfall eller utebliven vinst. Vårt totala ansvar är begränsat till produktens inköpspris.",
 			},
 			{
 				title: "7. Immateriella rättigheter",
 				content:
-					"Allt material på vår webbplats, inklusive text, bilder och logotyper, är skyddat av upphovsrätt och tillhör Synos Medical AB.",
+					"Allt material på vår webbplats, inklusive text, bilder och logotyper, är skyddat av upphovsrätt och tillhör Zavd Medical AB.",
 			},
 			{
 				title: "8. Tvister",
@@ -233,9 +233,9 @@ const legalPageData = {
 
 	// SEO
 	seo: {
-		title: "Juridisk Information | Synos Medical",
+		title: "Juridisk Information | Zavd Medical",
 		description:
-			"Juridisk information om Synos Medical AB - integritetspolicy, villkor, GDPR och cookies. All information du behöver på ett ställe.",
+			"Juridisk information om Zavd Medical AB - integritetspolicy, villkor, GDPR och cookies. All information du behöver på ett ställe.",
 		ogImage: "/storage/images/og-legal.jpg",
 	},
 };

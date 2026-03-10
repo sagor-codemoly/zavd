@@ -1,4 +1,4 @@
-# Synos Medical - Project Blueprint
+# Zavd Medical - Project Blueprint
 
 > **Purpose**: This document serves as a comprehensive technical blueprint for converting/redesigning this project into another one. It covers architecture, patterns, data flow, styling, and all technical decisions that enable a smooth transformation.
 
@@ -32,7 +32,7 @@
 
 ### What This Project Is
 
-A **Next.js 16 App Router** application for a Swedish medical equipment supplier (Synos Medical). It features:
+A **Next.js 16 App Router** application for a Swedish medical equipment supplier (Zavd Medical). It features:
 
 - **Product catalog** with categories, detailed specifications, before/after galleries
 - **Blog/News section** with categories, tags, and author pages
@@ -142,7 +142,7 @@ A **Next.js 16 App Router** application for a Swedish medical equipment supplier
 ## 3. Project Structure
 
 ```
-synos/
+zavd/
 ├── app/                          # Next.js App Router
 │   ├── (auth)/                   # Auth route group (login, register)
 │   ├── (client)/                 # Public pages route group
@@ -493,7 +493,7 @@ interface IOffice {
 | `KontaktPage` | `kontakt_page` | Contact page CMS |
 | `StartaEgetPage` | `starta_eget_page` | Start your own CMS |
 | `TrainingPage` | `training_page` | Training page CMS |
-| `VarforValjaSynosPage` | `varfor_valja_synos_page` | Why choose Synos CMS |
+| `VarforValjaZavdPage` | `varfor_valja_zavd_page` | Why choose Zavd CMS |
 | `KopguidePage` | `kopguide_page` | Buying guide CMS |
 | `MiniutbildningPage` | `miniutbildning_page` | Mini training CMS |
 
@@ -506,7 +506,7 @@ interface IOffice {
 ```typescript
 // lib/db/auth.ts
 betterAuth({
-  appName: "Synos Medical",
+  appName: "Zavd Medical",
   baseURL: process.env.BETTER_AUTH_URL,
   secret: process.env.BETTER_AUTH_SECRET,
 
@@ -526,7 +526,7 @@ betterAuth({
   },
 
   advanced: {
-    cookiePrefix: "synos",
+    cookiePrefix: "zavd",
     useSecureCookies: process.env.NODE_ENV === "production",
   },
 
@@ -1074,7 +1074,7 @@ interface IFAQQuestion {
 | FAQ | `/faq` | Frequently asked questions |
 | Contact | `/kontakt` | Contact information |
 | Starta Eget | `/starta-eget` | Start your own business |
-| Why Choose | `/starta-eget/varfor-valja-synos` | Why choose Synos |
+| Why Choose | `/starta-eget/varfor-valja-zavd` | Why choose Zavd |
 | Buying Guide | `/starta-eget/kopguide` | Buying guide |
 | Mini Training | `/starta-eget/miniutbildning` | Mini training |
 | Training | `/utbildningar` | Training programs |
@@ -1203,7 +1203,7 @@ export function generateProductJsonLd(product: IProduct) {
     image: product.productImages,
     brand: {
       "@type": "Brand",
-      name: "Synos Medical",
+      name: "Zavd Medical",
     },
     // ...
   };
@@ -1344,7 +1344,7 @@ export const mainNavNew: NavItem[] = [
     title: "Starta Eget",
     href: "/starta-eget",
     items: [
-      { title: "Varför välja Synos?", href: "/starta-eget/varfor-valja-synos" },
+      { title: "Varför välja Zavd?", href: "/starta-eget/varfor-valja-zavd" },
       { title: "Köpguide", href: "/starta-eget/kopguide" },
       { title: "Miniutbildning", href: "/starta-eget/miniutbildning" },
     ],
@@ -1555,7 +1555,7 @@ export const event = (name: string, options = {}) => {
 ```bash
 # Database
 MONGODB_URI=mongodb+srv://...
-MONGODB_DB=synos-db
+MONGODB_DB=zavd-db
 
 # Authentication
 BETTER_AUTH_SECRET=your-secret-key
@@ -1563,7 +1563,7 @@ BETTER_AUTH_URL=http://localhost:3000
 NEXT_PUBLIC_BETTER_AUTH_URL=http://localhost:3000
 
 # Site
-SITE_URL=https://synos.se
+SITE_URL=https://zavd.se
 NEXT_SERVER_ACTIONS_ENCRYPTION_KEY=your-encryption-key
 ```
 
@@ -1690,4 +1690,4 @@ pnpm seed:admin
 ---
 
 *Document generated: 2025-12-30*
-*Project: Synos Medical (synos.se)*
+*Project: Zavd Medical (zavd.se)*

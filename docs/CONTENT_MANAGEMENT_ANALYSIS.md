@@ -32,7 +32,7 @@ These pages have ALL content hardcoded in the component files. No database queri
 | 6 | Kontakt | `/kontakt` | Contact info, office locations, FAQ section |
 | 7 | FAQ | `/faq` | All 6 FAQ questions/answers (from faq-data.ts) |
 | 8 | Starta Eget | `/starta-eget` | Benefits, services, resources |
-| 9 | Varför Välja Synos | `/starta-eget/varfor-valja-synos` | Features, benefits, reasons |
+| 9 | Varför Välja Zavd | `/starta-eget/varfor-valja-zavd` | Features, benefits, reasons |
 | 10 | Köpguide | `/starta-eget/kopguide` | Guide steps, checklist items |
 | 11 | Miniutbildning | `/starta-eget/miniutbildning` | Training info, benefits, learning outcomes |
 | 12 | Utbildningar | `/utbildningar` | Training programs, process steps, benefits |
@@ -106,7 +106,7 @@ Static Content:
 ```
 Static Content:
 ├── Hero Section
-│   ├── Title: "Om Synos Medical"
+│   ├── Title: "Om Zavd Medical"
 │   └── Description text
 ├── Company Description
 │   ├── "Professionell leverantör..."
@@ -119,7 +119,7 @@ Static Content:
 │   └── Value 4: Partnerskap
 ├── Contact Information
 │   ├── Phone: 010-205 15 01
-│   ├── Email: info@synosmedical.se
+│   ├── Email: info@zavdmedical.se
 │   └── Addresses (Stockholm, Linköping)
 └── CTA Section
 ```
@@ -183,7 +183,7 @@ Static Content:
 │   └── Description
 ├── Contact Methods (3 cards)
 │   ├── Telefon: 010-205 15 01
-│   ├── Email: info@synosmedical.se
+│   ├── Email: info@zavdmedical.se
 │   └── Besök oss
 ├── Office Locations
 │   ├── Stockholm: Turebergsvägen 5, 191 47 Sollentuna
@@ -214,7 +214,7 @@ Static Content:
 │   ├── Service item descriptions
 │   └── Feature lists
 ├── Resources Grid (3 cards)
-│   ├── Varför välja Synos?
+│   ├── Varför välja Zavd?
 │   ├── Köpguide
 │   └── Miniutbildning
 └── Contact Form Section
@@ -242,7 +242,7 @@ Static Content:
 │   └── Ongoing support description
 └── Related Resources (links)
 
-MISSING: Button to synos.academy (per PDF requirements)
+MISSING: Button to zavd.academy (per PDF requirements)
 ```
 
 ### 8. Köpguide (`/starta-eget/kopguide`)

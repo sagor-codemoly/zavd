@@ -338,9 +338,9 @@ const KontaktPageSchema = new Schema<IKontaktPage>(
 		seo: {
 			type: KontaktPageSeoSchema,
 			default: {
-				title: "Contact Us - Synos Medical",
+				title: "Contact Us - Zavd Medical",
 				description:
-					"Contact Synos Medical for questions about medical equipment, training or starting your own clinic. We're located in Stockholm and Linköping.",
+					"Contact Zavd Medical for questions about medical equipment, training or starting your own clinic. We're located in Stockholm and Linköping.",
 			},
 		},
 	},

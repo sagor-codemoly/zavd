@@ -280,7 +280,7 @@ class FormSubmissionService {
 		const sanitizedData = {
 			type: "callback_request" as FormSubmissionType,
 			fullName: "Callback Request",
-			email: "callback@synos.se",
+			email: "callback@zavd.se",
 			phone: this.sanitizeInput(validData.phone),
 			countryCode: validData.countryCode,
 			countryName: "Sweden",

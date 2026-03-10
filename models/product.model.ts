@@ -41,7 +41,7 @@ export interface ISeo {
 
 export interface IHeroSettings {
 	themeColor?: string; // Hex color like "#4A5568"
-	badge?: string; // e.g., "2025 WORLD CHEESE AWARDS"
+	badge?: string; // e.g., "2025 WORLD ZAVD AWARDS"
 	ctaText?: string; // e.g., "WHERE TO BUY"
 	ctaUrl?: string; // e.g., "/contact"
 }

@@ -1,6 +1,6 @@
 # Debugging Guide - User Data Fetching
 
-**Project:** Synos Medical
+**Project:** Zavd Medical
 **Date:** December 3, 2025
 **Status:** 🔧 **DEBUGGING IN PROGRESS**
 
@@ -133,7 +133,7 @@ No active session - user needs to login
 ```
 Better Auth creates session
 Session stored in database
-Cookies set: synos.session_token
+Cookies set: zavd.session_token
 Redirect to /dashboard
 ```
 
@@ -197,7 +197,7 @@ Check Network tab → /api/user/me response:
 ### Check User Exists
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.user.findOne({ email: 'refayth.codemoly@gmail.com' })
 "
 ```
@@ -205,7 +205,7 @@ mongosh mongodb://127.0.0.1:27017/synos-db --eval "
 ### Check Profile Exists
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   const user = db.user.findOne({ email: 'refayth.codemoly@gmail.com' });
   db.profiles.findOne({ userId: user._id })
 "
@@ -214,7 +214,7 @@ mongosh mongodb://127.0.0.1:27017/synos-db --eval "
 ### Check Session Exists
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.session.find({ userId: ObjectId('692fc2b5163b6b4edc683e23') })
 "
 ```
@@ -222,7 +222,7 @@ mongosh mongodb://127.0.0.1:27017/synos-db --eval "
 ### Verify All Links
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   const user = db.user.findOne();
   const profile = db.profiles.findOne({ userId: user._id });
   const session = db.session.findOne({ userId: user._id });
@@ -281,7 +281,7 @@ Look for the emoji-marked logs in your terminal:
 ```bash
 # Quick verification
 mongosh --eval "
-  use synos-db;
+  use zavd-db;
   print('User count:', db.user.countDocuments());
   print('Profile count:', db.profiles.countDocuments());
   print('Session count:', db.session.countDocuments());
@@ -350,7 +350,7 @@ mongosh --eval "
 ### One-Command Check All
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   const user = db.user.findOne();
   const profile = db.profiles.findOne({ userId: user._id });
   const session = db.session.findOne({ userId: user._id });
@@ -369,7 +369,7 @@ mongosh mongodb://127.0.0.1:27017/synos-db --eval "
 ### Reset Everything
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.user.deleteMany({});
   db.profiles.deleteMany({});
   db.session.deleteMany({});

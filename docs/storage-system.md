@@ -112,7 +112,7 @@ All API routes require authentication via Better Auth session.
 ```http
 POST /api/storage/upload
 Content-Type: multipart/form-data
-Cookie: synos.session_token=...
+Cookie: zavd.session_token=...
 
 FormData:
   file: File (required)
@@ -143,7 +143,7 @@ FormData:
 ```http
 DELETE /api/storage/delete
 Content-Type: application/json
-Cookie: synos.session_token=...
+Cookie: zavd.session_token=...
 
 {
   "filename": "my-product-image.jpg",
@@ -164,7 +164,7 @@ Cookie: synos.session_token=...
 
 ```http
 GET /api/storage/list?folder=images&page=1&limit=20
-Cookie: synos.session_token=...
+Cookie: zavd.session_token=...
 ```
 
 **Response:**
@@ -786,7 +786,7 @@ import { ... } from "@/lib/storage";
 
 ### "Unauthorized" errors
 
-Ensure the user is logged in via Better Auth. The session cookie `synos.session_token` must be present.
+Ensure the user is logged in via Better Auth. The session cookie `zavd.session_token` must be present.
 
 ### MIME type validation fails
 

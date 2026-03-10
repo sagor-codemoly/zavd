@@ -186,8 +186,8 @@ const ResellerPageSchema = new Schema<IResellerPage>(
 		seo: {
 			type: ResellerPageSeoSchema,
 			default: {
-				title: "Bli Återförsäljare - Boxholm Cheese",
-				description: "Ansök om att bli återförsäljare för Boxholm Cheese. Samarbeta med oss och erbjud våra premium ostprodukter till dina kunder.",
+				title: "Bli Återförsäljare - Boxholm Zavd",
+				description: "Ansök om att bli återförsäljare för Boxholm Zavd. Samarbeta med oss och erbjud våra premium ostprodukter till dina kunder.",
 			},
 		},
 	},

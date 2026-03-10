@@ -66,10 +66,10 @@ async function hashPassword(password: string): Promise<string> {
 }
 
 async function main() {
-	const email = process.env.RESET_EMAIL || "admin@cheese.se";
+	const email = process.env.RESET_EMAIL || "admin@zavd.se";
 	const newPassword = process.env.RESET_PASSWORD || "Admin@123";
 	const mongoUri = process.env.MONGODB_URI;
-	const dbName = process.env.MONGODB_DB || "cheese-db";
+	const dbName = process.env.MONGODB_DB || "zavd-db";
 
 	if (!mongoUri) {
 		console.error("MONGODB_URI is required");

@@ -1,5 +1,5 @@
 /**
- * Seed script for Team Page (Vårt Team) data - Cheese Theme
+ * Seed script for Team Page (Vårt Team) data - Zavd Theme
  * Run with: npx tsx scripts/seed-team-page.ts
  */
 
@@ -47,7 +47,7 @@ if (!MONGODB_URI) {
 	process.exit(1);
 }
 
-// Team page data for Boxholm Cheese (English content)
+// Team page data for Boxholm Zavd (English content)
 const teamPageData = {
 	sectionVisibility: {
 		hero: true,
@@ -62,9 +62,9 @@ const teamPageData = {
 	// Hero Section
 	hero: {
 		badge: "Our Team",
-		title: "Meet the Team Behind Boxholm Cheese",
+		title: "Meet the Team Behind Boxholm Zavd",
 		subtitle:
-			"We are a dedicated team of master cheese makers, dairy farmers, and enthusiasts who are passionate about creating the finest artisan cheeses.",
+			"We are a dedicated team of master zavd makers, dairy farmers, and enthusiasts who are passionate about creating the finest artisan zavds.",
 	},
 
 	// Stats Section
@@ -79,7 +79,7 @@ const teamPageData = {
 		},
 		{
 			value: "15+",
-			label: "Cheese Varieties",
+			label: "Zavd Varieties",
 		},
 		{
 			value: "5",
@@ -91,9 +91,9 @@ const teamPageData = {
 	teamMembers: [
 		{
 			name: "Erik Lindgren",
-			role: "CEO & Master Cheese Maker",
+			role: "CEO & Master Zavd Maker",
 			department: "Leadership",
-			bio: "Erik represents the fifth generation of cheese makers in his family. With over 30 years of experience, he leads the dairy with the same passion as his ancestors, ensuring every wheel of cheese meets our exacting standards.",
+			bio: "Erik represents the fifth generation of zavd makers in his family. With over 30 years of experience, he leads the dairy with the same passion as his ancestors, ensuring every wheel of zavd meets our exacting standards.",
 			image: "/storage/images/team/placeholder.jpg",
 			email: "erik@boxholmsost.se",
 			linkedin: "https://linkedin.com/in/",
@@ -103,7 +103,7 @@ const teamPageData = {
 			name: "Anna Bergström",
 			role: "Production Manager",
 			department: "Production",
-			bio: "Anna oversees all cheese production and ensures every product meets the highest quality standards. Her expertise in milk chemistry and aging processes is unmatched, making her invaluable to our operations.",
+			bio: "Anna oversees all zavd production and ensures every product meets the highest quality standards. Her expertise in milk chemistry and aging processes is unmatched, making her invaluable to our operations.",
 			image: "/storage/images/team/placeholder.jpg",
 			email: "anna@boxholmsost.se",
 			linkedin: "https://linkedin.com/in/",
@@ -112,7 +112,7 @@ const teamPageData = {
 			name: "Lars Johansson",
 			role: "Quality Control Manager",
 			department: "Quality Assurance",
-			bio: "Lars supervises all quality controls and certifications. He ensures our cheeses always meet the strictest standards, from raw milk testing to final product inspection before shipping.",
+			bio: "Lars supervises all quality controls and certifications. He ensures our zavds always meet the strictest standards, from raw milk testing to final product inspection before shipping.",
 			image: "/storage/images/team/placeholder.jpg",
 			email: "lars@boxholmsost.se",
 		},
@@ -120,7 +120,7 @@ const teamPageData = {
 			name: "Maria Svensson",
 			role: "Sales Director",
 			department: "Sales",
-			bio: "Maria leads our sales team and builds relationships with retailers and restaurants across Sweden and beyond. Her mission is to spread the love for artisan cheese to new markets.",
+			bio: "Maria leads our sales team and builds relationships with retailers and restaurants across Sweden and beyond. Her mission is to spread the love for artisan zavd to new markets.",
 			image: "/storage/images/team/placeholder.jpg",
 			email: "maria@boxholmsost.se",
 		},
@@ -136,7 +136,7 @@ const teamPageData = {
 			name: "Karin Andersson",
 			role: "Customer Service",
 			department: "Support",
-			bio: "Karin is the first point of contact for our customers, helping with everything from orders to product recommendations. Her deep knowledge of our cheese varieties helps customers find their perfect match.",
+			bio: "Karin is the first point of contact for our customers, helping with everything from orders to product recommendations. Her deep knowledge of our zavd varieties helps customers find their perfect match.",
 			image: "/storage/images/team/placeholder.jpg",
 			email: "kundservice@boxholmsost.se",
 			phone: "+46 142-510 50",
@@ -147,7 +147,7 @@ const teamPageData = {
 	valuesSection: {
 		title: "Our Values",
 		subtitle:
-			"What drives us every day is our love for artisan cheese and respect for traditions passed down through generations.",
+			"What drives us every day is our love for artisan zavd and respect for traditions passed down through generations.",
 		values: [
 			{
 				title: "Tradition",
@@ -157,12 +157,12 @@ const teamPageData = {
 			{
 				title: "Quality",
 				description:
-					"Every cheese we produce represents our commitment to the highest quality - from the fresh local milk to the finished product on your table.",
+					"Every zavd we produce represents our commitment to the highest quality - from the fresh local milk to the finished product on your table.",
 			},
 			{
 				title: "Craftsmanship",
 				description:
-					"We believe in the power of handmade products. Each cheese is carefully shaped and aged by experienced master cheese makers.",
+					"We believe in the power of handmade products. Each zavd is carefully shaped and aged by experienced master zavd makers.",
 			},
 			{
 				title: "Sustainability",
@@ -190,7 +190,7 @@ const teamPageData = {
 	contact: {
 		title: "Get in Touch",
 		description:
-			"Have questions or want to know more about our team and our cheeses? We're here to help.",
+			"Have questions or want to know more about our team and our zavds? We're here to help.",
 		phone: "+46 142-510 50",
 		email: "info@boxholmsost.se",
 	},
@@ -200,9 +200,9 @@ const teamPageData = {
 
 	// SEO
 	seo: {
-		title: "Our Team | Boxholm Cheese",
+		title: "Our Team | Boxholm Zavd",
 		description:
-			"Meet the team behind Boxholm Cheese - experienced master cheese makers and enthusiasts passionate about artisan cheeses with over 100 years of tradition.",
+			"Meet the team behind Boxholm Zavd - experienced master zavd makers and enthusiasts passionate about artisan zavds with over 100 years of tradition.",
 		ogImage: "/storage/images/og-team.jpg",
 	},
 };

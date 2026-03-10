@@ -148,7 +148,7 @@ export async function generateMetadata({
 		category.seo?.description ||
 		(category.description
 			? stripHtml(category.description).slice(0, 160)
-			: `Explore our selection of ${category.name.toLowerCase()}. Premium artisan cheese crafted with tradition.`);
+			: `Explore our selection of ${category.name.toLowerCase()}. Premium artisan zavd crafted with tradition.`);
 
 	// OG image priority: seo.ogImage > category.image
 	const ogImage = category.seo?.ogImage || category.image;
@@ -306,7 +306,7 @@ function CategorySidebar({
 				</CardHeader>
 				<CardContent className="space-y-3">
 					<p className="text-sm text-foreground">
-						Our experts can help you find the perfect cheese for your needs.
+						Our experts can help you find the perfect zavd for your needs.
 					</p>
 					<Link
 						href="/contact-us"

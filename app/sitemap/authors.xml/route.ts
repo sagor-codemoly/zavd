@@ -23,8 +23,8 @@ export const revalidate = 3600;
  * These are the exact authors from author-sitemap.xml
  */
 const AUTHORS = [
-	{ name: "Agnes", slug: "agnessynos-se" },
-	{ name: "Andreas", slug: "andreassynos-se" },
+	{ name: "Agnes", slug: "agneszavd-se" },
+	{ name: "Andreas", slug: "andreaszavd-se" },
 ];
 
 /**

@@ -241,7 +241,7 @@ class SiteSettingsRepository {
 		const settings = await this.get();
 		return (
 			settings.branding || {
-				logoUrl: "/storage/synos-logo-beige-glow.svg",
+				logoUrl: "/storage/zavd-logo-beige-glow.svg",
 			}
 		);
 	}

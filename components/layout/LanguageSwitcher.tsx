@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
 import { Globe, Check, ChevronDown } from "lucide-react";
 import {
@@ -28,6 +28,7 @@ interface LanguageSwitcherProps {
 export function LanguageSwitcher({ variant = "default", theme = "dark" }: LanguageSwitcherProps) {
 	const locale = useLocale() as Locale;
 	const pathname = usePathname();
+	const router = useRouter();
 	const [isPending, startTransition] = useTransition();
 
 	const switchLocale = (newLocale: Locale) => {
@@ -60,8 +61,7 @@ export function LanguageSwitcher({ variant = "default", theme = "dark" }: Langua
 			// Set cookie for locale persistence
 			document.cookie = `NEXT_LOCALE=${newLocale};path=/;max-age=31536000`;
 
-			// Navigate with full page reload for clean state
-			window.location.href = newUrl;
+			router.push(newUrl);
 		});
 	};
 

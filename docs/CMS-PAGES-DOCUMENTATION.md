@@ -1,4 +1,4 @@
-# Synos CMS Pages Documentation
+# Zavd CMS Pages Documentation
 
 > Comprehensive documentation of all pages, their CMS integration status, and MongoDB models.
 
@@ -83,7 +83,7 @@
 | `/starta-eget` | Main Page | ✅ CMS | `StartaEgetPage` | `/dashboard/webbplats/starta-eget` |
 | `/starta-eget/kopguide` | Buying Guide | ⚠️ Needs Review | - | - |
 | `/starta-eget/miniutbildning` | Mini Training | ⚠️ Needs Review | - | - |
-| `/starta-eget/varfor-valja-synos` | Why Choose Synos | ⚠️ Needs Review | - | - |
+| `/starta-eget/varfor-valja-zavd` | Why Choose Zavd | ⚠️ Needs Review | - | - |
 
 ### Authentication Pages (Not CMS)
 
@@ -185,40 +185,40 @@ All dashboard pages are admin-only interfaces with forms to manage CMS content.
 
 ## Pages Needing CMS Data
 
-The following singleton page models need seed data from the reference website (synos.se):
+The following singleton page models need seed data from the reference website (zavd.se):
 
 ### Priority 1 - Main Pages
 
 | Page | Model | Reference URL | Status |
 |------|-------|---------------|--------|
-| Home | `HomePage` | https://www.synos.se/ | ✅ DONE |
-| About | `AboutPage` | https://www.synos.se/om-oss/ | ❌ Needs data |
-| Contact | `KontaktPage` | https://www.synos.se/kontakt/ | ❌ Needs data |
-| FAQ | `FAQPage` | https://www.synos.se/faq/ | ❌ Needs data |
+| Home | `HomePage` | https://www.zavd.se/ | ✅ DONE |
+| About | `AboutPage` | https://www.zavd.se/om-oss/ | ❌ Needs data |
+| Contact | `KontaktPage` | https://www.zavd.se/kontakt/ | ❌ Needs data |
+| FAQ | `FAQPage` | https://www.zavd.se/faq/ | ❌ Needs data |
 
 ### Priority 2 - Information Pages
 
 | Page | Model | Reference URL | Status |
 |------|-------|---------------|--------|
-| Privacy | `PrivacyPage` | https://www.synos.se/integritetspolicy/ | ❌ Needs data |
-| Legal | `LegalPage` | https://www.synos.se/juridisk-information/ | ❌ Needs data |
-| Team | `TeamPage` | https://www.synos.se/om-oss/team/ | ❌ Needs data |
+| Privacy | `PrivacyPage` | https://www.zavd.se/integritetspolicy/ | ❌ Needs data |
+| Legal | `LegalPage` | https://www.zavd.se/juridisk-information/ | ❌ Needs data |
+| Team | `TeamPage` | https://www.zavd.se/om-oss/team/ | ❌ Needs data |
 
 ### Priority 3 - Service Pages
 
 | Page | Model | Reference URL | Status |
 |------|-------|---------------|--------|
-| Training | `TrainingPage` | https://www.synos.se/utbildningar/ | ❌ Needs data |
-| Careers | `CareersPage` | https://www.synos.se/lediga-tjanster/ | ❌ Needs data |
-| Start Own | `StartaEgetPage` | https://www.synos.se/starta-eget/ | ❌ Needs data |
+| Training | `TrainingPage` | https://www.zavd.se/utbildningar/ | ❌ Needs data |
+| Careers | `CareersPage` | https://www.zavd.se/lediga-tjanster/ | ❌ Needs data |
+| Start Own | `StartaEgetPage` | https://www.zavd.se/starta-eget/ | ❌ Needs data |
 
 ### Content to Import
 
 | Content Type | Model | Reference URL | Status |
 |--------------|-------|---------------|--------|
-| Products | `Product` | https://www.synos.se/klinikutrustning/ | ❌ Needs data |
-| Categories | `Category` | https://www.synos.se/klinikutrustning/ | ❌ Needs data |
-| Blog Posts | `BlogPost` | https://www.synos.se/blogg/ | ❌ Needs data |
+| Products | `Product` | https://www.zavd.se/klinikutrustning/ | ❌ Needs data |
+| Categories | `Category` | https://www.zavd.se/klinikutrustning/ | ❌ Needs data |
+| Blog Posts | `BlogPost` | https://www.zavd.se/blogg/ | ❌ Needs data |
 
 ---
 

@@ -515,7 +515,7 @@ export default function SettingsPage() {
 												<FormItem>
 													<FormLabel>Company Name</FormLabel>
 													<FormControl>
-														<Input placeholder="Synos Medical AB" {...field} />
+														<Input placeholder="Zavd Medical AB" {...field} />
 													</FormControl>
 													<FormMessage />
 												</FormItem>
@@ -588,7 +588,7 @@ export default function SettingsPage() {
 														Contact Email
 													</FormLabel>
 													<FormControl>
-														<Input placeholder="info@synos.se" {...field} />
+														<Input placeholder="info@zavd.se" {...field} />
 													</FormControl>
 													<FormMessage />
 												</FormItem>
@@ -601,7 +601,7 @@ export default function SettingsPage() {
 												<FormItem>
 													<FormLabel>No-Reply Email (Optional)</FormLabel>
 													<FormControl>
-														<Input placeholder="noreply@synos.se" {...field} />
+														<Input placeholder="noreply@zavd.se" {...field} />
 													</FormControl>
 													<FormMessage />
 												</FormItem>
@@ -860,7 +860,7 @@ export default function SettingsPage() {
 												<FormLabel>Facebook</FormLabel>
 												<FormControl>
 													<Input
-														placeholder="https://facebook.com/synosmedical"
+														placeholder="https://facebook.com/zavdmedical"
 														{...field}
 													/>
 												</FormControl>
@@ -876,7 +876,7 @@ export default function SettingsPage() {
 												<FormLabel>Instagram</FormLabel>
 												<FormControl>
 													<Input
-														placeholder="https://instagram.com/synosmedical"
+														placeholder="https://instagram.com/zavdmedical"
 														{...field}
 													/>
 												</FormControl>
@@ -892,7 +892,7 @@ export default function SettingsPage() {
 												<FormLabel>LinkedIn</FormLabel>
 												<FormControl>
 													<Input
-														placeholder="https://linkedin.com/company/synos-medical"
+														placeholder="https://linkedin.com/company/zavd-medical"
 														{...field}
 													/>
 												</FormControl>
@@ -908,7 +908,7 @@ export default function SettingsPage() {
 												<FormLabel>Twitter / X</FormLabel>
 												<FormControl>
 													<Input
-														placeholder="https://twitter.com/synosmedical"
+														placeholder="https://twitter.com/zavdmedical"
 														{...field}
 													/>
 												</FormControl>
@@ -924,7 +924,7 @@ export default function SettingsPage() {
 												<FormLabel>YouTube</FormLabel>
 												<FormControl>
 													<Input
-														placeholder="https://youtube.com/@synosmedical"
+														placeholder="https://youtube.com/@zavdmedical"
 														{...field}
 													/>
 												</FormControl>
@@ -1039,7 +1039,7 @@ export default function SettingsPage() {
 												<FormItem>
 													<FormLabel>Twitter Handle</FormLabel>
 													<FormControl>
-														<Input placeholder="@synosmedical" {...field} />
+														<Input placeholder="@zavdmedical" {...field} />
 													</FormControl>
 													<FormDescription>
 														Used for Twitter card attribution.
@@ -1087,15 +1087,15 @@ export default function SettingsPage() {
 											data={{
 												title:
 													form.watch("seo.siteName") ||
-													"Synos Medical",
+													"Zavd Medical",
 												description:
 													form.watch("seo.siteDescription") ||
 													"Add a site description",
 												slug: "",
 												ogImage: form.watch("seo.ogImage") || null,
 												siteName:
-													form.watch("seo.siteName") || "Synos Medical",
-												siteUrl: "www.synos.se",
+													form.watch("seo.siteName") || "Zavd Medical",
+												siteUrl: "www.zavd.se",
 											}}
 										/>
 									</CardContent>

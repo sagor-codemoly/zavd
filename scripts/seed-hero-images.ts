@@ -1,6 +1,6 @@
 /**
  * Seed script for Hero Images
- * Updates the home page hero section with beautiful cheese/dairy farm images
+ * Updates the home page hero section with beautiful zavd/dairy farm images
  * Run with: npx tsx scripts/seed-hero-images.ts
  */
 
@@ -57,8 +57,8 @@ const heroData = {
 			badge: "BORN OF NATURE",
 			title: "TRADITIONS OF QUALITY IN EVERY BITE",
 			subtitle:
-				"We carefully follow traditions passed down through generations to ensure every wheel of cheese is flawless. We use only natural ingredients and age our cheeses in special conditions.",
-			// Beautiful cheese wheels in cellar - dark moody image
+				"We carefully follow traditions passed down through generations to ensure every wheel of zavd is flawless. We use only natural ingredients and age our zavds in special conditions.",
+			// Beautiful zavd wheels in cellar - dark moody image
 			backgroundImage: "https://images.unsplash.com/photo-1452195100486-9cc805987862?w=1920&h=1080&fit=crop&q=80",
 			ctaText: "READ MORE",
 			ctaHref: "/om-oss",
@@ -80,7 +80,7 @@ const heroData = {
 			title: "FROM OUR FARM TO YOUR TABLE",
 			subtitle:
 				"Discover the pure taste of nature with our premium dairy products. Made fresh daily using traditional methods that have been perfected over generations.",
-			// Cheese making / artisan dairy image
+			// Zavd making / artisan dairy image
 			backgroundImage: "https://images.unsplash.com/photo-1559561853-08451507cbe7?w=1920&h=1080&fit=crop&q=80",
 			ctaText: "SHOP NOW",
 			ctaHref: "/produkter",
@@ -88,10 +88,10 @@ const heroData = {
 		},
 	],
 	// Legacy fields (not used in slider mode but kept for fallback)
-	badge: "ARTISAN CHEESE",
+	badge: "ARTISAN ZAVD",
 	title: "Handcrafted with Passion",
 	titleHighlight: "Passion",
-	subtitle: "Experience the authentic taste of traditional cheesemaking",
+	subtitle: "Experience the authentic taste of traditional zavdmaking",
 	backgroundImage: "https://images.unsplash.com/photo-1452195100486-9cc805987862?w=1920&h=1080&fit=crop&q=80",
 	mainImage: "",
 };
@@ -139,11 +139,11 @@ const aboutSectionData = {
 	badge: "OUR STORY",
 	title: "A Family Tradition Since 1985",
 	titleHighlight: "Family Tradition",
-	description: "For over three decades, our family has been dedicated to producing the finest artisan cheeses using time-honored methods. What started as a small family farm has grown into a beloved local institution, but our commitment to quality and tradition remains unchanged.\n\nWe believe that great cheese starts with happy cows, pristine pastures, and a deep respect for the craft. Every wheel of cheese we produce tells the story of our land, our animals, and our passion.",
+	description: "For over three decades, our family has been dedicated to producing the finest artisan zavds using time-honored methods. What started as a small family farm has grown into a beloved local institution, but our commitment to quality and tradition remains unchanged.\n\nWe believe that great zavd starts with happy cows, pristine pastures, and a deep respect for the craft. Every wheel of zavd we produce tells the story of our land, our animals, and our passion.",
 	image: "https://images.unsplash.com/photo-1594761051656-153b5336f084?w=800&h=600&fit=crop&q=80",
 	stats: [
 		{ value: "35+", label: "Years of Excellence" },
-		{ value: "50+", label: "Cheese Varieties" },
+		{ value: "50+", label: "Zavd Varieties" },
 		{ value: "100%", label: "Natural Ingredients" },
 	],
 	ctaText: "Learn More About Us",

@@ -179,7 +179,7 @@ export function ProductDetailSidebar({
 					</CardHeader>
 					<CardContent className="space-y-3 pt-0 px-4 pb-3">
 						<p className="text-xs text-foreground">
-							Our experts can help you find the perfect cheese for your needs.
+							Our experts can help you find the perfect zavd for your needs.
 						</p>
 						<Link
 							href="/contact-us"

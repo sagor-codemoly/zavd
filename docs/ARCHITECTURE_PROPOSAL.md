@@ -1,6 +1,6 @@
 # Next.js Architecture Proposal
 
-## Synos Medical Website Migration
+## Zavd Medical Website Migration
 
 **Date:** October 28, 2025  
 **Framework:** Next.js 16 with App Router  
@@ -11,7 +11,7 @@
 ## 1. FOLDER STRUCTURE
 
 ```
-synos-se/
+zavd-se/
 ├── app/                          # Next.js App Router
 │   ├── (marketing)/              # Route group for marketing pages
 │   │   ├── layout.tsx            # Marketing layout with nav/footer
@@ -25,7 +25,7 @@ synos-se/
 │   │   │   └── page.tsx
 │   │   ├── starta-eget/          # Start your business
 │   │   │   ├── page.tsx
-│   │   │   ├── varfor-valja-synos/
+│   │   │   ├── varfor-valja-zavd/
 │   │   │   ├── kopguide/
 │   │   │   └── miniutbildning/
 │   │   ├── utbildningar/         # Training
@@ -454,8 +454,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendContactEmail(data: ContactFormData) {
 	return await resend.emails.send({
-		from: "kontakt@synos.se",
-		to: "info@synos.se",
+		from: "kontakt@zavd.se",
+		to: "info@zavd.se",
 		subject: `Kontaktformulär: ${data.subject}`,
 		html: renderContactEmailTemplate(data),
 	});
@@ -557,11 +557,11 @@ console.logapp / layout.tsx;
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://www.synos.se"),
+	metadataBase: new URL("https://www.zavd.se"),
 	title: {
 		default:
-			"Synos Medical - Sveriges ledande leverantör av MDR-certifierad klinikutrustning",
-		template: "%s | Synos Medical",
+			"Zavd Medical - Sveriges ledande leverantör av MDR-certifierad klinikutrustning",
+		template: "%s | Zavd Medical",
 	},
 	description: "Ledande leverantör av MDR-certifierad klinikutrustning...",
 	keywords: [
@@ -573,8 +573,8 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "sv_SE",
-		url: "https://www.synos.se",
-		siteName: "Synos Medical",
+		url: "https://www.zavd.se",
+		siteName: "Zavd Medical",
 	},
 	twitter: {
 		card: "summary_large_image",
@@ -590,9 +590,9 @@ export function OrganizationSchema() {
 	const schema = {
 		"@context": "https://schema.org",
 		"@type": "Organization",
-		name: "Synos Medical AB",
-		url: "https://www.synos.se",
-		logo: "https://www.synos.se/logo.png",
+		name: "Zavd Medical AB",
+		url: "https://www.zavd.se",
+		logo: "https://www.zavd.se/logo.png",
 		contactPoint: {
 			"@type": "ContactPoint",
 			telephone: "+46-10-205-15-01",
@@ -632,19 +632,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
 	return [
 		{
-			url: "https://www.synos.se",
+			url: "https://www.zavd.se",
 			lastModified: new Date(),
 			changeFrequency: "weekly",
 			priority: 1,
 		},
 		...products.map((product) => ({
-			url: `https://www.synos.se/produkter/${product.category}/${product.slug}`,
+			url: `https://www.zavd.se/produkter/${product.category}/${product.slug}`,
 			lastModified: product.updatedAt,
 			changeFrequency: "monthly" as const,
 			priority: 0.8,
 		})),
 		...articles.map((article) => ({
-			url: `https://www.synos.se/nyheter/${article.slug}`,
+			url: `https://www.zavd.se/nyheter/${article.slug}`,
 			lastModified: article.updatedAt,
 			changeFrequency: "monthly" as const,
 			priority: 0.6,
@@ -773,7 +773,7 @@ console.logvercel.json
 
 ```bash
 # .env.local
-NEXT_PUBLIC_SITE_URL=https://www.synos.se
+NEXT_PUBLIC_SITE_URL=https://www.zavd.se
 NEXT_PUBLIC_GTM_ID=GTM-PQ42DDZ
 NEXT_PUBLIC_FB_PIXEL_ID=2886484504973538
 NEXT_PUBLIC_GOOGLE_MAPS_KEY=your_key_here

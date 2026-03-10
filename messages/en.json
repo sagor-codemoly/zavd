@@ -94,18 +94,22 @@
 		"description": "This page is currently being built. Please check back soon."
 	},
 	"footer": {
-		"description": "Premium artisan zavd crafted with tradition and passion.",
-		"quickLinks": "Quick Links",
+		"description": "Central Association of Assyrian Associations in Germany and European Sections.",
+		"quickLinks": "About ZAVD",
+		"usefulLinks": "Offers & Advice",
+		"projekte": "Projects",
 		"contact": "Contact",
 		"followUs": "Follow Us",
-		"newsletter": "Newsletter",
-		"newsletterText": "Subscribe to our newsletter for updates and special offers.",
-		"emailPlaceholder": "Enter your email",
-		"subscribeButton": "Subscribe",
+		"socialDescription": "Support our work in Germany or donate for war victims from Syria.",
 		"copyright": "All rights reserved.",
 		"privacyPolicy": "Privacy Policy",
-		"termsOfService": "Terms of Service",
-		"cookiePolicy": "Cookie Policy"
+		"termsOfService": "Legal Notice",
+		"cookiePolicy": "Cookie Policy",
+		"newsletterTitle": "Subscribe Newsletter",
+		"newsletterDesc": "Subscribe to our newsletter to get the latest news and updates!",
+		"emailPlaceholder": "Your email...",
+		"subscribeButton": "Subscribe",
+		"privacyNote": "* Your email is kept private"
 	},
 	"home": {
 		"hero": {

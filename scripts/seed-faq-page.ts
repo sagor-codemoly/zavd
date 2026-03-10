@@ -1,5 +1,5 @@
 /**
- * Seed script for FAQ Page data (Cheese Theme)
+ * Seed script for FAQ Page data (Zavd Theme)
  * Run with: npx tsx scripts/seed-faq-page.ts
  */
 
@@ -47,7 +47,7 @@ if (!MONGODB_URI) {
 	process.exit(1);
 }
 
-// FAQ page data for Boxholm Cheese
+// FAQ page data for Boxholm Zavd
 const faqPageData = {
 	sectionVisibility: {
 		hero: true,

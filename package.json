@@ -1,5 +1,5 @@
 {
-  "name": "synos-se",
+  "name": "zavd-se",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "seed:admin": "npx tsx scripts/seed-admin.ts",
+    "seed:settings": "npx tsx scripts/seed-zavd-settings.ts",
     "seed:quality": "npx tsx scripts/seed-quality-page.ts",
     "fix:product-urls": "npx tsx scripts/fix-product-urls.ts"
   },

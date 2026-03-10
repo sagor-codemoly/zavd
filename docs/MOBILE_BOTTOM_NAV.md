@@ -2,13 +2,13 @@
 
 ## Overview
 
-A mobile-only bottom navigation bar that provides quick access to the main sections of the Synos Medical website. The navigation is fixed at the bottom of the viewport and only appears on mobile devices (screens < 768px).
+A mobile-only bottom navigation bar that provides quick access to the main sections of the Zavd Medical website. The navigation is fixed at the bottom of the viewport and only appears on mobile devices (screens < 768px).
 
 ## Features
 
 ### ✅ Design Requirements Met
 
--  **Synos Medical Design System**: Uses the warm beige/tan color palette with teal accent (#39898F)
+-  **Zavd Medical Design System**: Uses the warm beige/tan color palette with teal accent (#39898F)
 -  **Mobile-Only Display**: Hidden on tablet (≥768px) and desktop devices using Tailwind's `md:hidden` utility
 -  **Fixed Positioning**: Stays at the bottom of the viewport for easy thumb access
 -  **Responsive Layout**: 4 evenly distributed navigation buttons across the full width
@@ -45,7 +45,7 @@ components/layout/MobileBottomNav.tsx
 -  Client component (`"use client"`) for pathname detection
 -  Uses Next.js `usePathname()` hook for active state detection
 -  Implements proper TypeScript types
--  Follows existing code patterns in the Synos project
+-  Follows existing code patterns in the Zavd project
 
 ### Integration
 
@@ -79,7 +79,7 @@ console.logInside the layout
 
 ## Styling Details
 
-### Color Scheme (Synos Medical Palette)
+### Color Scheme (Zavd Medical Palette)
 
 -  **Primary (Teal Accent)**: `#39898F` - Used for active state
 -  **Secondary (Dark)**: `#2C2D38` - Not used in this component
@@ -167,5 +167,5 @@ Potential improvements for future iterations:
 
 -  The component uses the existing Tailwind configuration and design tokens
 -  No additional dependencies were added
--  Follows the existing code style and patterns in the Synos project
+-  Follows the existing code style and patterns in the Zavd project
 -  Compatible with the current Next.js 16 App Router setup

@@ -85,13 +85,21 @@
 	},
 	"footer": {
 		"description": "Zentralverband der Assyrischen Vereinigungen in Deutschland und europäischen Sektionen.",
-		"quickLinks": "Schnelllinks",
+		"quickLinks": "Über ZAVD",
+		"usefulLinks": "Angebote & Beratung",
+		"projekte": "Projekte",
 		"contact": "Kontakt",
 		"followUs": "Folgen Sie uns",
+		"socialDescription": "Unterstützen Sie unsere Arbeit in Deutschland oder spenden Sie für die Kriegsopfer aus Syrien.",
 		"copyright": "Alle Rechte vorbehalten.",
 		"privacyPolicy": "Datenschutz",
 		"termsOfService": "Impressum",
-		"cookiePolicy": "Cookie-Richtlinie"
+		"cookiePolicy": "Cookie-Richtlinie",
+		"newsletterTitle": "Newsletter abonnieren",
+		"newsletterDesc": "Abonnieren Sie unseren Newsletter für die neuesten Nachrichten und Updates!",
+		"emailPlaceholder": "Ihre E-Mail...",
+		"subscribeButton": "Abonnieren",
+		"privacyNote": "* Ihre E-Mail-Adresse wird vertraulich behandelt"
 	},
 	"home": {
 		"hero": {
@@ -278,6 +286,48 @@
 			"subjectMin": "Betreff muss mindestens 3 Zeichen lang sein",
 			"subjectMax": "Betreff darf maximal 200 Zeichen lang sein",
 			"messageMin": "Nachricht muss mindestens 10 Zeichen lang sein",
+			"messageMax": "Nachricht darf maximal 2000 Zeichen lang sein",
+			"gdprRequired": "Sie müssen der Datenschutzerklärung zustimmen"
+		},
+		"errors": {
+			"generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+			"genericLater": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut."
+		}
+	},
+	"quoteModal": {
+		"title": "Angebot anfordern",
+		"subtitle": "Füllen Sie das Formular aus und wir senden Ihnen ein Preisangebot.",
+		"success": {
+			"title": "Vielen Dank für Ihre Anfrage!",
+			"message": "Wir haben Ihre Angebotsanfrage erhalten und werden uns innerhalb von 24 Stunden mit einem Preisvorschlag bei Ihnen melden."
+		},
+		"form": {
+			"name": "Name",
+			"namePlaceholder": "Ihr vollständiger Name",
+			"email": "E-Mail-Adresse",
+			"emailPlaceholder": "ihre@email.com",
+			"phone": "Telefonnummer",
+			"phonePlaceholder": "701234567",
+			"companyName": "Firmenname",
+			"companyNamePlaceholder": "Ihr Firmenname",
+			"message": "Nachricht",
+			"messagePlaceholder": "Teilen Sie uns mit, wofür Sie sich interessieren oder was Sie wissen möchten...",
+			"gdprConsent": "Ich stimme der Datenschutzerklärung zu und bin mit der Verarbeitung meiner Daten gemäß DSGVO einverstanden.",
+			"privacyPolicy": "Datenschutzerklärung",
+			"submit": "Anfrage senden",
+			"sending": "Wird gesendet...",
+			"optional": "(optional)",
+			"required": "*"
+		},
+		"validation": {
+			"nameMin": "Name muss mindestens 2 Zeichen lang sein",
+			"nameMax": "Name darf maximal 100 Zeichen lang sein",
+			"emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+			"countryCodeRequired": "Ländercode ist erforderlich",
+			"phoneMin": "Telefonnummer muss mindestens 6 Ziffern haben",
+			"phoneMax": "Telefonnummer darf maximal 20 Ziffern haben",
+			"phoneInvalid": "Ungültige Telefonnummer für das gewählte Land",
+			"companyNameMax": "Firmenname darf maximal 200 Zeichen lang sein",
 			"messageMax": "Nachricht darf maximal 2000 Zeichen lang sein",
 			"gdprRequired": "Sie müssen der Datenschutzerklärung zustimmen"
 		},

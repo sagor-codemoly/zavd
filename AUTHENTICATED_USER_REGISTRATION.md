@@ -1,6 +1,6 @@
 # Authenticated User Registration System Documentation
 
-**Project:** Synos Medical Web Application
+**Project:** Zavd Medical Web Application
 **Date:** December 3, 2025
 **Status:** ✅ **PRODUCTION READY**
 

@@ -16,7 +16,7 @@ function convertToArticle(post: IBlogPost): Article {
 	};
 
 	const author: Author = {
-		name: authorData?.name || "Synos Medical",
+		name: authorData?.name || "Zavd Medical",
 		role: "Redaktionen",
 		image: authorData?.image || undefined,
 		bio: undefined,

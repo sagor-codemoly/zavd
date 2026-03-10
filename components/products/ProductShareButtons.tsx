@@ -36,7 +36,7 @@ export function ProductShareButtons({
 
 	const shareUrl =
 		typeof window !== "undefined" ? window.location.href : productUrl;
-	const shareText = `Kolla in ${productName} från Synos Medical`;
+	const shareText = `Kolla in ${productName} från Zavd Medical`;
 
 	const handleCopyLink = async () => {
 		try {

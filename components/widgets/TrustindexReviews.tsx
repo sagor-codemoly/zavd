@@ -96,7 +96,7 @@ export function TrustindexReviews({ compact = false }: TrustindexReviewsProps) {
 									Vad våra kunder säger
 								</h2>
 								<p className="text-muted-foreground max-w-2xl mx-auto">
-									Läs vad våra nöjda kunder har att säga om sina upplevelser med Synos Medical
+									Läs vad våra nöjda kunder har att säga om sina upplevelser med Zavd Medical
 								</p>
 							</>
 						)}
@@ -163,7 +163,7 @@ export function TrustindexReviews({ compact = false }: TrustindexReviewsProps) {
 						Vad våra kunder säger
 					</h2>
 					<p className="text-muted-foreground max-w-2xl mx-auto">
-						Läs vad våra nöjda kunder har att säga om sina upplevelser med Synos Medical
+						Läs vad våra nöjda kunder har att säga om sina upplevelser med Zavd Medical
 					</p>
 				</div>
 

@@ -414,8 +414,8 @@ https://yourdomain.com/storage/{folder}/{filename}
 ### Examples
 
 ```
-https://synos.se/storage/images/550e8400-e29b-41d4-a716-446655440000.jpg
-https://synos.se/storage/documents/a1b2c3d4-e5f6-7890-abcd-ef1234567890.pdf
+https://zavd.se/storage/images/550e8400-e29b-41d4-a716-446655440000.jpg
+https://zavd.se/storage/documents/a1b2c3d4-e5f6-7890-abcd-ef1234567890.pdf
 ```
 
 ### URL Generation
@@ -696,7 +696,7 @@ When using Nginx as reverse proxy:
 ```nginx
 # Serve storage files directly (optional optimization)
 location /storage/ {
-    alias /var/www/synos/public/storage/;
+    alias /var/www/zavd/public/storage/;
     expires 30d;
     add_header Cache-Control "public, immutable";
 }

@@ -10,7 +10,7 @@ import { AboutUsPageClient } from "../about-us/_components/about-us-page-client"
 export async function generateMetadata(): Promise<Metadata> {
 	const seo = await getAboutPageSeo();
 
-	const title = seo?.title || "Om Oss - Boxholm Cheese";
+	const title = seo?.title || "Om Oss - Boxholm Zavd";
 	const description =
 		seo?.description ||
 		"Lär känna vår historia, möt vårt team och upptäck passionen bakom våra hantverksostar.";

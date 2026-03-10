@@ -5,37 +5,37 @@ import { staggerContainer, staggerItem } from "@/lib/animations";
 
 const testimonials = [
 	{
-		quote: "Synos Medical har varit en fantastisk partner för vår klinik. Utrustningen är av högsta kvalitet och supporten är exceptionell. Vi kan varmt rekommendera dem till alla som söker professionell medicinsk utrustning.",
+		quote: "Zavd Medical har varit en fantastisk partner för vår klinik. Utrustningen är av högsta kvalitet och supporten är exceptionell. Vi kan varmt rekommendera dem till alla som söker professionell medicinsk utrustning.",
 		author: "Dr. Anna Bergström",
 		role: "Klinikchef, Stockholm Hudklinik",
 		rating: 5,
 	},
 	{
-		quote: "Vi har arbetat med Synos i över 5 år och är mycket nöjda. Deras lasersystem har revolutionerat våra behandlingar och patienterna är mycket nöjda med resultaten. Utbildningen vi fick var också mycket grundlig.",
+		quote: "Vi har arbetat med Zavd i över 5 år och är mycket nöjda. Deras lasersystem har revolutionerat våra behandlingar och patienterna är mycket nöjda med resultaten. Utbildningen vi fick var också mycket grundlig.",
 		author: "Maria Lindqvist",
 		role: "Ägare, Skönhetskliniken Linköping",
 		rating: 5,
 	},
 	{
-		quote: "Professionalism från start till mål. Synos hjälpte oss att välja rätt utrustning för vår verksamhet och stod vid vår sida genom hela processen. Servicen är förstklassig och tekniken fungerar felfritt.",
+		quote: "Professionalism från start till mål. Zavd hjälpte oss att välja rätt utrustning för vår verksamhet och stod vid vår sida genom hela processen. Servicen är förstklassig och tekniken fungerar felfritt.",
 		author: "Erik Johansson",
 		role: "Verksamhetschef, Nordiska Laserkliniken",
 		rating: 5,
 	},
 	{
-		quote: "Som ny klinik var vi osäkra på vilken utrustning vi skulle välja. Synos Medical tog sig tid att förstå våra behov och rekommenderade perfekta lösningar. Investeringen har redan betalat sig.",
+		quote: "Som ny klinik var vi osäkra på vilken utrustning vi skulle välja. Zavd Medical tog sig tid att förstå våra behov och rekommenderade perfekta lösningar. Investeringen har redan betalat sig.",
 		author: "Sofia Andersson",
 		role: "Grundare, Estetiska Kliniken Göteborg",
 		rating: 5,
 	},
 	{
-		quote: "Kvaliteten på utrustningen och den kontinuerliga supporten gör Synos till en ovärderlig partner. Vi har expanderat vår verksamhet tack vare deras pålitliga produkter och expertis.",
+		quote: "Kvaliteten på utrustningen och den kontinuerliga supporten gör Zavd till en ovärderlig partner. Vi har expanderat vår verksamhet tack vare deras pålitliga produkter och expertis.",
 		author: "Dr. Peter Nilsson",
 		role: "Medicinsk Ansvarig, Malmö Lasercenter",
 		rating: 5,
 	},
 	{
-		quote: "Synos Medical förstår verkligen behoven hos moderna kliniker. Deras MDR-certifierade utrustning ger oss och våra patienter trygghet. Vi är mycket glada över vårt samarbete.",
+		quote: "Zavd Medical förstår verkligen behoven hos moderna kliniker. Deras MDR-certifierade utrustning ger oss och våra patienter trygghet. Vi är mycket glada över vårt samarbete.",
 		author: "Karin Svensson",
 		role: "Klinikägare, Uppsala Hudvård",
 		rating: 5,
@@ -74,7 +74,7 @@ export function Testimonials() {
 						Vad våra kunder säger
 					</h2>
 					<p className="text-lg text-muted-foreground">
-						Läs om erfarenheter från kliniker som valt Synos Medical
+						Läs om erfarenheter från kliniker som valt Zavd Medical
 					</p>
 				</motion.div>
 

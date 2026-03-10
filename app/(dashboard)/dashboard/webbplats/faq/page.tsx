@@ -755,7 +755,7 @@ export default function FAQAdminPage() {
 																`faqContent.items.${index}.question`
 															)}
 															value={form.watch(`faqContent.items.${index}.question`) || ""}
-															placeholder="Vad är Synos Medical?"
+															placeholder="Vad är Zavd Medical?"
 														/>
 													</div>
 													<div className="space-y-2 md:flex md:gap-4">
@@ -789,7 +789,7 @@ export default function FAQAdminPage() {
 															`faqContent.items.${index}.answer`
 														)}
 														value={form.watch(`faqContent.items.${index}.answer`) || ""}
-														placeholder="Synos Medical erbjuder..."
+														placeholder="Zavd Medical erbjuder..."
 														rows={3}
 													/>
 												</div>
@@ -879,7 +879,7 @@ export default function FAQAdminPage() {
 												id="sidebar.email"
 												{...form.register("sidebar.email")}
 												value={form.watch("sidebar.email") || ""}
-												placeholder="info@synos.se"
+												placeholder="info@zavd.se"
 											/>
 										</div>
 										<div className="space-y-2">
@@ -1194,7 +1194,7 @@ export default function FAQAdminPage() {
 											id="seo.description"
 											{...form.register("seo.description")}
 											value={form.watch("seo.description") || ""}
-											placeholder="Har du frågor om Synos Medical..."
+											placeholder="Har du frågor om Zavd Medical..."
 											rows={3}
 										/>
 										<p className="text-sm text-muted-foreground">
@@ -1272,12 +1272,12 @@ export default function FAQAdminPage() {
 								<CardContent>
 									<SeoPreview
 										data={{
-											title: form.watch("seo.title") || "FAQ - Synos Medical",
+											title: form.watch("seo.title") || "FAQ - Zavd Medical",
 											description: form.watch("seo.description") || "Add a description",
 											slug: "faq",
 											ogImage: form.watch("seo.ogImage") || null,
-											siteName: "Synos Medical",
-											siteUrl: "www.synos.se",
+											siteName: "Zavd Medical",
+											siteUrl: "www.zavd.se",
 										}}
 									/>
 								</CardContent>

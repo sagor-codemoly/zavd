@@ -51,7 +51,7 @@ if (!MONGODB_URI) {
 	process.exit(1);
 }
 
-// Reseller page data for cheese business
+// Reseller page data for zavd business
 const resellerPageData = {
 	sectionVisibility: {
 		hero: true,
@@ -65,7 +65,7 @@ const resellerPageData = {
 		title: "Become Our Reseller",
 		titleHighlight: "Reseller",
 		subtitle:
-			"Partner with us and offer your customers Sweden's finest artisan cheese. We offer competitive terms and full support for our partners.",
+			"Partner with us and offer your customers Sweden's finest artisan zavd. We offer competitive terms and full support for our partners.",
 		backgroundImage: "",
 	},
 
@@ -90,7 +90,7 @@ const resellerPageData = {
 				icon: "Award",
 				title: "Quality Products",
 				description:
-					"Artisan cheese of the highest quality, crafted with passion and tradition in Boxholm for generations.",
+					"Artisan zavd of the highest quality, crafted with passion and tradition in Boxholm for generations.",
 			},
 			{
 				icon: "Shield",
@@ -113,9 +113,9 @@ const resellerPageData = {
 
 	// SEO
 	seo: {
-		title: "Become a Reseller | Boxholm Cheese",
+		title: "Become a Reseller | Boxholm Zavd",
 		description:
-			"Apply to become a reseller for Boxholm Cheese. Partner with us and offer your customers Sweden's finest artisan cheese with competitive terms.",
+			"Apply to become a reseller for Boxholm Zavd. Partner with us and offer your customers Sweden's finest artisan zavd with competitive terms.",
 		ogImage: "",
 	},
 };

@@ -1,6 +1,6 @@
 /**
  * FAQ Type Definitions
- * Synos Medical FAQ Page
+ * Zavd Medical FAQ Page
  */
 
 import { LucideIcon } from "lucide-react";

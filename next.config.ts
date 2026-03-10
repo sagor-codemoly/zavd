@@ -50,10 +50,10 @@ const nextConfig: NextConfig = {
 			// ============================================================================
 			// STARTA EGET SUBMENU REDIRECTS (WordPress had different paths)
 			// ============================================================================
-			// WordPress: /om-oss/varfor-valja-synos/ → Our: /starta-eget/varfor-valja-synos
+			// WordPress: /om-oss/varfor-valja-zavd/ → Our: /starta-eget/varfor-valja-zavd
 			{
-				source: "/om-oss/varfor-valja-synos",
-				destination: "/starta-eget/varfor-valja-synos",
+				source: "/om-oss/varfor-valja-zavd",
+				destination: "/starta-eget/varfor-valja-zavd",
 				permanent: true,
 			},
 			// WordPress: /kopguide/ → Our: /starta-eget/kopguide
@@ -104,8 +104,8 @@ const nextConfig: NextConfig = {
 				permanent: true,
 			},
 			{
-				source: "/om-oss/varfor-valja-synos/",
-				destination: "/starta-eget/varfor-valja-synos",
+				source: "/om-oss/varfor-valja-zavd/",
+				destination: "/starta-eget/varfor-valja-zavd",
 				permanent: true,
 			},
 			{
@@ -132,7 +132,7 @@ const nextConfig: NextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "www.synos.se",
+				hostname: "www.zavd.se",
 			},
 			{
 				protocol: "https",

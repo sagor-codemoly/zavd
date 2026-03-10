@@ -854,8 +854,8 @@ export function BlogPostForm({
 													watch("seo.ogImage") ||
 													watch("featuredImage")?.url ||
 													null,
-												siteUrl: "synos.se",
-												siteName: "Synos",
+												siteUrl: "zavd.se",
+												siteName: "Zavd",
 												productTitle: watch("title") || "",
 											}}
 										/>

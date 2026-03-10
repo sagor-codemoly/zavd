@@ -5,7 +5,7 @@ import { TeamPageClient } from "./_components/team-page-client";
 export async function generateMetadata(): Promise<Metadata> {
 	const seo = await getTeamPageSeo();
 
-	const title = seo?.title || "Vårt Team - Boxholm Cheese";
+	const title = seo?.title || "Vårt Team - Boxholm Zavd";
 	const description =
 		seo?.description ||
 		"Möt vårt passionerade team av ostmakare och experter som arbetar för att leverera de finaste ostarna.";

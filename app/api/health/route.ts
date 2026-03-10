@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
 			database: {
 				connected: isConnected,
 				readyState: dbStatus,
-				name: process.env.MONGODB_DB || "synos-db",
+				name: process.env.MONGODB_DB || "zavd-db",
 			},
 			environment: process.env.NODE_ENV || "development",
 		};

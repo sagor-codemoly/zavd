@@ -4,7 +4,7 @@ export const featuredProducts: Product[] = [
 	{
 		id: "pico",
 		brochureUrl:
-			"https://www.synos.se/wp-content/uploads/2024/04/Toro-Brochyr-svenska.pdf",
+			"https://www.zavd.se/wp-content/uploads/2024/04/Toro-Brochyr-svenska.pdf",
 		videoUrl: "https://www.youtube.com/watch?v=example",
 		slug: "pico",
 		name: "TORO Pico Laser",
@@ -130,7 +130,7 @@ export const featuredProducts: Product[] = [
 		],
 		images: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/04/Toro-1.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/04/Toro-1.png",
 				alt: "TORO Pico Laser",
 				width: 800,
 				height: 600,
@@ -139,21 +139,21 @@ export const featuredProducts: Product[] = [
 		],
 		gallery: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/04/Toro-1.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/04/Toro-1.png",
 				alt: "MOTUS PRO Laser - Huvudbild",
 				width: 1200,
 				height: 900,
 				isPrimary: true,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/04/Toro-2.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/04/Toro-2.png",
 				alt: "MOTUS PRO Laser - Huvudbild",
 				width: 1200,
 				height: 900,
 				isPrimary: true,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/04/Toro-3.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/04/Toro-3.png",
 				alt: "MOTUS PRO Laser - Huvudbild",
 				width: 1200,
 				height: 900,
@@ -161,7 +161,7 @@ export const featuredProducts: Product[] = [
 			},
 		],
 		seo: {
-			title: "TORO Pico Laser - Tatueringsborttagning | Synos Medical",
+			title: "TORO Pico Laser - Tatueringsborttagning | Zavd Medical",
 			description:
 				"TORO Pico Laser med picosekund-teknologi för effektiv tatueringsborttagning och hudföryngring. Minimal vävnadsskada.",
 			keywords: ["TORO", "picolaser", "tatueringsborttagning", "picosekund"],
@@ -371,7 +371,7 @@ export const featuredProducts: Product[] = [
 		],
 		images: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/03/Namnlos-design-6.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/03/Namnlos-design-6.png",
 				alt: "MOTUS PRO Laser",
 				width: 800,
 				height: 600,
@@ -380,28 +380,28 @@ export const featuredProducts: Product[] = [
 		],
 		gallery: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/03/Namnlos-design-6.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/03/Namnlos-design-6.png",
 				alt: "MOTUS PRO Laser - Huvudbild",
 				width: 1200,
 				height: 900,
 				isPrimary: true,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/03/bild-3.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/03/bild-3.png",
 				alt: "MOTUS PRO - Behandlingshandstycke",
 				width: 1200,
 				height: 900,
 				isPrimary: false,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/03/bild-4.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/03/bild-4.png",
 				alt: "MOTUS PRO - Kontrollpanel",
 				width: 1200,
 				height: 900,
 				isPrimary: false,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/03/behandlingsbild-2.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/03/behandlingsbild-2.png",
 				alt: "MOTUS PRO - Behandling pågår",
 				width: 1200,
 				height: 900,
@@ -423,7 +423,7 @@ export const featuredProducts: Product[] = [
 			// },
 		],
 		brochureUrl:
-			"https://www.synos.se/wp-content/uploads/2024/03/Motus-PRO-Broschyr-svenska.pdf",
+			"https://www.zavd.se/wp-content/uploads/2024/03/Motus-PRO-Broschyr-svenska.pdf",
 		videoUrl: "https://www.youtube.com/watch?v=example",
 		benefits: [
 			"Smärtfri behandling tack vare MOVEO-teknologi",
@@ -535,7 +535,7 @@ export const featuredProducts: Product[] = [
 				rating: 5,
 				title: "Överlägsen teknologi",
 				content:
-					"Efter att ha testat flera lasermaskiner är MOTUS PRO klart överlägsen. MOVEO-teknologin gör verkligen skillnad - snabbare behandlingar och nöjdare kunder. Supporten från Synos Medical är också förstklassig.",
+					"Efter att ha testat flera lasermaskiner är MOTUS PRO klart överlägsen. MOVEO-teknologin gör verkligen skillnad - snabbare behandlingar och nöjdare kunder. Supporten från Zavd Medical är också förstklassig.",
 				date: "2024-08-22",
 				verified: true,
 				helpful: 18,
@@ -574,7 +574,7 @@ export const featuredProducts: Product[] = [
 				answer:
 					"Ja, tack vare Nd:YAG våglängden (1064nm) kan MOTUS PRO säkert behandla solbränd hud. Detta gör det möjligt att erbjuda året-runt-behandlingar, vilket ökar klinikens intäkter även under sommarmånaderna.",
 				askedBy: "Karin S.",
-				answeredBy: "Synos Medical Expert",
+				answeredBy: "Zavd Medical Expert",
 				date: "2024-10-15",
 				helpful: 8,
 			},
@@ -584,7 +584,7 @@ export const featuredProducts: Product[] = [
 				answer:
 					"Vi rekommenderar årlig service för att säkerställa optimal prestanda. Däremellan är underhållet minimalt - grundläggande rengöring och kalibreringskontroller som kan göras av klinikpersonalen. Alla servicebesök ingår i vårt supportpaket.",
 				askedBy: "Peter L.",
-				answeredBy: "Synos Medical Expert",
+				answeredBy: "Zavd Medical Expert",
 				date: "2024-10-10",
 				helpful: 6,
 			},
@@ -594,7 +594,7 @@ export const featuredProducts: Product[] = [
 				answer:
 					"För ansiktsbehandling rekommenderar vi 9-15mm spotsize för precision kring känsliga områden som överläpp och haka. För större områden som ben och rygg använder vi 24mm spotsize för maximal effektivitet.",
 				askedBy: "Linda M.",
-				answeredBy: "Synos Medical Expert",
+				answeredBy: "Zavd Medical Expert",
 				date: "2024-09-28",
 				helpful: 10,
 			},
@@ -604,7 +604,7 @@ export const featuredProducts: Product[] = [
 				answer:
 					"Normal leveranstid är 4-6 veckor från beställning. Vi inkluderar installation, kalibrering och utbildning i leveransen. För brådskande behov kan vi ibland erbjuda snabbare leverans - kontakta oss för mer information.",
 				askedBy: "Johan K.",
-				answeredBy: "Synos Medical Expert",
+				answeredBy: "Zavd Medical Expert",
 				date: "2024-09-20",
 				helpful: 5,
 			},
@@ -614,13 +614,13 @@ export const featuredProducts: Product[] = [
 				answer:
 					"Ja, vi erbjuder uppgraderingsprogram för kliniker som har äldre MOTUS-modeller. Kontakta oss för en värdering av din nuvarande utrustning och ett skräddarsytt uppgraderingsförslag med inbytesvärde.",
 				askedBy: "Emma W.",
-				answeredBy: "Synos Medical Expert",
+				answeredBy: "Zavd Medical Expert",
 				date: "2024-09-05",
 				helpful: 7,
 			},
 		],
 		seo: {
-			title: "MOTUS PRO - Alexandritlaser för hårborttagning | Synos Medical",
+			title: "MOTUS PRO - Alexandritlaser för hårborttagning | Zavd Medical",
 			description:
 				"MOTUS PRO med Moveo-teknologi - Smärtfri hårborttagning på alla hudtyper. Snabb, säker och effektiv behandling.",
 			keywords: ["MOTUS PRO", "alexandritlaser", "hårborttagning", "Moveo"],
@@ -690,7 +690,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 			"pigmentation",
 		],
 		brochureUrl:
-			"https://www.synos.se/wp-content/uploads/2024/04/Tetra-PRO-Broschyr-SWE.pdf",
+			"https://www.zavd.se/wp-content/uploads/2024/04/Tetra-PRO-Broschyr-SWE.pdf",
 		treatments: [
 			"Hudföryngring",
 			"Hudåtstramning",
@@ -724,7 +724,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 		],
 		images: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/04/Tetra-Pro-Shooting_100124_9591_D.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/04/Tetra-Pro-Shooting_100124_9591_D.png",
 				alt: "Tetra PRO CO₂ Laser",
 				width: 800,
 				height: 600,
@@ -733,21 +733,21 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 		],
 		gallery: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/04/Tetra-Pro-Shooting_100124_9591_D.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/04/Tetra-Pro-Shooting_100124_9591_D.png",
 				alt: "Tetra PRO CO₂ Laser",
 				width: 800,
 				height: 600,
 				isPrimary: true,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/04/tetra-pro-2.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/04/tetra-pro-2.png",
 				alt: "Tetra PRO CO₂ Laser",
 				width: 800,
 				height: 600,
 				isPrimary: false,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2024/04/tetra-pro-handdtag.png",
+				url: "https://www.zavd.se/wp-content/uploads/2024/04/tetra-pro-handdtag.png",
 				alt: "Tetra PRO CO₂ Laser",
 				width: 800,
 				height: 600,
@@ -755,7 +755,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 			},
 		],
 		seo: {
-			title: "Tetra PRO CO₂ Laser - Hudföryngring & Kirurgi | Synos Medical",
+			title: "Tetra PRO CO₂ Laser - Hudföryngring & Kirurgi | Zavd Medical",
 			description:
 				"Tetra PRO fraktionerad CO₂ laser för hudföryngring, ärrbehandling och kirurgi. Precision och effektivitet i ett system.",
 			keywords: ["Tetra PRO", "CO2 laser", "fraktionerad", "hudföryngring"],
@@ -837,7 +837,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 	// 		],
 	// 		images: [
 	// 			{
-	// 				url: "https://www.synos.se/wp-content/uploads/2024/01/Jovena-pic-small7-scaled-e1704880128119.jpg",
+	// 				url: "https://www.zavd.se/wp-content/uploads/2024/01/Jovena-pic-small7-scaled-e1704880128119.jpg",
 	// 				alt: "Jovena",
 	// 				width: 800,
 	// 				height: 600,
@@ -846,35 +846,35 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 	// 		],
 	// 		gallery: [
 	// 			{
-	// 				url: "https://www.synos.se/wp-content/uploads/2024/01/Jovena-pic-small7-scaled-e1704880128119.jpg",
+	// 				url: "https://www.zavd.se/wp-content/uploads/2024/01/Jovena-pic-small7-scaled-e1704880128119.jpg",
 	// 				alt: "Jovena",
 	// 				width: 800,
 	// 				height: 600,
 	// 				isPrimary: true,
 	// 			},
 	// 			{
-	// 				url: "https://www.synos.se/wp-content/uploads/2024/01/Jovena-pic-2-scaled-e1704880512279.jpg",
+	// 				url: "https://www.zavd.se/wp-content/uploads/2024/01/Jovena-pic-2-scaled-e1704880512279.jpg",
 	// 				alt: "Jovena",
 	// 				width: 800,
 	// 				height: 600,
 	// 				isPrimary: false,
 	// 			},
 	// 			{
-	// 				url: "https://www.synos.se/wp-content/uploads/2024/01/Manipolo_PlasmaRoll_Scontornato-e1704880576644.png",
+	// 				url: "https://www.zavd.se/wp-content/uploads/2024/01/Manipolo_PlasmaRoll_Scontornato-e1704880576644.png",
 	// 				alt: "Jovena",
 	// 				width: 800,
 	// 				height: 600,
 	// 				isPrimary: false,
 	// 			},
 	// 			{
-	// 				url: "https://www.synos.se/wp-content/uploads/2024/01/Manipolo_BQUAD_small-e1704880628565.png",
+	// 				url: "https://www.zavd.se/wp-content/uploads/2024/01/Manipolo_BQUAD_small-e1704880628565.png",
 	// 				alt: "Jovena",
 	// 				width: 800,
 	// 				height: 600,
 	// 				isPrimary: false,
 	// 			},
 	// 			{
-	// 				url: "https://www.synos.se/wp-content/uploads/2024/01/Manipolo_PlasmaPro_2_bianco_ok-e1704880756822.png",
+	// 				url: "https://www.zavd.se/wp-content/uploads/2024/01/Manipolo_PlasmaPro_2_bianco_ok-e1704880756822.png",
 	// 				alt: "Jovena",
 	// 				width: 800,
 	// 				height: 600,
@@ -882,7 +882,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 	// 			},
 	// 		],
 	// 		seo: {
-	// 			title: "Jovena - Multifunktionell hudföryngring | Synos Medical",
+	// 			title: "Jovena - Multifunktionell hudföryngring | Zavd Medical",
 	// 			description:
 	// 				"Jovena multifunktionell plattform för hudföryngring, kroppsskulptering och ansiktsbehandlingar. Flera teknologier i ett system.",
 	// 			keywords: ["Jovena", "hudföryngring", "kroppsskulptering", "RF"],
@@ -938,7 +938,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 </ol>
 `,
 		brochureUrl:
-			"https://www.synos.se/wp-content/uploads/2023/08/Onda-PRO-Broschyr-SWE.pdf",
+			"https://www.zavd.se/wp-content/uploads/2023/08/Onda-PRO-Broschyr-SWE.pdf",
 		categories: ["body-sculpting"],
 		treatments: ["Fettreducering", "Cellulitbehandling", "Kroppsskulptering"],
 		features: [
@@ -966,7 +966,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 		],
 		images: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2023/08/Shooting-250523_Onda-PRO_Device_1626_D-scaled.jpg",
+				url: "https://www.zavd.se/wp-content/uploads/2023/08/Shooting-250523_Onda-PRO_Device_1626_D-scaled.jpg",
 				alt: "Onda Coolwaves PRO",
 				width: 800,
 				height: 600,
@@ -975,21 +975,21 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 		],
 		gallery: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2023/08/Shooting-250523_Onda-PRO_Device_1626_D-scaled.jpg",
+				url: "https://www.zavd.se/wp-content/uploads/2023/08/Shooting-250523_Onda-PRO_Device_1626_D-scaled.jpg",
 				alt: "Onda Coolwaves PRO",
 				width: 800,
 				height: 600,
 				isPrimary: true,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2023/08/Shooting-250523_Onda-PRO_0492_D-scaled.jpg",
+				url: "https://www.zavd.se/wp-content/uploads/2023/08/Shooting-250523_Onda-PRO_0492_D-scaled.jpg",
 				alt: "Onda Coolwaves PRO",
 				width: 800,
 				height: 600,
 				isPrimary: false,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2023/08/Shooting-250523_Onda-PRO_3handpiece1665_D-scaled.jpg",
+				url: "https://www.zavd.se/wp-content/uploads/2023/08/Shooting-250523_Onda-PRO_3handpiece1665_D-scaled.jpg",
 				alt: "Onda Coolwaves PRO",
 				width: 800,
 				height: 600,
@@ -997,7 +997,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 			},
 		],
 		seo: {
-			title: "Onda Coolwaves PRO - Fettreducering | Synos Medical",
+			title: "Onda Coolwaves PRO - Fettreducering | Zavd Medical",
 			description:
 				"Onda Coolwaves PRO med mikrovågsteknologi för effektiv fettreducering och cellulitbehandling. Icke-invasiv kroppsskulptering.",
 			keywords: ["Onda", "Coolwaves", "fettreducering", "cellulit"],
@@ -1031,7 +1031,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 </ol>
 `,
 		brochureUrl:
-			"https://www.synos.se/wp-content/uploads/2021/04/Vivace-broschyr-swe3.pdf",
+			"https://www.zavd.se/wp-content/uploads/2021/04/Vivace-broschyr-swe3.pdf",
 		categories: ["skin-rejuvenation", "facial-treatments", "acne-scars"],
 		treatments: ["Hudföryngring", "Hudåtstramning", "Ärrbehandling"],
 		features: [
@@ -1059,7 +1059,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 		],
 		images: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2021/04/Vivace-med-dermascope-logo-e1677683732267.png",
+				url: "https://www.zavd.se/wp-content/uploads/2021/04/Vivace-med-dermascope-logo-e1677683732267.png",
 				alt: "Vivace RF",
 				width: 800,
 				height: 600,
@@ -1068,35 +1068,35 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 		],
 		gallery: [
 			{
-				url: "https://www.synos.se/wp-content/uploads/2021/04/Vivace-med-dermascope-logo-e1677683732267.png",
+				url: "https://www.zavd.se/wp-content/uploads/2021/04/Vivace-med-dermascope-logo-e1677683732267.png",
 				alt: "Vivace RF",
 				width: 800,
 				height: 600,
 				isPrimary: true,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2021/04/Namnlost-1.jpg",
+				url: "https://www.zavd.se/wp-content/uploads/2021/04/Namnlost-1.jpg",
 				alt: "Vivace RF",
 				width: 800,
 				height: 600,
 				isPrimary: false,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2021/04/Namnlost-2.jpg",
+				url: "https://www.zavd.se/wp-content/uploads/2021/04/Namnlost-2.jpg",
 				alt: "Vivace RF",
 				width: 800,
 				height: 600,
 				isPrimary: false,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2021/04/Namnlost-3.jpg",
+				url: "https://www.zavd.se/wp-content/uploads/2021/04/Namnlost-3.jpg",
 				alt: "Vivace RF",
 				width: 800,
 				height: 600,
 				isPrimary: false,
 			},
 			{
-				url: "https://www.synos.se/wp-content/uploads/2021/04/Namnlost-4.jpg",
+				url: "https://www.zavd.se/wp-content/uploads/2021/04/Namnlost-4.jpg",
 				alt: "Vivace RF",
 				width: 800,
 				height: 600,
@@ -1104,7 +1104,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 			},
 
 			{
-				url: "https://www.synos.se/wp-content/uploads/2021/04/IMG_4017.jpg",
+				url: "https://www.zavd.se/wp-content/uploads/2021/04/IMG_4017.jpg",
 				alt: "Vivace RF",
 				width: 800,
 				height: 600,
@@ -1112,7 +1112,7 @@ Uppgradera din klinik med marknadens mest avancerade CO2-laser. Kontakta oss ida
 			},
 		],
 		seo: {
-			title: "Vivace RF - Microneedling med RF | Synos Medical",
+			title: "Vivace RF - Microneedling med RF | Zavd Medical",
 			description:
 				"Den är hyllad till skyarna och har vunnit flera prestigefulla priser, om och om igen. Den är älskad i Hollywood och gör just nu succé över hela världen. Nu finns Vivace RF i Sverige – hudåtstramningsmaskinen olik alla andra.",
 			keywords: [

@@ -465,7 +465,7 @@ export default function StorePageCMS() {
 									<div key={field.id} className="flex items-center gap-2">
 										<Input
 											{...form.register(`info.features.${index}` as const)}
-											placeholder="e.g., Cheese tasting available"
+											placeholder="e.g., Zavd tasting available"
 										/>
 										<Button
 											type="button"
@@ -629,7 +629,7 @@ export default function StorePageCMS() {
 									<Label>Email</Label>
 									<Input
 										{...form.register("map.email")}
-										placeholder="e.g., store@boxholmcheese.se"
+										placeholder="e.g., store@boxholmzavd.se"
 									/>
 								</div>
 							</div>
@@ -813,7 +813,7 @@ export default function StorePageCMS() {
 										description: form.watch("seo.description") || "Add a description",
 										slug: "our-store",
 										ogImage: form.watch("seo.ogImage") || null,
-										siteName: "Boxholm Cheese",
+										siteName: "Boxholm Zavd",
 										siteUrl: "www.example.com",
 									}}
 								/>

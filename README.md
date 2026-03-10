@@ -1,4 +1,4 @@
-# Cheese Project
+# Zavd Project
 
 Medical product catalog website built with Next.js 16, React 19, and MongoDB.
 
@@ -31,17 +31,17 @@ cp .env.example .env
 
 **Option A: MongoDB Atlas (Cloud)**
 ```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/cheese-db
-MONGODB_DB=cheese-db
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/zavd-db
+MONGODB_DB=zavd-db
 ```
 
 **Option B: Local MongoDB (Docker)**
 ```bash
-docker run -d --name cheese-mongodb -p 27017:27017 -v cheese-mongodb-data:/data/db mongo:7
+docker run -d --name zavd-mongodb -p 27017:27017 -v zavd-mongodb-data:/data/db mongo:7
 ```
 ```env
-MONGODB_URI=mongodb://127.0.0.1:27017/cheese-db
-MONGODB_DB=cheese-db
+MONGODB_URI=mongodb://127.0.0.1:27017/zavd-db
+MONGODB_DB=zavd-db
 ```
 
 ### 4. Create Admin User
@@ -53,14 +53,14 @@ npm run seed:admin
 **Default Admin Credentials:**
 | Field | Value |
 |-------|-------|
-| Email | `admin@cheese.se` |
+| Email | `admin@zavd.se` |
 | Password | `Admin@123` |
 
 > Password requirements: min 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special char (@$!%*?&#)
 
 **Or use environment variables:**
 ```bash
-SEED_ADMIN_EMAIL=admin@cheese.se SEED_ADMIN_NAME="Admin User" SEED_ADMIN_PASSWORD="Admin@123" npm run seed:admin
+SEED_ADMIN_EMAIL=admin@zavd.se SEED_ADMIN_NAME="Admin User" SEED_ADMIN_PASSWORD="Admin@123" npm run seed:admin
 ```
 
 ### 5. Run Development Server
@@ -78,7 +78,7 @@ Access the admin panel at `/login` with your admin credentials.
 ## Project Structure
 
 ```
-cheese/
+zavd/
 ├── app/                  # Next.js App Router
 │   ├── (auth)/          # Authentication pages
 │   ├── (client)/        # Public pages

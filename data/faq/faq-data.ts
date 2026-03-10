@@ -1,6 +1,6 @@
 /**
  * FAQ Data
- * Content for the Synos Medical FAQ page
+ * Content for the Zavd Medical FAQ page
  */
 
 import {
@@ -20,7 +20,7 @@ import { FAQItem, FAQCategory } from "@/types/faq";
 export const faqCategories: FAQCategory[] = [
 	{
 		id: "about",
-		name: "Om Synos Medical",
+		name: "Om Zavd Medical",
 		icon: Building2,
 		order: 1,
 	},
@@ -67,17 +67,17 @@ export const faqCategories: FAQCategory[] = [
  */
 export const faqItems: FAQItem[] = [
 	{
-		id: "what-is-synos",
+		id: "what-is-zavd",
 		category: "about",
-		question: "Vad är Synos Medical?",
+		question: "Vad är Zavd Medical?",
 		answer:
-			"Synos Medical erbjuder professionella lasermaskiner och utrustning till kliniker och salonger runt om i Skandinavien. Våra maskiner är högfunktionella, väl testade och självklart i linje med den senaste medicinska forskningen. Vi jobbar med leverantörer från några av världens främsta lasertillverkare och självklart finns maskiner för alla sorters laserbehandlingar.",
+			"Zavd Medical erbjuder professionella lasermaskiner och utrustning till kliniker och salonger runt om i Skandinavien. Våra maskiner är högfunktionella, väl testade och självklart i linje med den senaste medicinska forskningen. Vi jobbar med leverantörer från några av världens främsta lasertillverkare och självklart finns maskiner för alla sorters laserbehandlingar.",
 		order: 1,
 	},
 	{
 		id: "training-offer",
 		category: "training",
-		question: "Erbjuder Synos Medical laserutbildningar? Vad kostar utbildningar?",
+		question: "Erbjuder Zavd Medical laserutbildningar? Vad kostar utbildningar?",
 		answer:
 			"Tyvärr erbjuder vi inga utbildningar separat från maskinköp, en grundlig utbildning ingår alltid i priset vid köp av en maskin. Vi är medvetna om att vår utrustning används av personer med olika bakgrunder, erfarenheter och kunskaper. Därför vi alltid skräddarsy utbildningen efter deltagarnas förutsättningar och behov. Vi går inte bara igenom själva användandet av den specifika maskinen utan även andra viktiga aspekter, exempelvis maskinlära och patientsäkerhet.",
 		order: 2,
@@ -96,7 +96,7 @@ export const faqItems: FAQItem[] = [
 		category: "products",
 		question: "Vilka märken erbjuder ni?",
 		answer:
-			"Vi på Synos Medical AB har samlat ihop de absolut bästa maskinerna inom sina respektive områden. Synos Medical är återförsäljare av DEKA Lasers, Asclepion Laser, Jena surgical och IDS LTD.",
+			"Vi på Zavd Medical AB har samlat ihop de absolut bästa maskinerna inom sina respektive områden. Zavd Medical är återförsäljare av DEKA Lasers, Asclepion Laser, Jena surgical och IDS LTD.",
 		order: 4,
 	},
 	{

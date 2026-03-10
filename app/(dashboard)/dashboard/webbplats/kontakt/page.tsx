@@ -968,7 +968,7 @@ export default function KontaktPage() {
 														<Input
 															{...field}
 															value={field.value || ""}
-															placeholder="Contact Us - Synos Medical"
+															placeholder="Contact Us - Zavd Medical"
 														/>
 													</FormControl>
 													<FormDescription>
@@ -989,7 +989,7 @@ export default function KontaktPage() {
 														<Textarea
 															{...field}
 															value={field.value || ""}
-															placeholder="Contact Synos Medical for questions..."
+															placeholder="Contact Zavd Medical for questions..."
 															rows={3}
 														/>
 													</FormControl>
@@ -1039,14 +1039,14 @@ export default function KontaktPage() {
 											data={{
 												title:
 													form.watch("seo.title") ||
-													"Contact Us - Synos Medical",
+													"Contact Us - Zavd Medical",
 												description:
 													form.watch("seo.description") ||
 													"Add a description",
 												slug: "kontakt",
 												ogImage: form.watch("seo.ogImage") || null,
-												siteName: "Synos Medical",
-												siteUrl: "www.synos.se",
+												siteName: "Zavd Medical",
+												siteUrl: "www.zavd.se",
 											}}
 										/>
 									</CardContent>

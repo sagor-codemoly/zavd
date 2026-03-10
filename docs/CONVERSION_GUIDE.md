@@ -22,7 +22,7 @@ This guide is divided into **10 phases**. Each phase has:
 cd ~/Projects/YourFolder
 
 # Copy the entire project
-cp -r /path/to/synos ./new-project-name
+cp -r /path/to/zavd ./new-project-name
 
 # Navigate into it
 cd new-project-name
@@ -33,7 +33,7 @@ rm -rf .git
 # Initialize new git repo
 git init
 git add .
-git commit -m "Initial commit: cloned from Synos template"
+git commit -m "Initial commit: cloned from Zavd template"
 ```
 
 ### Step 0.2: Update package.json
@@ -295,7 +295,7 @@ For dynamic items (like Products), keep isDynamic: true.
 ```
 Update next.config.ts redirects:
 
-1. Remove all the WordPress migration redirects (they're specific to Synos)
+1. Remove all the WordPress migration redirects (they're specific to Zavd)
 2. Keep only redirects that are relevant to the new site
 3. If you're keeping the /blogg to /nyheter redirect pattern, update it
 4. Or remove all redirects if starting fresh
@@ -814,18 +814,18 @@ Update [FormName] in components/admin/[FormName].tsx:
 
 ## Phase 9: Testing & Cleanup
 
-### Step 9.1: Remove Synos-Specific Content
+### Step 9.1: Remove Zavd-Specific Content
 
 **Claude Code Prompt:**
 
 ```
-Search and replace/remove all Synos-specific references:
+Search and replace/remove all Zavd-specific references:
 
-1. Search for "Synos" in all files and replace with your company name
-2. Search for "synos" (lowercase) in slugs, variables, etc.
+1. Search for "Zavd" in all files and replace with your company name
+2. Search for "zavd" (lowercase) in slugs, variables, etc.
 3. Remove any hardcoded Swedish text that should be dynamic
-4. Update cookie prefix in lib/db/auth.ts (cookiePrefix: "synos" -> "yourprefix")
-5. Remove any Synos-specific assets from public/
+4. Update cookie prefix in lib/db/auth.ts (cookiePrefix: "zavd" -> "yourprefix")
+5. Remove any Zavd-specific assets from public/
 ```
 
 ### Step 9.2: Clean Up Unused Files
@@ -888,7 +888,7 @@ Manual testing checklist:
 - [ ] Forms work on mobile
 
 ### Verification Checklist
-- [ ] No Synos references remain
+- [ ] No Zavd references remain
 - [ ] Unused files removed
 - [ ] Build passes
 - [ ] All features tested
@@ -1028,4 +1028,4 @@ Fix [issue] in [location]:
 
 ---
 
-*Guide created for converting Synos Medical template to new projects.*
+*Guide created for converting Zavd Medical template to new projects.*

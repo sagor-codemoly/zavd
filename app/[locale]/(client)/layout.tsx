@@ -6,6 +6,7 @@ import { CallbackPopup } from "@/components/callback/CallbackPopup";
 import { CookieConsent } from "@/components/cookie/CookieConsent";
 import { CookieConsentProvider } from "@/lib/context/cookie-consent-context";
 import { NavbarVariantProvider } from "@/lib/context/navbar-variant-context";
+import { setRequestLocale } from "next-intl/server";
 import {
 	getLegacySiteConfig,
 	getBrandingSettings,
@@ -22,9 +23,13 @@ import {
  */
 export default async function ClientLayout({
 	children,
+	params,
 }: {
 	children: React.ReactNode;
+	params: Promise<{ locale: string }>;
 }) {
+	const { locale } = await params;
+	setRequestLocale(locale);
 	// Fetch site settings from database in parallel
 	const [siteConfig, brandingSettings, footerSettings, socialMedia, siteSettings] = await Promise.all([
 		getLegacySiteConfig(),
@@ -35,7 +40,7 @@ export default async function ClientLayout({
 	]);
 
 	const logoUrl = brandingSettings?.logoUrl;
-	const companyName = siteSettings?.companyName || "Milatte Dairy Farms";
+	const companyName = siteSettings?.companyName || "ZAVD";
 
 	return (
 		<CookieConsentProvider>

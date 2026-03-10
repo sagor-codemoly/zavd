@@ -1,6 +1,6 @@
 # Quick Reference - User Authentication & Data Fetching
 
-**Project:** Synos Medical
+**Project:** Zavd Medical
 **Last Updated:** December 3, 2025
 
 ---
@@ -41,7 +41,7 @@ pnpm dev
 ### Check Better Auth User
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.user.findOne({ email: 'your-email@example.com' })
 "
 ```
@@ -49,7 +49,7 @@ mongosh mongodb://127.0.0.1:27017/synos-db --eval "
 ### Check Profile
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.profiles.findOne()
 "
 ```
@@ -57,7 +57,7 @@ mongosh mongodb://127.0.0.1:27017/synos-db --eval "
 ### Verify Relationship
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   const user = db.user.findOne();
   const profile = db.profiles.findOne({ userId: user._id });
   printjson({ user, profile });
@@ -136,7 +136,7 @@ const user = await User.findById(userId).populate("profile");
 ### Clear Database
 
 ```bash
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.user.deleteMany({});
   db.profiles.deleteMany({});
   db.session.deleteMany({});
@@ -149,14 +149,14 @@ mongosh mongodb://127.0.0.1:27017/synos-db --eval "
 ```bash
 # Call sync endpoint
 curl -X POST http://localhost:3000/api/auth/sync-user \
-  -H "Cookie: synos.session_token=YOUR_TOKEN"
+  -H "Cookie: zavd.session_token=YOUR_TOKEN"
 ```
 
 ### Check Session
 
 ```bash
 # Browser DevTools → Application → Cookies
-# Look for: synos.session_token
+# Look for: zavd.session_token
 ```
 
 ---
@@ -169,14 +169,14 @@ curl -X POST http://localhost:3000/api/auth/sync-user \
 
 ```javascript
 console.logBrowser console
-document.cookie  console.logShould include synos.session_token
+document.cookie  console.logShould include zavd.session_token
 ```
 
 **Solution 2: Create profile manually**
 
 ```bash
 curl -X POST http://localhost:3000/api/auth/sync-user \
-  -H "Cookie: synos.session_token=..."
+  -H "Cookie: zavd.session_token=..."
 ```
 
 **Solution 3: Check database**

@@ -36,11 +36,11 @@ export async function generateMetadata(): Promise<Metadata> {
 		getSiteSettings(),
 	]);
 
-	const siteName = siteSettings.seo?.siteName || "Cheese Business";
+	const siteName = siteSettings.seo?.siteName || "Zavd Business";
 	const title = seo?.title || `Become Our Reseller - ${siteName}`;
 	const description =
 		seo?.description ||
-		`Apply to become a reseller for ${siteName}. Partner with us and offer our premium cheese products to your customers.`;
+		`Apply to become a reseller for ${siteName}. Partner with us and offer our premium zavd products to your customers.`;
 
 	return {
 		title,

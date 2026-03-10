@@ -222,7 +222,7 @@ export function AdminSidebar({ className }: AdminSidebarProps) {
 				if (response.ok && data.data) {
 					// Use dashboardLogoUrl if set, otherwise fallback to logoUrl
 					setLogoUrl(data.data.branding?.dashboardLogoUrl || data.data.branding?.logoUrl || null);
-					setCompanyName(data.data.companyName || "Synos");
+					setCompanyName(data.data.companyName || "Zavd");
 				}
 			} catch (error) {
 				console.error("Failed to fetch site settings:", error);

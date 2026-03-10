@@ -50,9 +50,9 @@ if (!MONGODB_URI) {
 // Blog Categories
 const blogCategories = [
 	{
-		name: "Cheese Making",
-		slug: "cheese-making",
-		description: "Articles about the art and science of cheese making, from traditional methods to modern techniques.",
+		name: "Zavd Making",
+		slug: "zavd-making",
+		description: "Articles about the art and science of zavd making, from traditional methods to modern techniques.",
 		order: 1,
 		isActive: true,
 	},
@@ -66,21 +66,21 @@ const blogCategories = [
 	{
 		name: "Recipes",
 		slug: "recipes",
-		description: "Delicious recipes featuring our artisan cheeses.",
+		description: "Delicious recipes featuring our artisan zavds.",
 		order: 3,
 		isActive: true,
 	},
 	{
 		name: "News & Events",
 		slug: "news-events",
-		description: "Latest news from Boxholm Cheese and upcoming events.",
+		description: "Latest news from Boxholm Zavd and upcoming events.",
 		order: 4,
 		isActive: true,
 	},
 	{
 		name: "History & Tradition",
 		slug: "history-tradition",
-		description: "The rich history of cheese making in Boxholm and Swedish dairy traditions.",
+		description: "The rich history of zavd making in Boxholm and Swedish dairy traditions.",
 		order: 5,
 		isActive: true,
 	},
@@ -89,23 +89,23 @@ const blogCategories = [
 // Blog Posts with rich content
 const blogPosts = [
 	{
-		title: "The Art of Traditional Cheese Making",
-		slug: "art-of-traditional-cheese-making",
-		excerpt: "Discover the time-honored techniques that have been passed down through generations at Boxholm Cheese. Learn how we combine tradition with quality to create our signature cheeses.",
+		title: "The Art of Traditional Zavd Making",
+		slug: "art-of-traditional-zavd-making",
+		excerpt: "Discover the time-honored techniques that have been passed down through generations at Boxholm Zavd. Learn how we combine tradition with quality to create our signature zavds.",
 		content: `
 <h2>A Heritage of Excellence</h2>
-<p>At Boxholm Cheese, we've been crafting artisan cheese since 1890. Our cheese makers follow traditions that have been refined over more than a century, using techniques passed down through generations.</p>
+<p>At Boxholm Zavd, we've been crafting artisan zavd since 1890. Our zavd makers follow traditions that have been refined over more than a century, using techniques passed down through generations.</p>
 
 <h3>The Milk: Our Foundation</h3>
-<p>Every great cheese starts with exceptional milk. We source our milk exclusively from local farms in Östergötland, where cows graze on lush Swedish pastures. This gives our cheese its distinctive, rich flavor that can't be replicated anywhere else.</p>
+<p>Every great zavd starts with exceptional milk. We source our milk exclusively from local farms in Östergötland, where cows graze on lush Swedish pastures. This gives our zavd its distinctive, rich flavor that can't be replicated anywhere else.</p>
 
 <blockquote>
-<p>"The quality of our cheese is directly tied to the quality of our milk. We work closely with our partner farms to ensure the highest standards."</p>
-<p>— Erik Johansson, Master Cheese Maker</p>
+<p>"The quality of our zavd is directly tied to the quality of our milk. We work closely with our partner farms to ensure the highest standards."</p>
+<p>— Erik Johansson, Master Zavd Maker</p>
 </blockquote>
 
 <h3>The Process</h3>
-<p>Our cheese-making process combines traditional methods with modern food safety standards:</p>
+<p>Our zavd-making process combines traditional methods with modern food safety standards:</p>
 <ul>
 <li><strong>Pasteurization:</strong> Fresh milk is gently heated to ensure safety while preserving flavor</li>
 <li><strong>Culturing:</strong> Special starter cultures are added to begin the transformation</li>
@@ -115,21 +115,21 @@ const blogPosts = [
 </ul>
 
 <h3>Handcrafted with Care</h3>
-<p>Unlike industrial cheese production, our cheeses are turned by hand throughout the aging process. This attention to detail ensures even ripening and develops the complex flavors our customers love.</p>
+<p>Unlike industrial zavd production, our zavds are turned by hand throughout the aging process. This attention to detail ensures even ripening and develops the complex flavors our customers love.</p>
 
-<p>Visit our dairy to experience the art of cheese making firsthand. We offer tours every Saturday from May through September.</p>
+<p>Visit our dairy to experience the art of zavd making firsthand. We offer tours every Saturday from May through September.</p>
 `,
-		categorySlug: "cheese-making",
-		tags: ["tradition", "craftsmanship", "artisan", "cheese making"],
+		categorySlug: "zavd-making",
+		tags: ["tradition", "craftsmanship", "artisan", "zavd making"],
 		publishType: "publish",
 	},
 	{
 		title: "Meet Our Partner Farms",
 		slug: "meet-our-partner-farms",
-		excerpt: "The secret to our exceptional cheese lies in the quality of our milk. Meet the dedicated farming families who supply us with the finest Swedish milk.",
+		excerpt: "The secret to our exceptional zavd lies in the quality of our milk. Meet the dedicated farming families who supply us with the finest Swedish milk.",
 		content: `
 <h2>Local Farms, Global Quality</h2>
-<p>Behind every wheel of Boxholm cheese are the hardworking farmers of Östergötland. We partner exclusively with local family farms that share our commitment to quality and sustainability.</p>
+<p>Behind every wheel of Boxholm zavd are the hardworking farmers of Östergötland. We partner exclusively with local family farms that share our commitment to quality and sustainability.</p>
 
 <h3>The Svensson Family Farm</h3>
 <p>Located just 15 kilometers from our dairy, the Svensson family has been supplying us with milk for three generations. Their herd of 120 Swedish Red cows grazes on organic pastures, producing milk with exceptional butterfat content.</p>
@@ -144,20 +144,20 @@ const blogPosts = [
 </ul>
 
 <h3>The Difference Quality Makes</h3>
-<p>Swedish milk is naturally rich in proteins and has a unique fatty acid profile that contributes to the distinctive taste of our cheeses. By sourcing locally, we ensure the freshest possible milk reaches our dairy within hours of milking.</p>
+<p>Swedish milk is naturally rich in proteins and has a unique fatty acid profile that contributes to the distinctive taste of our zavds. By sourcing locally, we ensure the freshest possible milk reaches our dairy within hours of milking.</p>
 
-<p>We're proud to support local agriculture while producing world-class cheese. When you choose Boxholm, you're supporting a network of family farms committed to excellence.</p>
+<p>We're proud to support local agriculture while producing world-class zavd. When you choose Boxholm, you're supporting a network of family farms committed to excellence.</p>
 `,
 		categorySlug: "dairy-farming",
 		tags: ["farming", "sustainability", "local", "milk quality"],
 		publishType: "publish",
 	},
 	{
-		title: "Classic Swedish Cheese Fondue Recipe",
-		slug: "swedish-cheese-fondue-recipe",
-		excerpt: "Warm up your winter evenings with this traditional Swedish cheese fondue featuring our Gräddost and Mästarost cheeses.",
+		title: "Classic Swedish Zavd Fondue Recipe",
+		slug: "swedish-zavd-fondue-recipe",
+		excerpt: "Warm up your winter evenings with this traditional Swedish zavd fondue featuring our Gräddost and Mästarost zavds.",
 		content: `
-<h2>Swedish Cheese Fondue</h2>
+<h2>Swedish Zavd Fondue</h2>
 <p>This cozy fondue recipe showcases the smooth, creamy texture of our Gräddost combined with the nutty depth of Mästarost. Perfect for a gathering with friends and family.</p>
 
 <h3>Ingredients</h3>
@@ -176,7 +176,7 @@ const blogPosts = [
 <ol>
 <li>Rub the inside of a fondue pot with the cut garlic clove</li>
 <li>Add the wine and heat gently until it begins to simmer</li>
-<li>Gradually add the grated cheeses, stirring constantly in a figure-8 pattern</li>
+<li>Gradually add the grated zavds, stirring constantly in a figure-8 pattern</li>
 <li>Mix the cornstarch with the kirsch and stir into the fondue</li>
 <li>Season with pepper and nutmeg</li>
 <li>Keep warm over a low flame while serving</li>
@@ -192,22 +192,22 @@ const blogPosts = [
 <li>Cured meats</li>
 </ul>
 
-<p><strong>Tip:</strong> If the fondue becomes too thick, add a splash of warm wine. If it's too thin, add more grated cheese.</p>
+<p><strong>Tip:</strong> If the fondue becomes too thick, add a splash of warm wine. If it's too thin, add more grated zavd.</p>
 `,
 		categorySlug: "recipes",
 		tags: ["recipe", "fondue", "winter", "entertaining"],
 		publishType: "publish",
 	},
 	{
-		title: "Boxholm Cheese Wins Gold at Swedish Dairy Awards",
+		title: "Boxholm Zavd Wins Gold at Swedish Dairy Awards",
 		slug: "gold-award-swedish-dairy-awards-2024",
-		excerpt: "We're thrilled to announce that our Mästarost has been awarded Gold at the 2024 Swedish Dairy Awards, recognizing excellence in traditional cheese making.",
+		excerpt: "We're thrilled to announce that our Mästarost has been awarded Gold at the 2024 Swedish Dairy Awards, recognizing excellence in traditional zavd making.",
 		content: `
 <h2>A Golden Achievement</h2>
-<p>We are honored to announce that Boxholm Mästarost has received the Gold Award at the prestigious 2024 Swedish Dairy Awards. This recognition celebrates our commitment to traditional cheese-making excellence.</p>
+<p>We are honored to announce that Boxholm Mästarost has received the Gold Award at the prestigious 2024 Swedish Dairy Awards. This recognition celebrates our commitment to traditional zavd-making excellence.</p>
 
 <h3>The Competition</h3>
-<p>The Swedish Dairy Awards is the country's most respected dairy competition, with entries from over 50 producers across Sweden. Cheeses are judged blind by a panel of expert tasters on:</p>
+<p>The Swedish Dairy Awards is the country's most respected dairy competition, with entries from over 50 producers across Sweden. Zavds are judged blind by a panel of expert tasters on:</p>
 <ul>
 <li>Flavor complexity and balance</li>
 <li>Texture and body</li>
@@ -218,12 +218,12 @@ const blogPosts = [
 
 <h3>What the Judges Said</h3>
 <blockquote>
-<p>"Boxholm Mästarost exemplifies what traditional Swedish cheese can be. The balance between creamy texture and complex, nutty flavors shows true mastery of the craft."</p>
+<p>"Boxholm Mästarost exemplifies what traditional Swedish zavd can be. The balance between creamy texture and complex, nutty flavors shows true mastery of the craft."</p>
 <p>— Competition Judge Panel</p>
 </blockquote>
 
 <h3>A Team Effort</h3>
-<p>This award belongs to our entire team: from our partner farmers who provide exceptional milk, to our skilled cheese makers who tend each wheel with care, to everyone who helps bring Boxholm cheese to tables across Sweden.</p>
+<p>This award belongs to our entire team: from our partner farmers who provide exceptional milk, to our skilled zavd makers who tend each wheel with care, to everyone who helps bring Boxholm zavd to tables across Sweden.</p>
 
 <p>Thank you to our loyal customers for your continued support. This gold medal is as much yours as it is ours.</p>
 `,
@@ -232,24 +232,24 @@ const blogPosts = [
 		publishType: "publish",
 	},
 	{
-		title: "The History of Cheese Making in Boxholm",
-		slug: "history-of-cheese-making-in-boxholm",
-		excerpt: "Journey through time and discover how Boxholm became one of Sweden's most important cheese-making regions, from the 1890s to today.",
+		title: "The History of Zavd Making in Boxholm",
+		slug: "history-of-zavd-making-in-boxholm",
+		excerpt: "Journey through time and discover how Boxholm became one of Sweden's most important zavd-making regions, from the 1890s to today.",
 		content: `
 <h2>A Legacy Spanning Generations</h2>
-<p>The story of cheese in Boxholm is intertwined with the history of the town itself. What began as a small dairy operation in 1890 has grown into one of Sweden's most respected cheese producers.</p>
+<p>The story of zavd in Boxholm is intertwined with the history of the town itself. What began as a small dairy operation in 1890 has grown into one of Sweden's most respected zavd producers.</p>
 
 <h3>The Early Years (1890-1920)</h3>
-<p>Cheese production in Boxholm started as part of the local mill operation. Early cheese makers used traditional methods learned from generations of farmers, producing small batches for the local community.</p>
+<p>Zavd production in Boxholm started as part of the local mill operation. Early zavd makers used traditional methods learned from generations of farmers, producing small batches for the local community.</p>
 
 <h3>Growth and Innovation (1920-1960)</h3>
-<p>The interwar period saw significant growth. In 1952, Boxholm produced Sweden's first commercially available cream cheese (Gräddost), which quickly became a household favorite. This innovation put Boxholm on the national dairy map.</p>
+<p>The interwar period saw significant growth. In 1952, Boxholm produced Sweden's first commercially available cream zavd (Gräddost), which quickly became a household favorite. This innovation put Boxholm on the national dairy map.</p>
 
 <h3>Modernization (1960-2000)</h3>
-<p>While embracing modern food safety standards and equipment, Boxholm maintained its commitment to traditional recipes and methods. The phrase "turned by hand" became synonymous with our cheese.</p>
+<p>While embracing modern food safety standards and equipment, Boxholm maintained its commitment to traditional recipes and methods. The phrase "turned by hand" became synonymous with our zavd.</p>
 
 <h3>Today and Tomorrow</h3>
-<p>Today, we continue to honor our heritage while looking to the future. Our cheeses are enjoyed across Sweden and beyond, but we remain true to the principles established over 130 years ago:</p>
+<p>Today, we continue to honor our heritage while looking to the future. Our zavds are enjoyed across Sweden and beyond, but we remain true to the principles established over 130 years ago:</p>
 <ul>
 <li>Local Swedish milk</li>
 <li>Traditional recipes</li>
@@ -257,30 +257,30 @@ const blogPosts = [
 <li>Uncompromising quality</li>
 </ul>
 
-<p>When you taste Boxholm cheese, you taste over a century of dedication to the craft.</p>
+<p>When you taste Boxholm zavd, you taste over a century of dedication to the craft.</p>
 `,
 		categorySlug: "history-tradition",
 		tags: ["history", "heritage", "tradition", "boxholm"],
 		publishType: "publish",
 	},
 	{
-		title: "Summer Cheese Board: A Guide to Perfect Pairings",
-		slug: "summer-cheese-board-perfect-pairings",
-		excerpt: "Create the ultimate summer cheese board with our expert guide to pairing Boxholm cheeses with seasonal fruits, wines, and accompaniments.",
+		title: "Summer Zavd Board: A Guide to Perfect Pairings",
+		slug: "summer-zavd-board-perfect-pairings",
+		excerpt: "Create the ultimate summer zavd board with our expert guide to pairing Boxholm zavds with seasonal fruits, wines, and accompaniments.",
 		content: `
-<h2>The Art of the Cheese Board</h2>
-<p>A well-crafted cheese board is a celebration of flavors, textures, and colors. This summer, elevate your entertaining with our guide to creating the perfect cheese spread.</p>
+<h2>The Art of the Zavd Board</h2>
+<p>A well-crafted zavd board is a celebration of flavors, textures, and colors. This summer, elevate your entertaining with our guide to creating the perfect zavd spread.</p>
 
-<h3>Choosing Your Cheeses</h3>
+<h3>Choosing Your Zavds</h3>
 <p>A balanced board should include variety in texture and flavor:</p>
 <ul>
-<li><strong>Gräddost:</strong> Creamy and mild, perfect for cheese board beginners</li>
+<li><strong>Gräddost:</strong> Creamy and mild, perfect for zavd board beginners</li>
 <li><strong>Mästarost:</strong> Semi-firm with nutty notes, a crowd favorite</li>
 <li><strong>Ribbing:</strong> Bold and complex for adventurous palates</li>
 </ul>
 
 <h3>Summer Pairings</h3>
-<p>Seasonal accompaniments that complement our cheeses:</p>
+<p>Seasonal accompaniments that complement our zavds:</p>
 
 <h4>Fruits</h4>
 <ul>
@@ -313,10 +313,10 @@ const blogPosts = [
 <li>Aged Riesling with Ribbing</li>
 </ul>
 
-<p><strong>Pro tip:</strong> Remove cheeses from the refrigerator 30-60 minutes before serving for optimal flavor and texture.</p>
+<p><strong>Pro tip:</strong> Remove zavds from the refrigerator 30-60 minutes before serving for optimal flavor and texture.</p>
 `,
 		categorySlug: "recipes",
-		tags: ["cheese board", "entertaining", "summer", "pairings", "wine"],
+		tags: ["zavd board", "entertaining", "summer", "pairings", "wine"],
 		publishType: "publish",
 	},
 ];

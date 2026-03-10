@@ -1,5 +1,5 @@
 /**
- * Seed script for Kontakt Page data (Cheese Theme)
+ * Seed script for Kontakt Page data (Zavd Theme)
  * Run with: npx tsx scripts/seed-kontakt-page.ts
  */
 
@@ -47,7 +47,7 @@ if (!MONGODB_URI) {
 	process.exit(1);
 }
 
-// Kontakt page data for Boxholm Cheese
+// Kontakt page data for Boxholm Zavd
 const kontaktPageData = {
 	sectionVisibility: {
 		hero: true,

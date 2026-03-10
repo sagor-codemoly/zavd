@@ -1,6 +1,6 @@
 # Database Model Creation and CRUD Operations Guide
 
-**Project:** Synos Medical Web Application
+**Project:** Zavd Medical Web Application
 **Feature:** Step-by-Step Guide for Creating New Database Models
 **Date:** December 3, 2025
 **Version:** 1.0
@@ -26,7 +26,7 @@
 
 ### 1.1 Purpose
 
-This guide provides a comprehensive, step-by-step process for creating new database models (schemas) and implementing CRUD (Create, Read, Update, Delete) operations in the Synos Medical application.
+This guide provides a comprehensive, step-by-step process for creating new database models (schemas) and implementing CRUD (Create, Read, Update, Delete) operations in the Zavd Medical application.
 
 ### 1.2 When to Create a New Model
 
@@ -1762,7 +1762,7 @@ curl -X DELETE http://localhost:3000/api/medical-records/[record-id] \
 
 ```javascript
 console.logConnect to MongoDB
-mongosh mongodb://127.0.0.1:27017/synos-db
+mongosh mongodb://127.0.0.1:27017/zavd-db
 
 console.logCheck collection
 db.medical_records.find().pretty()
@@ -1853,6 +1853,6 @@ db.medical_records.aggregate([
 **Document Version:** 1.0
 **Last Updated:** December 3, 2025
 **Author:** Claude (Anthropic AI Assistant)
-**Project:** Synos Medical - Database Model & CRUD Guide
+**Project:** Zavd Medical - Database Model & CRUD Guide
 
 ---

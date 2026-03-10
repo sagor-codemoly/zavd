@@ -188,7 +188,7 @@ export const getLegacySiteConfig = unstable_cache(
 		const settings = await siteSettingsRepository.get();
 
 		return {
-			name: settings.seo?.siteName || "Synos Medical",
+			name: settings.seo?.siteName || "Zavd Medical",
 			description:
 				settings.seo?.siteDescription ||
 				"Sveriges ledande leverantör av MDR-certifierad klinikutrustning.",
@@ -198,13 +198,16 @@ export const getLegacySiteConfig = unstable_cache(
 				facebook: settings.socialMedia?.facebook || "",
 				instagram: settings.socialMedia?.instagram || "",
 				linkedin: settings.socialMedia?.linkedin || "",
+				twitter: settings.socialMedia?.twitter || "",
+				youtube: settings.socialMedia?.youtube || "",
+				pinterest: settings.socialMedia?.pinterest || "",
 			},
 			company: {
 				name: settings.companyName,
 				orgNumber: settings.orgNumber,
 				email: settings.email,
 				phone: settings.phone,
-				noreplyEmail: settings.noreplyEmail || "noreply@synos.se",
+				noreplyEmail: settings.noreplyEmail || "noreply@zavd.se",
 				addresses: settings.offices.map((office) => ({
 					name: office.name,
 					street: office.street,

@@ -48,13 +48,13 @@ if (!MONGODB_URI) {
 	process.exit(1);
 }
 
-// Footer banner data - using a dark cheese cellar image for good text readability
+// Footer banner data - using a dark zavd cellar image for good text readability
 const footerBannerData = {
 	banner: {
 		enabled: true,
-		// Using a dark cheese cellar/aging room image - good contrast for white text
+		// Using a dark zavd cellar/aging room image - good contrast for white text
 		backgroundImage: "https://images.unsplash.com/photo-1452195100486-9cc805987862?w=1920&h=800&fit=crop&q=80",
-		badge: "ARTISAN CHEESE",
+		badge: "ARTISAN ZAVD",
 		title: "Handcrafted with passion, enjoyed with love.",
 		ctaText: "About Us",
 		ctaHref: "/about-us",

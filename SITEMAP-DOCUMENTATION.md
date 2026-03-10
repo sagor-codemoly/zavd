@@ -1,8 +1,8 @@
-# Synos.se Sitemap Structure Documentation
+# Zavd.se Sitemap Structure Documentation
 
 ## Overview
 
-This document provides a comprehensive analysis of the sitemap structure from `https://www.synos.se/sitemap_index.xml` and how it maps to the Next.js App Router folder structure in this project.
+This document provides a comprehensive analysis of the sitemap structure from `https://www.zavd.se/sitemap_index.xml` and how it maps to the Next.js App Router folder structure in this project.
 
 ---
 
@@ -126,8 +126,8 @@ app/(client)/blogg/tag/[slug]/page.tsx
 
 **Authors (2):**
 ```
-/blogg/author/agnessynos-se/
-/blogg/author/andreassynos-se/
+/blogg/author/agneszavd-se/
+/blogg/author/andreaszavd-se/
 ```
 
 **Needed Implementation:**
@@ -434,7 +434,7 @@ import { BlogRepository } from '@/lib/database/repositories/blog.repository';
 import { ProductRepository } from '@/lib/database/repositories/product.repository';
 // ... other repositories
 
-const BASE_URL = 'https://www.synos.se';
+const BASE_URL = 'https://www.zavd.se';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogRepo = new BlogRepository();

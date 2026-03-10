@@ -31,9 +31,9 @@ export async function generateMetadata(): Promise<Metadata> {
 	const siteName = siteSettings.seo?.siteName || "Milatte Farm";
 	const siteDescription =
 		siteSettings.seo?.siteDescription ||
-		"Premium artisan cheeses and natural dairy products from our family farm";
+		"Premium artisan zavds and natural dairy products from our family farm";
 
-	const title = seo?.title || `${siteName} - Artisan Cheese & Dairy`;
+	const title = seo?.title || `${siteName} - Artisan Zavd & Dairy`;
 	const description = seo?.description || siteDescription;
 
 	return {

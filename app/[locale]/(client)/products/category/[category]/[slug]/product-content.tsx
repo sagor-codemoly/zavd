@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 interface ProductContentProps {
 	product: ProductType;
 	relatedProducts?: ProductType[];
-	/** Base path for navigation (e.g., "/products" or "/products/category/soft-cheese") */
+	/** Base path for navigation (e.g., "/products" or "/products/category/soft-zavd") */
 	basePath?: string;
 	/** Label for the back button breadcrumb */
 	baseLabel?: string;

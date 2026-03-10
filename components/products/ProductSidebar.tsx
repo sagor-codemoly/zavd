@@ -89,7 +89,7 @@ export function ProductSidebar({
 			<Card className="border-primary/50 bg-card/80 backdrop-blur-sm">
 				<CardHeader className="pb-3">
 					<CardTitle className="text-base font-medium text-foreground">
-						Varför välja Synos?
+						Varför välja Zavd?
 					</CardTitle>
 				</CardHeader>
 				<CardContent className="space-y-3">

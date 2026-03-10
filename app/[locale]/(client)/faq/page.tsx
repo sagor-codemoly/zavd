@@ -9,13 +9,13 @@ export async function generateMetadata(): Promise<Metadata> {
 		title: data.seo?.title || "FAQ - Frequently Asked Questions",
 		description:
 			data.seo?.description ||
-			"Have questions about our artisan cheese products, farm tours, or services? Find answers to the most common questions here. Contact us if you don't find what you're looking for.",
+			"Have questions about our artisan zavd products, farm tours, or services? Find answers to the most common questions here. Contact us if you don't find what you're looking for.",
 		keywords: data.seo?.keywords || [
 			"FAQ",
 			"frequently asked questions",
-			"cheese questions",
+			"zavd questions",
 			"dairy farm",
-			"artisan cheese",
+			"artisan zavd",
 			"farm tours",
 			"support",
 		],
@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			title: data.seo?.title || "FAQ - Frequently Asked Questions | Milatte Farm",
 			description:
 				data.seo?.description ||
-				"Answers to the most common questions about our cheese products, farm tours, and services.",
+				"Answers to the most common questions about our zavd products, farm tours, and services.",
 			type: "website",
 			locale: "en_US",
 			...(data.seo?.ogImage && { images: [data.seo.ogImage] }),
@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			title: data.seo?.title || "FAQ - Frequently Asked Questions | Milatte Farm",
 			description:
 				data.seo?.description ||
-				"Answers to the most common questions about our cheese products, farm tours, and services.",
+				"Answers to the most common questions about our zavd products, farm tours, and services.",
 		},
 	};
 }

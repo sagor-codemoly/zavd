@@ -1,7 +1,7 @@
-# Synos.se Project Status Overview
+# Zavd.se Project Status Overview
 
 **Document Generated:** 2025-12-21
-**Based on:** Wireframe Proposal for Synos.docx.pdf
+**Based on:** Wireframe Proposal for Zavd.docx.pdf
 
 ---
 
@@ -33,7 +33,7 @@ The homepage (`app/(client)/page.tsx`) includes these CMS-controlled sections:
 | 5 | Product Showcase | `ProductShowcase.tsx` | DONE | Yes |
 | 6 | Image Gallery | `ImageGallery.tsx` | DONE | Yes |
 | 7 | Process Steps / "How We Do" | `ProcessSteps.tsx` | DONE | Yes |
-| 8 | About Section / "Why Choose Synos" | `AboutSection.tsx` | DONE | Yes |
+| 8 | About Section / "Why Choose Zavd" | `AboutSection.tsx` | DONE | Yes |
 | 9 | Testimonials | `Testimonials.tsx` | DONE | Yes |
 | 10 | CTA Section | `CtaSection.tsx` | DONE | Yes |
 | 11 | Footer | `Footer.tsx` | DONE | Partial (config) |
@@ -43,7 +43,7 @@ The homepage (`app/(client)/page.tsx`) includes these CMS-controlled sections:
 | Section | Status | Notes |
 |---------|--------|-------|
 | **Categories Section** (Grid with icons) | NOT IMPLEMENTED | Wireframe shows: Hair Removal, Skin Treatments, Laser Accessories grid |
-| **Case Studies / References** | NOT IMPLEMENTED | Carousel of clinics using Synos devices + testimonial quotes |
+| **Case Studies / References** | NOT IMPLEMENTED | Carousel of clinics using Zavd devices + testimonial quotes |
 | **Contact Section on Homepage** | PARTIAL | Contact info in CTA section, but no embedded Map + Form |
 
 ### Section Visibility Control
@@ -123,7 +123,7 @@ All sections have visibility toggles in CMS (`sectionVisibility` in home-page mo
 | Page | Route | Status | CMS Page |
 |------|-------|--------|----------|
 | Starta Eget Main | `/starta-eget` | DONE | starta-eget |
-| Varför välja Synos? | `/starta-eget/varfor-valja-synos` | DONE | - |
+| Varför välja Zavd? | `/starta-eget/varfor-valja-zavd` | DONE | - |
 | Köpguide | `/starta-eget/kopguide` | DONE | - |
 | Miniutbildning | `/starta-eget/miniutbildning` | DONE | - |
 
@@ -269,7 +269,7 @@ Products listed in the wireframe that need to be added:
 | [Synck](https://wpriverthemes.com/HTML/synck/index.html) | Services/How we do, Product menu | Partially implemented (ProcessSteps) |
 | [Bullish](https://wdtbullish.wpengine.com/home-1-onepage-demo/) | Testimonials/Reviews | Implemented |
 | Semi-transparent Nav | Header styling | DONE |
-| Synos Grafik V1/V2 | Brand graphics | Available in wireframe |
+| Zavd Grafik V1/V2 | Brand graphics | Available in wireframe |
 
 ---
 
@@ -308,7 +308,7 @@ Products listed in the wireframe that need to be added:
 | Item | Description | Effort |
 |------|-------------|--------|
 | **Categories Section** | Grid with icons for treatment categories (Hair Removal, Skin, etc.) | Medium |
-| **Case Studies Section** | Carousel showing clinics using Synos devices with quotes | Medium |
+| **Case Studies Section** | Carousel showing clinics using Zavd devices with quotes | Medium |
 
 ### Medium Priority - Content
 

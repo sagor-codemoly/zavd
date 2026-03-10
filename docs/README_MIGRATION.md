@@ -1,6 +1,6 @@
-# Synos Medical - WordPress to Next.js Migration
+# Zavd Medical - WordPress to Next.js Migration
 
-Welcome to the comprehensive migration documentation for transforming the Synos Medical website from WordPress to Next.js 16.
+Welcome to the comprehensive migration documentation for transforming the Zavd Medical website from WordPress to Next.js 16.
 
 ## 📋 Documentation Overview
 
@@ -166,7 +166,7 @@ Create a `.env.local` file:
 
 ```bash
 # Site Configuration
-NEXT_PUBLIC_SITE_URL=https://www.synos.se
+NEXT_PUBLIC_SITE_URL=https://www.zavd.se
 
 # Analytics
 NEXT_PUBLIC_GTM_ID=GTM-PQ42DDZ
@@ -188,12 +188,12 @@ SANITY_API_TOKEN=your_token_here
 
 ## 📊 Current Site Information
 
-**WordPress Site:** https://www.synos.se
+**WordPress Site:** https://www.zavd.se
 
-**Company:** Synos Medical AB  
+**Company:** Zavd Medical AB  
 **Org Number:** 556871-8075  
 **Locations:** Stockholm & Linköping  
-**Contact:** 010-205 15 01, info@synos.se
+**Contact:** 010-205 15 01, info@zavd.se
 
 **Key Pages:**
 - Homepage with product carousel
@@ -327,7 +327,7 @@ SANITY_API_TOKEN=your_token_here
 - Frontend expertise required
 - Next.js experience preferred
 
-**Synos Medical Team:**
+**Zavd Medical Team:**
 - **Andreas Tanzi** - VD & Grundare
 - **Jakob Malmsten** - Produktspecialist / Kundansvarig (+46 764 959 466)
 - **Linn Danielsson** - Utbildare (073 8661 588)

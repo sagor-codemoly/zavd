@@ -1,55 +1,25 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import {
-	Facebook,
-	Linkedin,
-	Instagram,
-	Mail,
-	MapPin,
-	Phone,
-	Twitter,
-	Youtube,
-} from "lucide-react";
+import { Facebook, Linkedin, Instagram, Twitter, Youtube, Mail, MapPin, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
 import Logo from "../common/logo";
 import type { SiteConfigType } from "@/config/site";
-import type { IFooterSettings, IFooterLink, IFooterBanner } from "@/models/site-settings.model";
+import type { IFooterSettings } from "@/models/site-settings.model";
 
-// Default footer banner settings
-const DEFAULT_BANNER: IFooterBanner = {
-	enabled: true,
-	badge: "DAIRY FARM",
-	title: "We make the creative solutions for modern brands.",
-	ctaText: "About Us",
-	ctaHref: "/about",
-};
-
-// Default footer settings
-const DEFAULT_FOOTER_SETTINGS: IFooterSettings = {
-	banner: DEFAULT_BANNER,
-	quickLinksTitle: "Links",
-	contactTitle: "Office",
-	newsletterTitle: "Stay Updated",
-	quickLinks: [
-		{ label: "About Us", href: "/about" },
-		{ label: "Products", href: "/store" },
-		{ label: "Farm Tours", href: "/tours" },
-		{ label: "Articles", href: "/articles" },
-		{ label: "Contact", href: "/contact" },
-	],
-	newsletterDescription:
-		"Subscribe to get updates on new products and farm news.",
-	newsletterPlaceholder: "Your email address",
-	newsletterButtonText: "Subscribe",
-	bottomLinks: [
-		{ label: "Privacy Policy", href: "/integritetspolicy" },
-		{ label: "Legal Information", href: "/juridisk-information" },
-		{ label: "Sitemap", href: "/sitemap.xml" },
-	],
-};
+function PinterestIcon({ className }: { className?: string }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			className={className}
+		>
+			<path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
+		</svg>
+	);
+}
 
 interface FooterProps {
 	config: SiteConfigType;
@@ -58,205 +28,121 @@ interface FooterProps {
 	companyName?: string;
 }
 
-export function Footer({
-	config,
-	footerSettings,
-	logoUrl,
-	companyName,
-}: FooterProps) {
+export function Footer({ config, footerSettings, logoUrl, companyName }: FooterProps) {
 	const t = useTranslations("footer");
+	const nav = useTranslations("navigation");
 	const currentYear = new Date().getFullYear();
 	const primaryAddress = config.company.addresses[0];
+	const [email, setEmail] = useState("");
+	const [subscribed, setSubscribed] = useState(false);
 
-	// Merge provided settings with defaults
-	const banner = {
-		enabled: footerSettings?.banner?.enabled ?? DEFAULT_BANNER.enabled,
-		backgroundImage: footerSettings?.banner?.backgroundImage || DEFAULT_BANNER.backgroundImage,
-		badge: footerSettings?.banner?.badge || DEFAULT_BANNER.badge,
-		title: footerSettings?.banner?.title || DEFAULT_BANNER.title,
-		ctaText: footerSettings?.banner?.ctaText || DEFAULT_BANNER.ctaText,
-		ctaHref: footerSettings?.banner?.ctaHref || DEFAULT_BANNER.ctaHref,
-	};
+	// Col 2 — Über ZAVD
+	const uberZavdLinks = [
+		{ label: nav("uberZavd"), href: "/uber-zavd" },
+		{ label: nav("vorstandTeam"), href: "/uber-zavd/vorstand-team" },
+		{ label: nav("geschichte"), href: "/uber-zavd/geschichte" },
+		{ label: nav("satzung"), href: "/uber-zavd/satzung" },
+	];
 
-	const settings = {
-		quickLinksTitle:
-			footerSettings?.quickLinksTitle || DEFAULT_FOOTER_SETTINGS.quickLinksTitle,
-		contactTitle:
-			footerSettings?.contactTitle || DEFAULT_FOOTER_SETTINGS.contactTitle,
-		newsletterTitle:
-			footerSettings?.newsletterTitle || DEFAULT_FOOTER_SETTINGS.newsletterTitle,
-		quickLinks:
-			footerSettings?.quickLinks?.length
-				? footerSettings.quickLinks
-				: DEFAULT_FOOTER_SETTINGS.quickLinks,
-		newsletterDescription:
-			footerSettings?.newsletterDescription ||
-			DEFAULT_FOOTER_SETTINGS.newsletterDescription,
-		newsletterPlaceholder:
-			footerSettings?.newsletterPlaceholder ||
-			DEFAULT_FOOTER_SETTINGS.newsletterPlaceholder,
-		newsletterButtonText:
-			footerSettings?.newsletterButtonText ||
-			DEFAULT_FOOTER_SETTINGS.newsletterButtonText,
-		bottomLinks:
-			footerSettings?.bottomLinks?.length
-				? footerSettings.bottomLinks
-				: DEFAULT_FOOTER_SETTINGS.bottomLinks,
-	};
+	// Col 3 — Angebote & Beratung
+	const angeboteLinks = [
+		{ label: nav("fluchtAsyl"), href: "/angebote-beratung/flucht-asyl" },
+		{ label: nav("beratungUnterstuetzung"), href: "/angebote-beratung/beratung-unterstuetzung" },
+		{ label: nav("namensaenderung"), href: "/angebote-beratung/namensaenderung" },
+		{ label: nav("wichtigeLinks"), href: "/angebote-beratung/wichtige-links" },
+	];
 
-	// Social media icons mapping
+	// Col 4 — Projekte
+	const projekteLinks = [
+		{ label: nav("patenschaftsprojekt"), href: "/projekte/patenschaftsprojekt" },
+		{ label: nav("gemeinsamAktiv"), href: "/projekte/gemeinsam-aktiv" },
+		{ label: nav("gutReinkommen"), href: "/projekte/gut-reinkommen" },
+		{ label: nav("ehrenamtEngagement"), href: "/projekte/ehrenamt-engagement" },
+	];
+
+	const bottomLinks = [
+		{ label: t("privacyPolicy"), href: "/integritetspolicy" },
+		{ label: t("termsOfService"), href: "/juridisk-information" },
+	];
+
 	const socialIcons = [
-		{ Icon: Facebook, href: config.links.facebook, label: "Facebook" },
-		{ Icon: Instagram, href: config.links.instagram, label: "Instagram" },
-		{ Icon: Linkedin, href: config.links.linkedin, label: "LinkedIn" },
-		{ Icon: Twitter, href: config.links.twitter, label: "Twitter" },
-		{ Icon: Youtube, href: config.links.youtube, label: "YouTube" },
-	].filter(item => item.href);
+		{ Icon: Facebook, href: config.links.facebook || "#", label: "Facebook" },
+		{ Icon: Instagram, href: config.links.instagram || "#", label: "Instagram" },
+		{ Icon: Twitter, href: config.links.twitter || "#", label: "Twitter" },
+		{ Icon: Youtube, href: config.links.youtube || "#", label: "YouTube" },
+		{ Icon: PinterestIcon, href: config.links.pinterest || "#", label: "Pinterest" },
+		{ Icon: Linkedin, href: config.links.linkedin || "#", label: "LinkedIn" },
+	];
 
-	const renderLink = (link: IFooterLink) => {
-		if (link.isExternal) {
-			return (
-				<a
-					href={link.href}
-					target="_blank"
-					rel="noopener noreferrer"
-					className="hover:text-primary transition-colors"
-				>
-					{link.label}
-				</a>
-			);
+	const linkClass =
+		"relative text-white/55 text-sm transition-colors duration-200 hover:text-white " +
+		"after:absolute after:left-0 after:-bottom-0.5 after:h-px after:w-0 after:bg-primary " +
+		"after:transition-all after:duration-300 hover:after:w-full";
+
+	const handleSubscribe = (e: React.FormEvent) => {
+		e.preventDefault();
+		if (email) {
+			setSubscribed(true);
+			setEmail("");
 		}
-		return (
-			<Link href={link.href} className="hover:text-primary transition-colors">
-				{link.label}
-			</Link>
-		);
 	};
 
 	return (
-		<>
-			{/* Pre-Footer Banner Section with Image Fade */}
-			{banner.enabled && (
-				<section className="relative h-[400px] md:h-[500px] overflow-hidden">
-					{/* Background Image */}
-					{banner.backgroundImage ? (
-						<Image
-							src={banner.backgroundImage}
-							alt="Footer banner"
-							fill
-							className="object-cover"
-							priority={false}
-						/>
-					) : (
-						<div className="absolute inset-0 bg-gradient-to-b from-[#FDF9EF] to-[#E8A641]/30" />
-					)}
+		<footer className="bg-secondary text-white">
+			<div className="_container py-14">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
 
-					{/* Gradient Overlay - Fade to footer color */}
-					<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-secondary" />
-					<div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent" style={{ top: '40%' }} />
-
-					{/* Content */}
-					<div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-						{/* Badge */}
-						{banner.badge && (
-							<span className="inline-block px-4 py-1.5 bg-white/90 text-secondary text-xs font-medium tracking-[0.2em] uppercase rounded-full mb-6">
-								{banner.badge}
-							</span>
-						)}
-
-						{/* Title */}
-						{banner.title && (
-							<h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-white max-w-3xl mb-8 leading-tight drop-shadow-lg">
-								{banner.title}
-							</h2>
-						)}
-
-						{/* CTA Button */}
-						{banner.ctaText && banner.ctaHref && (
-							<Link href={banner.ctaHref}>
-								<Button
-									variant="outline"
-									className="bg-white/90 hover:bg-white text-secondary border-white/50 hover:border-white px-8 py-6 text-sm font-semibold tracking-wide"
-								>
-									{banner.ctaText}
-								</Button>
-							</Link>
-						)}
-					</div>
-				</section>
-			)}
-
-			{/* Main Footer */}
-			<footer className="bg-secondary text-primary-foreground pt-16 pb-24 md:pb-8">
-				<div className="_container">
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-						{/* Brand Column */}
-						<div className="space-y-4">
-							<div className="flex items-center gap-2 mb-4">
-								<Logo logoUrl={logoUrl} companyName={companyName} />
-							</div>
-							<p className="text-primary-foreground/70 text-sm leading-relaxed">
-								{config.description}
-							</p>
+					{/* Col 1: Logo + Contact + Social */}
+					<div className="lg:col-span-1">
+						<div className="mb-7">
+							<Logo logoUrl={logoUrl} companyName={companyName} />
 						</div>
-
-						{/* Office/Contact Info */}
-						<div>
-							<h4 className="font-bold text-lg mb-6">{settings.contactTitle}</h4>
-							<ul className="space-y-4 text-sm text-primary-foreground/70">
-								{primaryAddress && (
-									<li className="flex items-start gap-3">
-										<MapPin className="h-5 w-5 text-primary shrink-0" />
-										<span>
-											{primaryAddress.street}
-											<br />
+						<ul className="space-y-3.5 mb-7">
+							{primaryAddress && (
+								<>
+									<li className="flex items-start gap-2.5">
+										<Phone className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+										<a
+											href={`tel:${config.company.phone.replace(/\s/g, "")}`}
+											className="text-sm text-white/65 hover:text-white transition-colors duration-200"
+										>
+											{config.company.phone}
+										</a>
+									</li>
+									<li className="flex items-start gap-2.5">
+										<MapPin className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+										<span className="text-sm text-white/65 leading-snug">
+											{primaryAddress.street},{" "}
 											{primaryAddress.postalCode} {primaryAddress.city}
 										</span>
 									</li>
-								)}
-								<li className="flex items-center gap-3">
-									<Mail className="h-5 w-5 text-primary shrink-0" />
-									<a
-										href={`mailto:${config.company.email}`}
-										className="hover:text-primary transition-colors"
-									>
-										{config.company.email}
-									</a>
-								</li>
-								<li className="flex items-center gap-3">
-									<Phone className="h-5 w-5 text-primary shrink-0" />
-									<a
-										href={`tel:${config.company.phone.replace(/\s/g, "")}`}
-										className="hover:text-primary transition-colors"
-									>
-										{config.company.phone}
-									</a>
-								</li>
-							</ul>
-						</div>
+								</>
+							)}
+							<li className="flex items-center gap-2.5">
+								<Mail className="h-4 w-4 text-primary shrink-0" />
+								<a
+									href={`mailto:${config.company.email}`}
+									className="text-sm text-white/65 hover:text-white transition-colors duration-200"
+								>
+									{config.company.email}
+								</a>
+							</li>
+						</ul>
 
-						{/* Quick Links */}
+						{/* Follow Us — flat icons */}
 						<div>
-							<h4 className="font-bold text-lg mb-6">{settings.quickLinksTitle}</h4>
-							<ul className="space-y-3 text-sm text-primary-foreground/70">
-								{settings.quickLinks.map((item, index) => (
-									<li key={`${item.href}-${index}`}>{renderLink(item)}</li>
-								))}
-							</ul>
-						</div>
-
-						{/* Social Media */}
-						<div>
-							<h4 className="font-bold text-lg mb-6">{t("followUs")}</h4>
-							<div className="flex gap-3 flex-wrap">
+							<p className="text-sm font-semibold text-white mb-3">
+								{t("followUs")}
+							</p>
+							<div className="flex gap-4 flex-wrap">
 								{socialIcons.map(({ Icon, href, label }) => (
 									<a
 										key={label}
 										href={href}
-										target="_blank"
+										target={href === "#" ? undefined : "_blank"}
 										rel="noopener noreferrer"
 										aria-label={label}
-										className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+										className="text-primary hover:text-primary/75 transition-colors duration-200"
 									>
 										<Icon className="h-5 w-5" />
 									</a>
@@ -265,30 +151,114 @@ export function Footer({
 						</div>
 					</div>
 
-					<div className="h-px w-full bg-white/10 my-8" />
-
-					<div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/50">
-						<p>
-							&copy; {currentYear} {config.company.name}. {t("copyright")}
-						</p>
-						<div className="flex gap-6">
-							{settings.bottomLinks.map((link, index) => (
-								<Link
-									key={`${link.href}-${index}`}
-									href={link.href}
-									className="hover:text-white"
-									{...(link.isExternal && {
-										target: "_blank",
-										rel: "noopener noreferrer",
-									})}
-								>
-									{link.label}
-								</Link>
+					{/* Col 2: Über ZAVD */}
+					<div>
+						<h4 className="text-xs font-semibold uppercase tracking-widest text-white mb-3">
+							{t("quickLinks")}
+						</h4>
+						<div className="w-8 h-0.5 bg-primary mb-6" />
+						<ul className="space-y-3.5">
+							{uberZavdLinks.map((link, i) => (
+								<li key={i}>
+									<Link href={link.href} className={linkClass}>
+										{link.label}
+									</Link>
+								</li>
 							))}
-						</div>
+						</ul>
+					</div>
+
+					{/* Col 3: Angebote & Beratung */}
+					<div>
+						<h4 className="text-xs font-semibold uppercase tracking-widest text-white mb-3">
+							{t("usefulLinks")}
+						</h4>
+						<div className="w-8 h-0.5 bg-primary mb-6" />
+						<ul className="space-y-3.5">
+							{angeboteLinks.map((link, i) => (
+								<li key={i}>
+									<Link href={link.href} className={linkClass}>
+										{link.label}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</div>
+
+					{/* Col 4: Projekte */}
+					<div>
+						<h4 className="text-xs font-semibold uppercase tracking-widest text-white mb-3">
+							{t("projekte")}
+						</h4>
+						<div className="w-8 h-0.5 bg-primary mb-6" />
+						<ul className="space-y-3.5">
+							{projekteLinks.map((link, i) => (
+								<li key={i}>
+									<Link href={link.href} className={linkClass}>
+										{link.label}
+									</Link>
+								</li>
+							))}
+						</ul>
+					</div>
+
+					{/* Col 5: Newsletter — Blessed Church style */}
+					<div>
+						<h4 className="text-xs font-semibold uppercase tracking-widest text-white mb-3">
+							{t("newsletterTitle")}
+						</h4>
+						<div className="w-8 h-0.5 bg-primary mb-6" />
+						<p className="text-sm text-white/65 mb-5 leading-relaxed">
+							{t("newsletterDesc")}
+						</p>
+						{subscribed ? (
+							<p className="text-sm text-primary font-medium">✓ Vielen Dank!</p>
+						) : (
+							<form onSubmit={handleSubscribe} className="space-y-2">
+								<div className="flex">
+									<input
+										type="email"
+										value={email}
+										onChange={(e) => setEmail(e.target.value)}
+										placeholder={t("emailPlaceholder")}
+										required
+										className="flex-1 min-w-0 px-3 py-2.5 text-sm bg-white/10 border border-white/15 rounded-l-md text-white placeholder:text-white/35 focus:outline-none focus:border-primary transition-colors"
+									/>
+									<button
+										type="submit"
+										className="px-3 py-2.5 bg-primary hover:bg-primary/85 text-white text-sm font-semibold rounded-r-md transition-colors duration-200 shrink-0"
+									>
+										{t("subscribeButton")}
+									</button>
+								</div>
+								<p className="text-xs text-white/35">{t("privacyNote")}</p>
+							</form>
+						)}
 					</div>
 				</div>
-			</footer>
-		</>
+			</div>
+
+			{/* Bottom Bar — Blessed Church style */}
+			<div>
+				<div className="_container py-5 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-3">
+					<p className="text-xs text-white/45">
+						&copy; {currentYear}{" "}
+						<span className="text-primary font-semibold">{config.company.name}</span>
+						{" | "}{t("copyright")}
+					</p>
+					<div className="flex items-center gap-5">
+						{bottomLinks.map((link, i) => (
+							<Link
+								key={i}
+								href={link.href}
+								className="text-xs text-white/45 hover:text-white transition-colors duration-200"
+							>
+								{link.label}
+							</Link>
+						))}
+					</div>
+				</div>
+			</div>
+		</footer>
 	);
 }

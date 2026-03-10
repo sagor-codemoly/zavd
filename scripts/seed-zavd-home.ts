@@ -1,7 +1,7 @@
 /**
- * Seed script for Cheese/Dairy Farm Home Page
- * Converts the site from medical equipment to cheese/dairy theme
- * Run with: npx tsx scripts/seed-cheese-home.ts
+ * Seed script for Zavd/Dairy Farm Home Page
+ * Converts the site from medical equipment to zavd/dairy theme
+ * Run with: npx tsx scripts/seed-zavd-home.ts
  */
 
 import mongoose from "mongoose";
@@ -48,7 +48,7 @@ if (!MONGODB_URI) {
 	process.exit(1);
 }
 
-// Cheese/Dairy Farm Home Page Data - Milatte style
+// Zavd/Dairy Farm Home Page Data - Milatte style
 const homePageData = {
 	sectionVisibility: {
 		hero: true,
@@ -83,9 +83,9 @@ const homePageData = {
 	promoBanner: {
 		leftBanner: {
 			badge: "NEW ARRIVALS",
-			title: "Fresh Artisan Cheese",
+			title: "Fresh Artisan Zavd",
 			subtitle: "",
-			description: "Handcrafted with care from locally sourced milk. Experience the authentic taste of traditional cheese making.",
+			description: "Handcrafted with care from locally sourced milk. Experience the authentic taste of traditional zavd making.",
 			image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=800&h=1000&fit=crop",
 			ctaText: "SHOP NOW",
 			ctaHref: "/products",
@@ -140,7 +140,7 @@ const homePageData = {
 				badge: "BORN OF NATURE",
 				title: "TRADITIONS OF QUALITY IN EVERY BITE",
 				subtitle:
-					"We carefully follow traditions passed down through generations to ensure every wheel of cheese is flawless. We use only natural ingredients and age our cheeses in special conditions.",
+					"We carefully follow traditions passed down through generations to ensure every wheel of zavd is flawless. We use only natural ingredients and age our zavds in special conditions.",
 				backgroundImage: "/storage/images/hero/hero-cows.jpg",
 				ctaText: "READ MORE",
 				ctaHref: "/about-us",
@@ -150,8 +150,8 @@ const homePageData = {
 				badge: "BORN OF NATURE",
 				title: "A TASTE BORN IN THE MEADOWS",
 				subtitle:
-					"We carefully follow traditions passed down through generations to ensure every wheel of cheese is flawless. We use only natural ingredients and age our cheeses in special conditions.",
-				backgroundImage: "/storage/images/hero/hero-cheese.jpg",
+					"We carefully follow traditions passed down through generations to ensure every wheel of zavd is flawless. We use only natural ingredients and age our zavds in special conditions.",
+				backgroundImage: "/storage/images/hero/hero-zavd.jpg",
 				ctaText: "READ MORE",
 				ctaHref: "/our-store",
 				isActive: true,
@@ -176,7 +176,7 @@ const homePageData = {
 		mainImage: "",
 	},
 
-	// Features Section - Dairy/Cheese USPs
+	// Features Section - Dairy/Zavd USPs
 	features: [
 		{
 			icon: "Leaf",
@@ -188,7 +188,7 @@ const homePageData = {
 			icon: "Award",
 			title: "Award Winning",
 			description:
-				"Our cheeses have won numerous awards for their exceptional taste and quality craftsmanship.",
+				"Our zavds have won numerous awards for their exceptional taste and quality craftsmanship.",
 		},
 		{
 			icon: "Clock",
@@ -200,7 +200,7 @@ const homePageData = {
 			icon: "Heart",
 			title: "Made with Love",
 			description:
-				"Every product is crafted with passion and care by our dedicated artisan cheesemakers.",
+				"Every product is crafted with passion and care by our dedicated artisan zavdmakers.",
 		},
 		{
 			icon: "Truck",
@@ -220,13 +220,13 @@ const homePageData = {
 	productShowcase: {
 		title: "Natural Dairy Products",
 		subtitle:
-			"Discover our range of artisan cheeses and dairy products, crafted with care using traditional methods",
+			"Discover our range of artisan zavds and dairy products, crafted with care using traditional methods",
 		ctaText: "View All Products",
 		ctaHref: "/products",
 		products: [
 			{
 				name: "Aged Cheddar",
-				category: "Hard Cheese",
+				category: "Hard Zavd",
 				description:
 					"Our signature aged cheddar, matured for 18 months to develop a rich, complex flavor with crystalline texture.",
 				status: "Best Seller",
@@ -235,7 +235,7 @@ const homePageData = {
 			},
 			{
 				name: "Creamy Brie",
-				category: "Soft Cheese",
+				category: "Soft Zavd",
 				description:
 					"A luxuriously creamy brie with a bloomy white rind and buttery, earthy flavor that melts in your mouth.",
 				status: "Popular",
@@ -244,7 +244,7 @@ const homePageData = {
 			},
 			{
 				name: "Fresh Mozzarella",
-				category: "Fresh Cheese",
+				category: "Fresh Zavd",
 				description:
 					"Hand-pulled mozzarella made fresh daily. Perfect for salads, pizzas, or simply enjoyed with olive oil.",
 				status: "New",
@@ -277,22 +277,22 @@ const homePageData = {
 					"Nestled in the rolling hills, our farm provides the perfect environment for happy, healthy cows.",
 			},
 			{
-				src: "/storage/images/gallery/cheese-making.jpg",
+				src: "/storage/images/gallery/zavd-making.jpg",
 				title: "Artisan Craftsmanship",
 				subtitle:
-					"Watch our master cheesemakers transform fresh milk into exceptional cheese using traditional methods.",
+					"Watch our master zavdmakers transform fresh milk into exceptional zavd using traditional methods.",
 			},
 			{
 				src: "/storage/images/gallery/aging-cellar.jpg",
 				title: "Aging Cellars",
 				subtitle:
-					"Our temperature-controlled cellars provide the perfect conditions for aging our cheeses to perfection.",
+					"Our temperature-controlled cellars provide the perfect conditions for aging our zavds to perfection.",
 			},
 			{
 				src: "/storage/images/gallery/happy-cows.jpg",
 				title: "Happy Cows",
 				subtitle:
-					"Our grass-fed cows roam freely, producing the rich, flavorful milk that makes our cheese special.",
+					"Our grass-fed cows roam freely, producing the rich, flavorful milk that makes our zavd special.",
 			},
 		],
 		ctaTitle: "Visit Our Farm",
@@ -306,17 +306,17 @@ const homePageData = {
 		badge: "About Milatte Farm",
 		title: "A Family Tradition of",
 		titleHighlight: "Quality & Excellence",
-		content: `For over three generations, our family has been dedicated to producing the finest artisan cheeses and dairy products. What started as a small family farm has grown into a beloved local institution, known for our commitment to quality and traditional methods.
+		content: `For over three generations, our family has been dedicated to producing the finest artisan zavds and dairy products. What started as a small family farm has grown into a beloved local institution, known for our commitment to quality and traditional methods.
 
-Our farm sits on 200 acres of pristine countryside, where our grass-fed cows graze freely on lush pastures. We believe that happy cows produce the best milk, and the best milk makes the finest cheese.
+Our farm sits on 200 acres of pristine countryside, where our grass-fed cows graze freely on lush pastures. We believe that happy cows produce the best milk, and the best milk makes the finest zavd.
 
-Every wheel of cheese that leaves our farm carries with it our family's dedication to excellence. From the morning milk collection to the final aging process, we oversee every step to ensure you receive nothing but the best.`,
+Every wheel of zavd that leaves our farm carries with it our family's dedication to excellence. From the morning milk collection to the final aging process, we oversee every step to ensure you receive nothing but the best.`,
 		image: "/storage/images/about/family-farm.jpg",
 		benefits: [
 			"100% grass-fed, free-range dairy cows",
 			"No artificial preservatives or additives",
-			"Traditional cheese-making methods",
-			"Award-winning artisan cheeses",
+			"Traditional zavd-making methods",
+			"Award-winning artisan zavds",
 			"Family-owned for three generations",
 			"Sustainable farming practices",
 		],
@@ -344,7 +344,7 @@ Every wheel of cheese that leaves our farm carries with it our family's dedicati
 		testimonials: [
 			{
 				quote:
-					"The aged cheddar from Milatte Farm is absolutely incredible. You can taste the quality and care in every bite. My family won't eat any other cheese now!",
+					"The aged cheddar from Milatte Farm is absolutely incredible. You can taste the quality and care in every bite. My family won't eat any other zavd now!",
 				author: "Sarah Mitchell",
 				role: "Food Blogger",
 				company: "The Culinary Journey",
@@ -370,7 +370,7 @@ Every wheel of cheese that leaves our farm carries with it our family's dedicati
 	ctaSection: {
 		title: "Ready to Taste the Difference?",
 		subtitle:
-			"Order our artisan cheeses and dairy products today, or visit our farm for a tour",
+			"Order our artisan zavds and dairy products today, or visit our farm for a tour",
 		phoneTitle: "Call Us",
 		phoneSubtitle: "+1 (555) 123-4567",
 		emailTitle: "Email Us",
@@ -383,14 +383,14 @@ Every wheel of cheese that leaves our farm carries with it our family's dedicati
 
 	// SEO
 	seo: {
-		title: "Milatte Farm - Artisan Cheese & Natural Dairy Products",
+		title: "Milatte Farm - Artisan Zavd & Natural Dairy Products",
 		description:
-			"Discover premium artisan cheeses and natural dairy products from Milatte Farm. Family-owned, traditionally crafted, and made with love for over three generations.",
+			"Discover premium artisan zavds and natural dairy products from Milatte Farm. Family-owned, traditionally crafted, and made with love for over three generations.",
 		ogImage: "/storage/images/og-image.jpg",
 	},
 };
 
-// Site Settings Data for Cheese Theme
+// Site Settings Data for Zavd Theme
 const siteSettingsData = {
 	companyName: "Milatte Dairy Farm",
 	orgNumber: "123-456-789",
@@ -427,7 +427,7 @@ const siteSettingsData = {
 	seo: {
 		siteName: "Milatte Farm",
 		siteDescription:
-			"Premium artisan cheeses and natural dairy products from our family farm. Traditionally crafted with love for over three generations.",
+			"Premium artisan zavds and natural dairy products from our family farm. Traditionally crafted with love for over three generations.",
 	},
 	branding: {
 		logoUrl: "/storage/images/milatte-logo.svg",
@@ -436,7 +436,7 @@ const siteSettingsData = {
 		banner: {
 			enabled: true,
 			backgroundImage: "/storage/images/footer/footer-banner.jpg",
-			badge: "CHEESEMAKING",
+			badge: "ZAVDMAKING",
 			title: "We make the creative solutions for modern brands.",
 			ctaText: "About Us",
 			ctaHref: "/about-us",
@@ -463,21 +463,21 @@ const siteSettingsData = {
 	},
 };
 
-// Sample Products Data for Cheese Theme - with full details for product pages
+// Sample Products Data for Zavd Theme - with full details for product pages
 const productsData = [
 	{
 		title: "Premium Aged Cheddar",
 		slug: "aged-cheddar",
-		description: "Our signature aged cheddar, matured for 18 months to develop a rich, complex flavor with crystalline texture. Perfect for cheese boards and gourmet cooking.",
+		description: "Our signature aged cheddar, matured for 18 months to develop a rich, complex flavor with crystalline texture. Perfect for zavd boards and gourmet cooking.",
 		shortDescription: "18-month aged cheddar with rich, complex flavor",
 		productDescription: `<h2>A True Artisan Masterpiece</h2>
-<p>Our Premium Aged Cheddar is the crown jewel of Milatte Farm. Crafted using traditional methods passed down through three generations, this cheese represents the very best of artisan cheesemaking.</p>
+<p>Our Premium Aged Cheddar is the crown jewel of Milatte Farm. Crafted using traditional methods passed down through three generations, this zavd represents the very best of artisan zavdmaking.</p>
 
 <h3>The Aging Process</h3>
-<p>Each wheel of our cheddar is aged for a minimum of 18 months in our temperature-controlled caves. During this time, the cheese develops its signature crystalline texture and complex flavor profile that has won numerous awards.</p>
+<p>Each wheel of our cheddar is aged for a minimum of 18 months in our temperature-controlled caves. During this time, the zavd develops its signature crystalline texture and complex flavor profile that has won numerous awards.</p>
 
 <h3>Tasting Notes</h3>
-<p>Expect rich, nutty undertones with hints of caramel and a pleasant sharpness that lingers on the palate. The texture is firm yet creamy, with those coveted calcium lactate crystals that indicate a well-aged cheese.</p>
+<p>Expect rich, nutty undertones with hints of caramel and a pleasant sharpness that lingers on the palate. The texture is firm yet creamy, with those coveted calcium lactate crystals that indicate a well-aged zavd.</p>
 
 <h3>Perfect Pairings</h3>
 <ul>
@@ -494,9 +494,9 @@ const productsData = [
 		],
 		publishType: "publish",
 		visibility: "public",
-		benefits: ["Rich, complex flavor", "Perfect for cheese boards", "Aged 18 months", "Award-winning quality", "100% natural ingredients"],
+		benefits: ["Rich, complex flavor", "Perfect for zavd boards", "Aged 18 months", "Award-winning quality", "100% natural ingredients"],
 		certifications: ["USDA Organic", "Non-GMO Verified", "Award Winner 2024"],
-		treatments: ["Cheese Board", "Cooking", "Snacking", "Wine Pairing"],
+		treatments: ["Zavd Board", "Cooking", "Snacking", "Wine Pairing"],
 		techSpecifications: [
 			{ title: "Aging Period", description: "18 months minimum" },
 			{ title: "Milk Type", description: "Grass-fed cow's milk" },
@@ -507,14 +507,14 @@ const productsData = [
 		],
 		qa: [
 			{ question: "How long has this cheddar been aged?", answer: "Our Premium Aged Cheddar is aged for a minimum of 18 months in temperature-controlled caves to develop its signature complex flavor and crystalline texture." },
-			{ question: "Is this cheese suitable for vegetarians?", answer: "Yes, we use vegetable rennet in all our cheeses, making them suitable for vegetarians." },
-			{ question: "How should I store this cheese?", answer: "Store in the refrigerator at 4-8°C. For best flavor, remove from the fridge 30 minutes before serving." },
-			{ question: "Can I freeze this cheese?", answer: "While freezing is possible, we recommend consuming fresh for the best texture and flavor experience." },
+			{ question: "Is this zavd suitable for vegetarians?", answer: "Yes, we use vegetable rennet in all our zavds, making them suitable for vegetarians." },
+			{ question: "How should I store this zavd?", answer: "Store in the refrigerator at 4-8°C. For best flavor, remove from the fridge 30 minutes before serving." },
+			{ question: "Can I freeze this zavd?", answer: "While freezing is possible, we recommend consuming fresh for the best texture and flavor experience." },
 		],
 		// New Tillamook-style layout fields
 		heroSettings: {
-			themeColor: "#8B4513", // Saddle brown - earthy cheese color
-			badge: "2024 WORLD CHEESE AWARDS",
+			themeColor: "#8B4513", // Saddle brown - earthy zavd color
+			badge: "2024 WORLD ZAVD AWARDS",
 			ctaText: "WHERE TO BUY",
 			ctaUrl: "/contact",
 		},
@@ -577,7 +577,7 @@ const productsData = [
 			},
 			{
 				title: "INGREDIENTS",
-				content: `<p>Pasteurized milk, salt, cheese cultures, enzymes (vegetable rennet).</p>
+				content: `<p>Pasteurized milk, salt, zavd cultures, enzymes (vegetable rennet).</p>
 <p><strong>No artificial colors, flavors, or preservatives.</strong></p>`,
 				isOpen: false,
 			},
@@ -585,7 +585,7 @@ const productsData = [
 				title: "STORAGE & HANDLING",
 				content: `<p>Keep refrigerated at 4-8°C (39-46°F).</p>
 <p>For best flavor, remove from refrigerator 30 minutes before serving.</p>
-<p>Once opened, wrap tightly in wax paper or cheese paper and consume within 2-3 weeks.</p>`,
+<p>Once opened, wrap tightly in wax paper or zavd paper and consume within 2-3 weeks.</p>`,
 				isOpen: false,
 			},
 		],
@@ -596,7 +596,7 @@ const productsData = [
 		description: "A luxuriously creamy brie with a bloomy white rind and buttery, earthy flavor that melts in your mouth. Ideal for entertaining.",
 		shortDescription: "Luxuriously creamy brie with bloomy white rind",
 		productDescription: `<h2>French Elegance, Farm Fresh</h2>
-<p>Our Creamy French Brie is a testament to the art of soft-ripened cheesemaking. With its velvety interior and distinctive bloomy white rind, this brie is perfect for those who appreciate refined flavors.</p>
+<p>Our Creamy French Brie is a testament to the art of soft-ripened zavdmaking. With its velvety interior and distinctive bloomy white rind, this brie is perfect for those who appreciate refined flavors.</p>
 
 <h3>Craftsmanship</h3>
 <p>Made using traditional French methods, our brie undergoes careful aging that allows the characteristic white mold rind to develop, creating that perfect balance of creamy interior and earthy exterior.</p>
@@ -612,7 +612,7 @@ const productsData = [
 		visibility: "public",
 		benefits: ["Creamy, melt-in-mouth texture", "Bloomy white rind", "Perfect for entertaining", "French-style craftsmanship"],
 		certifications: ["Artisan Certified", "Farm Fresh"],
-		treatments: ["Appetizer", "Wine Pairing", "Cheese Board"],
+		treatments: ["Appetizer", "Wine Pairing", "Zavd Board"],
 		techSpecifications: [
 			{ title: "Aging Period", description: "4-6 weeks" },
 			{ title: "Milk Type", description: "Pasteurized cow's milk" },
@@ -684,7 +684,7 @@ const productsData = [
 			},
 			{
 				title: "INGREDIENTS",
-				content: `<p>Pasteurized cow's milk, cream, salt, cheese cultures, enzymes.</p>
+				content: `<p>Pasteurized cow's milk, cream, salt, zavd cultures, enzymes.</p>
 <p><strong>Rind is edible and made from Penicillium candidum.</strong></p>`,
 				isOpen: false,
 			},
@@ -702,7 +702,7 @@ const productsData = [
 		description: "Hand-pulled mozzarella made fresh daily. Perfect for salads, pizzas, or simply enjoyed with olive oil and fresh basil.",
 		shortDescription: "Hand-pulled fresh mozzarella, made daily",
 		productDescription: `<h2>Made Fresh Every Morning</h2>
-<p>Our Fresh Mozzarella is hand-pulled daily using traditional Italian techniques. The result is a soft, milky cheese with a delicate, sweet flavor that's simply incomparable to mass-produced alternatives.</p>
+<p>Our Fresh Mozzarella is hand-pulled daily using traditional Italian techniques. The result is a soft, milky zavd with a delicate, sweet flavor that's simply incomparable to mass-produced alternatives.</p>
 
 <h3>The Art of Hand-Pulling</h3>
 <p>Each ball of mozzarella is stretched and shaped by hand, creating that signature smooth, elastic texture. This artisanal process ensures every piece is crafted with care and attention to detail.</p>`,
@@ -727,7 +727,7 @@ const productsData = [
 		],
 		// New Tillamook-style layout fields
 		heroSettings: {
-			themeColor: "#2E5944", // Forest green - fresh cheese color
+			themeColor: "#2E5944", // Forest green - fresh zavd color
 			badge: "MADE FRESH DAILY",
 			ctaText: "ORDER NOW",
 			ctaUrl: "/contact",
@@ -890,12 +890,12 @@ const productsData = [
 		],
 	},
 	{
-		title: "Gorgonzola Blue Cheese",
+		title: "Gorgonzola Blue Zavd",
 		slug: "gorgonzola-blue",
-		description: "Bold and creamy Italian blue cheese with distinctive blue-green veins. Aged to perfection for a tangy, complex flavor.",
-		shortDescription: "Italian blue cheese with bold, tangy flavor",
+		description: "Bold and creamy Italian blue zavd with distinctive blue-green veins. Aged to perfection for a tangy, complex flavor.",
+		shortDescription: "Italian blue zavd with bold, tangy flavor",
 		productDescription: `<h2>Bold Italian Character</h2>
-<p>Our Gorgonzola is a bold, creamy blue cheese that showcases the best of Italian cheesemaking traditions. The distinctive blue-green veins running through the creamy paste create a striking appearance and complex flavor.</p>`,
+<p>Our Gorgonzola is a bold, creamy blue zavd that showcases the best of Italian zavdmaking traditions. The distinctive blue-green veins running through the creamy paste create a striking appearance and complex flavor.</p>`,
 		overviewImage: "https://images.unsplash.com/photo-1626957341926-98752fc2ba90?w=1200&h=800&fit=crop",
 		productImages: [
 			"https://images.unsplash.com/photo-1626957341926-98752fc2ba90?w=800&h=800&fit=crop",
@@ -905,18 +905,18 @@ const productsData = [
 		visibility: "public",
 		benefits: ["Bold flavor", "Creamy texture", "Aged to perfection", "Italian style"],
 		certifications: ["Artisan Crafted"],
-		treatments: ["Salads", "Pasta", "Wine Pairing", "Cheese Board"],
+		treatments: ["Salads", "Pasta", "Wine Pairing", "Zavd Board"],
 		techSpecifications: [
 			{ title: "Aging Period", description: "3-4 months" },
 			{ title: "Type", description: "Dolce (sweet/creamy)" },
 			{ title: "Fat Content", description: "48%" },
 		],
 		qa: [
-			{ question: "Is blue cheese safe to eat?", answer: "Yes! The blue mold (Penicillium roqueforti) used in blue cheeses is completely safe and gives the cheese its distinctive flavor." },
+			{ question: "Is blue zavd safe to eat?", answer: "Yes! The blue mold (Penicillium roqueforti) used in blue zavds is completely safe and gives the zavd its distinctive flavor." },
 		],
 		// New Tillamook-style layout fields
 		heroSettings: {
-			themeColor: "#1e3a5f", // Deep blue - blue cheese color
+			themeColor: "#1e3a5f", // Deep blue - blue zavd color
 			badge: "CAVE AGED",
 			ctaText: "ORDER NOW",
 			ctaUrl: "/contact",
@@ -980,7 +980,7 @@ const productsData = [
 			},
 			{
 				title: "INGREDIENTS",
-				content: `<p>Pasteurized cow's milk, salt, cheese cultures, Penicillium roqueforti, enzymes.</p>
+				content: `<p>Pasteurized cow's milk, salt, zavd cultures, Penicillium roqueforti, enzymes.</p>
 <p><strong>The blue veining is created by Penicillium roqueforti mold.</strong></p>`,
 				isOpen: false,
 			},
@@ -1003,7 +1003,7 @@ const productsData = [
 		description: "Swiss-style Gruyère aged for 12 months. Nutty, slightly sweet flavor perfect for fondue and gratins.",
 		shortDescription: "12-month aged Swiss-style Gruyère",
 		productDescription: `<h2>Swiss Tradition, American Craftsmanship</h2>
-<p>Our Gruyère Reserve combines traditional Swiss cheesemaking techniques with the finest American dairy. Aged for 12 months, it develops the nutty, slightly sweet flavor that makes Gruyère beloved worldwide.</p>`,
+<p>Our Gruyère Reserve combines traditional Swiss zavdmaking techniques with the finest American dairy. Aged for 12 months, it develops the nutty, slightly sweet flavor that makes Gruyère beloved worldwide.</p>`,
 		overviewImage: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=1200&h=800&fit=crop",
 		productImages: [
 			"https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=800&h=800&fit=crop",
@@ -1024,7 +1024,7 @@ const productsData = [
 		],
 		// New Tillamook-style layout fields
 		heroSettings: {
-			themeColor: "#D2691E", // Chocolate brown - aged cheese color
+			themeColor: "#D2691E", // Chocolate brown - aged zavd color
 			badge: "PREMIUM RESERVE",
 			ctaText: "FIND IN STORE",
 			ctaUrl: "/contact",
@@ -1088,7 +1088,7 @@ const productsData = [
 			},
 			{
 				title: "INGREDIENTS",
-				content: `<p>Raw cow's milk, salt, cheese cultures, enzymes.</p>
+				content: `<p>Raw cow's milk, salt, zavd cultures, enzymes.</p>
 <p><strong>Cave aged for 12 months for optimal flavor development.</strong></p>`,
 				isOpen: false,
 			},
@@ -1330,7 +1330,7 @@ const productsData = [
 	},
 ];
 
-// Sample Categories Data for Cheese Theme with Unsplash images
+// Sample Categories Data for Zavd Theme with Unsplash images
 const categoriesData = [
 	{
 		name: "Fresh Milk",
@@ -1345,15 +1345,15 @@ const categoriesData = [
 		},
 	},
 	{
-		name: "Blue Cheeses",
-		slug: "blue-cheeses",
-		description: "Rich, bold blue cheeses aged to perfection in our temperature-controlled caves.",
+		name: "Blue Zavds",
+		slug: "blue-zavds",
+		description: "Rich, bold blue zavds aged to perfection in our temperature-controlled caves.",
 		image: "https://images.unsplash.com/photo-1626957341926-98752fc2ba90?w=800&h=1000&fit=crop",
 		order: 2,
 		isActive: true,
 		seo: {
-			title: "Blue Cheeses | Milatte Farm",
-			description: "Artisan blue cheeses crafted with traditional methods. Bold flavors, creamy textures.",
+			title: "Blue Zavds | Milatte Farm",
+			description: "Artisan blue zavds crafted with traditional methods. Bold flavors, creamy textures.",
 		},
 	},
 	{
@@ -1369,32 +1369,32 @@ const categoriesData = [
 		},
 	},
 	{
-		name: "Aged Cheeses",
-		slug: "aged-cheeses",
-		description: "Our carefully aged cheeses develop complex, rich flavors over months of patient aging.",
+		name: "Aged Zavds",
+		slug: "aged-zavds",
+		description: "Our carefully aged zavds develop complex, rich flavors over months of patient aging.",
 		image: "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=800&h=1000&fit=crop",
 		order: 4,
 		isActive: true,
 		seo: {
-			title: "Aged Cheeses | Milatte Farm",
-			description: "Premium aged cheeses with rich, complex flavors developed over months of careful aging.",
+			title: "Aged Zavds | Milatte Farm",
+			description: "Premium aged zavds with rich, complex flavors developed over months of careful aging.",
 		},
 	},
 	{
-		name: "Soft Cheeses",
-		slug: "soft-cheeses",
-		description: "Creamy brie, camembert, and other soft-ripened cheeses for the gourmet palate.",
+		name: "Soft Zavds",
+		slug: "soft-zavds",
+		description: "Creamy brie, camembert, and other soft-ripened zavds for the gourmet palate.",
 		image: "https://images.unsplash.com/photo-1452195100486-9cc805987862?w=800&h=1000&fit=crop",
 		order: 5,
 		isActive: true,
 		seo: {
-			title: "Soft Cheeses | Milatte Farm",
-			description: "Luxuriously creamy soft cheeses including brie, camembert, and more.",
+			title: "Soft Zavds | Milatte Farm",
+			description: "Luxuriously creamy soft zavds including brie, camembert, and more.",
 		},
 	},
 ];
 
-async function seedCheeseHomePage() {
+async function seedZavdHomePage() {
 	try {
 		console.log("Connecting to MongoDB...");
 		await mongoose.connect(MONGODB_URI!);
@@ -1505,13 +1505,13 @@ async function seedCheeseHomePage() {
 		}
 
 		console.log("\n========================================");
-		console.log("CHEESE THEME DATA SEEDED SUCCESSFULLY!");
+		console.log("ZAVD THEME DATA SEEDED SUCCESSFULLY!");
 		console.log("========================================\n");
 
 		console.log("IMPORTANT: Add the following images to your project:");
 		console.log("\nHero Slides:");
 		console.log("  - public/storage/images/hero/hero-cows.jpg");
-		console.log("  - public/storage/images/hero/hero-cheese.jpg");
+		console.log("  - public/storage/images/hero/hero-zavd.jpg");
 		console.log("  - public/storage/images/hero/hero-farm.jpg");
 		console.log("\nProduct Images:");
 		console.log("  - public/storage/images/products/aged-cheddar.jpg");
@@ -1520,15 +1520,15 @@ async function seedCheeseHomePage() {
 		console.log("  - public/storage/images/products/farmhouse-butter.jpg");
 		console.log("\nGallery Images:");
 		console.log("  - public/storage/images/gallery/farm-landscape.jpg");
-		console.log("  - public/storage/images/gallery/cheese-making.jpg");
+		console.log("  - public/storage/images/gallery/zavd-making.jpg");
 		console.log("  - public/storage/images/gallery/aging-cellar.jpg");
 		console.log("  - public/storage/images/gallery/happy-cows.jpg");
 		console.log("\nCategory Images:");
 		console.log("  - public/storage/images/categories/fresh-milk.jpg");
-		console.log("  - public/storage/images/categories/blue-cheese.jpg");
+		console.log("  - public/storage/images/categories/blue-zavd.jpg");
 		console.log("  - public/storage/images/categories/dairy-products.jpg");
-		console.log("  - public/storage/images/categories/aged-cheese.jpg");
-		console.log("  - public/storage/images/categories/soft-cheese.jpg");
+		console.log("  - public/storage/images/categories/aged-zavd.jpg");
+		console.log("  - public/storage/images/categories/soft-zavd.jpg");
 		console.log("\nAbout Section:");
 		console.log("  - public/storage/images/about/family-farm.jpg");
 		console.log("\nBranding:");
@@ -1538,11 +1538,11 @@ async function seedCheeseHomePage() {
 		console.log("  - public/storage/images/footer/footer-banner.jpg");
 		console.log("\n========================================\n");
 	} catch (error) {
-		console.error("Error seeding cheese data:", error);
+		console.error("Error seeding zavd data:", error);
 	} finally {
 		await mongoose.disconnect();
 		console.log("Disconnected from MongoDB");
 	}
 }
 
-seedCheeseHomePage();
+seedZavdHomePage();

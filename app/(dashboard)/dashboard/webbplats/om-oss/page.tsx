@@ -489,7 +489,7 @@ export default function AboutPageCMS() {
 									<Label>Subtitle</Label>
 									<Input
 										{...form.register("history.subtitle")}
-										placeholder="e.g., Cheese making practice across generations"
+										placeholder="e.g., Zavd making practice across generations"
 									/>
 								</div>
 							</div>
@@ -970,7 +970,7 @@ export default function AboutPageCMS() {
 												<Label>Role</Label>
 												<Input
 													{...form.register(`team.members.${index}.role`)}
-													placeholder="e.g., Head Cheese Maker"
+													placeholder="e.g., Head Zavd Maker"
 												/>
 											</div>
 											<div className="space-y-2">

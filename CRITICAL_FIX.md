@@ -17,15 +17,15 @@ The `MONGODB_URI` was missing the database name in the connection string:
 # WRONG (was connecting to default 'test' database)
 MONGODB_URI=mongodb://127.0.0.1:27017/?directConnection=true...
 
-# CORRECT (now connects to 'synos-db')
-MONGODB_URI=mongodb://127.0.0.1:27017/synos-db?directConnection=true...
+# CORRECT (now connects to 'zavd-db')
+MONGODB_URI=mongodb://127.0.0.1:27017/zavd-db?directConnection=true...
 ```
 
 ### What Was Happening
 
-1. ✅ Better Auth connected to `synos-db` correctly (using separate connection)
+1. ✅ Better Auth connected to `zavd-db` correctly (using separate connection)
 2. ❌ Mongoose connected to default database (probably `test`)
-3. ✅ User registration created user in `synos-db`
+3. ✅ User registration created user in `zavd-db`
 4. ❌ Mongoose queries looked in wrong database, found nothing
 
 ### Proof from Logs
@@ -49,8 +49,8 @@ The query was correct, but looking in the **wrong database**!
 # BEFORE
 MONGODB_URI=mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.9
 
-# AFTER (added /synos-db)
-MONGODB_URI=mongodb://127.0.0.1:27017/synos-db?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.9
+# AFTER (added /zavd-db)
+MONGODB_URI=mongodb://127.0.0.1:27017/zavd-db?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.5.9
 ```
 
 ### 2. Added Connection Verification Logs
@@ -82,16 +82,16 @@ pnpm dev
 **You should now see:**
 
 ```
-🔌 [MongoDB] Connecting to: mongodb://127.0.0.1:27017/synos-db?...
+🔌 [MongoDB] Connecting to: mongodb://127.0.0.1:27017/zavd-db?...
 ✅ [MongoDB] Connected successfully!
-✅ [MongoDB] Database name: synos-db  ← This confirms correct database!
+✅ [MongoDB] Database name: zavd-db  ← This confirms correct database!
 ```
 
 ### Step 2: Clear and Re-register
 
 ```bash
 # Clear database
-mongosh mongodb://127.0.0.1:27017/synos-db --eval "
+mongosh mongodb://127.0.0.1:27017/zavd-db --eval "
   db.user.deleteMany({});
   db.profiles.deleteMany({});
   db.session.deleteMany({});
@@ -105,7 +105,7 @@ mongosh mongodb://127.0.0.1:27017/synos-db --eval "
 After registration, you should see:
 
 ```
-🗄️ [UserRepository] Database name: synos-db  ← Correct!
+🗄️ [UserRepository] Database name: zavd-db  ← Correct!
 🗄️ [UserRepository] Query executed. Result: { found: true }  ← User found!
 ✅ User and profile retrieved
 ```
@@ -117,7 +117,7 @@ After registration, you should see:
 ### Fixed Issues
 
 1. ✅ **Collection name:** `"users"` → `"user"`
-2. ✅ **Database connection:** Added `/synos-db` to MONGODB_URI
+2. ✅ **Database connection:** Added `/zavd-db` to MONGODB_URI
 3. ✅ **Logging:** Comprehensive logs throughout entire flow
 4. ✅ **Type safety:** Added virtual profile property to IUser interface
 
@@ -147,7 +147,7 @@ After registration, you should see:
 ### Before
 
 ```
-Better Auth → synos-db/user collection ✅
+Better Auth → zavd-db/user collection ✅
 Mongoose   → test/user collection ❌ (wrong DB!)
 Query      → test database → finds nothing
 ```
@@ -155,9 +155,9 @@ Query      → test database → finds nothing
 ### After
 
 ```
-Better Auth → synos-db/user collection ✅
-Mongoose   → synos-db/user collection ✅ (correct DB!)
-Query      → synos-db database → finds user! ✅
+Better Auth → zavd-db/user collection ✅
+Mongoose   → zavd-db/user collection ✅ (correct DB!)
+Query      → zavd-db database → finds user! ✅
 ```
 
 ---

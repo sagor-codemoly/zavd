@@ -25,25 +25,26 @@ export interface ISocialMedia {
 	linkedin?: string;
 	twitter?: string;
 	youtube?: string;
+	pinterest?: string;
 }
 
 /**
  * SEO settings interface
  */
 export interface ISeoSettings {
-	siteName: string; // "Synos Medical"
+	siteName: string; // "Zavd Medical"
 	siteTagline?: string; // "Ost från Boxholm"
 	siteDescription: string; // Default meta description
 	ogImage?: string; // Default OG image URL
 	keywords?: string[]; // Default keywords
-	twitterHandle?: string; // @synosmedical
+	twitterHandle?: string; // @zavdmedical
 }
 
 /**
  * Branding settings interface
  */
 export interface IBrandingSettings {
-	logoUrl: string; // "/storage/synos-logo-beige-glow.svg"
+	logoUrl: string; // "/storage/zavd-logo-beige-glow.svg"
 	faviconUrl?: string; // "/storage/favicon.ico"
 	dashboardLogoUrl?: string; // Logo for admin dashboard
 }
@@ -63,7 +64,7 @@ export interface IFooterLink {
 export interface IFooterBanner {
 	enabled: boolean;
 	backgroundImage?: string;
-	badge?: string; // e.g., "CHEESEMAKING"
+	badge?: string; // e.g., "ZAVDMAKING"
 	title?: string; // e.g., "We make the creative solutions for modern brands."
 	ctaText?: string; // e.g., "About Us"
 	ctaHref?: string; // e.g., "/about"
@@ -123,14 +124,14 @@ export interface ISiteSettings extends Document {
 	_id: mongoose.Types.ObjectId;
 
 	// Company Information
-	companyName: string; // "Synos Medical AB"
+	companyName: string; // "Zavd Medical AB"
 	orgNumber: string; // "556871-8075"
 	vatNumber?: string; // "SE556871807501"
 
 	// Contact Information
 	phone: string; // "010-205 15 01"
-	email: string; // "info@synos.se"
-	noreplyEmail?: string; // "noreply@synos.se"
+	email: string; // "info@zavd.se"
+	noreplyEmail?: string; // "noreply@zavd.se"
 
 	// Office Locations
 	offices: IOffice[];
@@ -214,6 +215,7 @@ const SocialMediaSchema = new Schema<ISocialMedia>(
 		linkedin: { type: String, trim: true },
 		twitter: { type: String, trim: true },
 		youtube: { type: String, trim: true },
+		pinterest: { type: String, trim: true },
 	},
 	{ _id: false }
 );

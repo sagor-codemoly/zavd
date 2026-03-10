@@ -60,7 +60,7 @@ Implement multiple schema types for comprehensive SEO:
   "name": "Product Name",
   "description": "...",
   "image": ["url1", "url2"],
-  "brand": { "@type": "Brand", "name": "Synos Medical" },
+  "brand": { "@type": "Brand", "name": "Zavd Medical" },
   "category": "Medical Equipment",
   "sku": "product-slug"
 }
@@ -102,9 +102,9 @@ Implement multiple schema types for comprehensive SEO:
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Synos Medical AB",
-  "url": "https://synos.se",
-  "logo": "https://synos.se/logo.png",
+  "name": "Zavd Medical AB",
+  "url": "https://zavd.se",
+  "logo": "https://zavd.se/logo.png",
   "contactPoint": { ... }
 }
 ```
@@ -132,7 +132,7 @@ Implement multiple schema types for comprehensive SEO:
 - [x] `og:image` - Product OG image or overview image
 - [x] `og:url` - Canonical URL
 - [x] `og:type` - "product" or "website"
-- [x] `og:site_name` - "Synos Medical"
+- [x] `og:site_name` - "Zavd Medical"
 - [x] `og:locale` - "sv_SE"
 
 ### Twitter Cards

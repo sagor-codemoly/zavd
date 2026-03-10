@@ -1184,7 +1184,7 @@ export default function PrivacyPageAdmin() {
 													<FormLabel>Company Name</FormLabel>
 													<FormControl>
 														<Input
-															placeholder="Synos Medical AB"
+															placeholder="Zavd Medical AB"
 															{...field}
 															value={field.value || ""}
 														/>
@@ -1223,7 +1223,7 @@ export default function PrivacyPageAdmin() {
 													<FormControl>
 														<Input
 															type="email"
-															placeholder="info@synosmedical.se"
+															placeholder="info@zavdmedical.se"
 															{...field}
 															value={field.value || ""}
 														/>
@@ -1403,7 +1403,7 @@ export default function PrivacyPageAdmin() {
 														<FormLabel>Text</FormLabel>
 														<FormControl>
 															<Input
-																placeholder="info@synosmedical.se"
+																placeholder="info@zavdmedical.se"
 																{...field}
 																value={field.value || ""}
 															/>
@@ -1420,7 +1420,7 @@ export default function PrivacyPageAdmin() {
 														<FormLabel>Link</FormLabel>
 														<FormControl>
 															<Input
-																placeholder="mailto:info@synosmedical.se"
+																placeholder="mailto:info@zavdmedical.se"
 																{...field}
 																value={field.value || ""}
 															/>
@@ -1451,7 +1451,7 @@ export default function PrivacyPageAdmin() {
 													<FormLabel>Meta Title</FormLabel>
 													<FormControl>
 														<Input
-															placeholder="Integritetspolicy - Synos Medical"
+															placeholder="Integritetspolicy - Zavd Medical"
 															{...field}
 															value={field.value || ""}
 														/>
@@ -1471,7 +1471,7 @@ export default function PrivacyPageAdmin() {
 													<FormLabel>Meta Description</FormLabel>
 													<FormControl>
 														<Textarea
-															placeholder="Läs om hur Synos Medical AB behandlar dina personuppgifter enligt GDPR."
+															placeholder="Läs om hur Zavd Medical AB behandlar dina personuppgifter enligt GDPR."
 															rows={3}
 															{...field}
 															value={field.value || ""}
@@ -1519,12 +1519,12 @@ export default function PrivacyPageAdmin() {
 									<CardContent>
 										<SeoPreview
 											data={{
-												title: form.watch("seo.title") || "Integritetspolicy - Synos Medical",
+												title: form.watch("seo.title") || "Integritetspolicy - Zavd Medical",
 												description: form.watch("seo.description") || "Add a description",
 												ogImage: form.watch("seo.ogImage") || null,
 												slug: "integritetspolicy",
-												siteName: "Synos Medical",
-												siteUrl: "www.synos.se",
+												siteName: "Zavd Medical",
+												siteUrl: "www.zavd.se",
 											}}
 										/>
 									</CardContent>

@@ -23,20 +23,20 @@ export async function generateMetadata(): Promise<Metadata> {
 	return {
 		title: `Blog | ${siteConfig.name}`,
 		description:
-			"Read our latest articles about cheese making, dairy farming, and the tradition behind our artisan cheese products.",
+			"Read our latest articles about zavd making, dairy farming, and the tradition behind our artisan zavd products.",
 		keywords: [
 			"blog",
 			"articles",
-			"cheese",
+			"zavd",
 			"dairy",
 			"artisan",
-			"cheese making",
+			"zavd making",
 			"tradition",
 		],
 		openGraph: {
 			title: `Blog | ${siteConfig.name}`,
 			description:
-				"Read our latest articles about cheese making, dairy farming, and the tradition behind our artisan cheese products.",
+				"Read our latest articles about zavd making, dairy farming, and the tradition behind our artisan zavd products.",
 			url: `${siteConfig.url}/blog`,
 			siteName: siteConfig.name,
 			images: [
@@ -54,7 +54,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			card: "summary_large_image",
 			title: `Blog | ${siteConfig.name}`,
 			description:
-				"Read our latest articles about cheese making, dairy farming, and the tradition behind our artisan cheese products.",
+				"Read our latest articles about zavd making, dairy farming, and the tradition behind our artisan zavd products.",
 			images: [`${siteConfig.url}/images/og/blog.jpg`],
 		},
 		alternates: {
@@ -79,7 +79,7 @@ export default async function BlogPage() {
 						"@type": "Blog",
 						name: `${siteConfig.name} Blog`,
 						description:
-							"Articles about cheese making, dairy farming, and artisan cheese products.",
+							"Articles about zavd making, dairy farming, and artisan zavd products.",
 						url: `${siteConfig.url}/blog`,
 						publisher: {
 							"@type": "Organization",

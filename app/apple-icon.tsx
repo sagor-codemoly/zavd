@@ -50,7 +50,7 @@ export default async function AppleIcon() {
 		}
 	}
 
-	// Generate branded fallback icon matching the Synos brand
+	// Generate branded fallback icon matching the Zavd brand
 	// Dark rounded rectangle with teal/cyan "S"
 	return new ImageResponse(
 		(

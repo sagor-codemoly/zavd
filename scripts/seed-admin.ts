@@ -235,12 +235,12 @@ async function getCredentials(): Promise<{
 
 async function main() {
 	console.log("\n========================================");
-	console.log("  Synos - Admin User Seed Script");
+	console.log("  Zavd - Admin User Seed Script");
 	console.log("========================================\n");
 
 	// Get MongoDB URI
 	const mongoUri = process.env.MONGODB_URI;
-	const dbName = process.env.MONGODB_DB || "synos-db";
+	const dbName = process.env.MONGODB_DB || "zavd-db";
 
 	if (!mongoUri) {
 		console.error("Error: MONGODB_URI environment variable is required.");

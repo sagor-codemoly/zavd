@@ -48,14 +48,12 @@
 		"dashboard": "Instrumentpanel"
 	},
 	"footer": {
-		"description": "Premiumost hantverksmässigt tillverkad med tradition och passion.",
+		"description": "Centralförbundet för Assyriska Föreningar i Tyskland och europeiska sektioner.",
 		"quickLinks": "Snabblänkar",
+		"usefulLinks": "Användbara länkar",
 		"contact": "Kontakt",
-		"followUs": "Följ oss",
-		"newsletter": "Nyhetsbrev",
-		"newsletterText": "Prenumerera på vårt nyhetsbrev för uppdateringar och specialerbjudanden.",
-		"emailPlaceholder": "Ange din e-post",
-		"subscribeButton": "Prenumerera",
+		"followUs": "Sociala medier",
+		"socialDescription": "Stöd vårt arbete i Tyskland eller donera till krigsoffren från Syrien. För mer information, klicka på knappen nedan.",
 		"copyright": "Alla rättigheter förbehållna.",
 		"privacyPolicy": "Integritetspolicy",
 		"termsOfService": "Användarvillkor",

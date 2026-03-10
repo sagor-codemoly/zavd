@@ -34,7 +34,7 @@ The contact form is a fully functional, production-ready implementation with:
 -  HTML and plain text email templates
 -  Contact notification email (to company)
 -  Auto-reply email (to customer)
--  Professional styling with Synos branding
+-  Professional styling with Zavd branding
 
 ### 3. **Contact Form Component**
 
@@ -94,7 +94,7 @@ NEXT_PUBLIC_GOOGLE_MAPS_KEY=your_google_maps_api_key_here
 ### 2. **Get Resend API Key**
 
 1. Sign up at [resend.com](https://resend.com)
-2. Verify your domain (synos.se)
+2. Verify your domain (zavd.se)
 3. Create an API key
 4. Add to `.env.local`
 
@@ -128,7 +128,7 @@ NEXT_PUBLIC_GOOGLE_MAPS_KEY=your_google_maps_api_key_here
    ↓
 4. Server-side validation
    ↓
-5. Send email to company (info@synos.se)
+5. Send email to company (info@zavd.se)
    ↓
 6. Send auto-reply to customer
    ↓
@@ -150,7 +150,7 @@ The form works **without** Resend API key:
 
 With Resend API key configured:
 
--  Emails are sent to `info@synos.se`
+-  Emails are sent to `info@zavd.se`
 -  Auto-reply sent to customer
 -  Email IDs logged for tracking
 -  Full error handling
@@ -176,7 +176,7 @@ With Resend API key configured:
 
 ### Company Notification Email
 
-Sent to: `info@synos.se`
+Sent to: `info@zavd.se`
 
 Contains:
 
@@ -213,8 +213,8 @@ Edit `app/api/contact/route.ts`:
 
 ```typescript
 const companyEmailResult = await resend.emails.send({
-	from: "Synos Medical Kontaktformulär <noreply@synos.se>",
-	to: "your-email@synos.se", console.logChange this
+	from: "Zavd Medical Kontaktformulär <noreply@zavd.se>",
+	to: "your-email@zavd.se", console.logChange this
 	console.log...
 });
 ```
