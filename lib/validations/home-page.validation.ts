@@ -40,7 +40,10 @@ export const heroSectionSchema = z.object({
 	// Slider mode fields
 	isSlider: z.boolean().optional(),
 	slides: z.array(heroSlideSchema).optional(),
-	autoPlayInterval: z.number().min(1000).max(30000).optional(),
+	autoPlayInterval: z.preprocess(
+		(val) => (val === 0 || val === null || val === undefined ? undefined : Number(val)),
+		z.number().min(1000).max(30000).optional()
+	),
 	showArrows: z.boolean().optional(),
 	// Legacy single hero fields
 	badge: z.string().max(200).optional(),
@@ -194,10 +197,9 @@ export const aboutSectionExtendedSchema = aboutSectionSchema.extend({
  * Testimonial Item schema - fields optional to allow partial data
  */
 export const testimonialItemSchema = z.object({
-	quote: z.string().max(1000).optional(),
-	author: z.string().max(100).optional(),
-	role: z.string().max(100).optional(),
-	company: z.string().max(200).optional(),
+	title: z.string().max(200).optional(),
+	subtitle: z.string().max(200).optional(),
+	description: z.string().max(1000).optional(),
 	image: z.string().optional(),
 });
 
@@ -291,9 +293,53 @@ export const introSectionSchema = z.object({
 	partnerLogos: z.array(partnerLogoSchema).optional(),
 });
 
+/**
+ * Integration Section schema
+ */
+export const integrationSectionSchema = z.object({
+	heading: z.string().max(200).optional(),
+	quote: z.string().max(500).optional(),
+	description: z.string().max(2000).optional(),
+	image: z.string().optional(),
+	readMoreLink: z.string().max(500).optional(),
+	partnerLogos: z.array(partnerLogoSchema).optional(),
+});
+
+/**
+ * Sponsors Section schema
+ */
+export const sponsorsSectionSchema = z.object({
+	heading: z.string().max(200).optional(),
+	description: z.string().max(1000).optional(),
+	backgroundImage: z.string().optional(),
+	sponsors: z.array(partnerLogoSchema).optional(),
+});
+
+/**
+ * Volunteering Section schema
+ */
+export const volunteeringSectionSchema = z.object({
+	heading: z.string().max(200).optional(),
+	description: z.string().max(2000).optional(),
+	image: z.string().optional(),
+	partnerLogos: z.array(partnerLogoSchema).optional(),
+});
+
+/**
+ * Partners Carousel Section schema
+ */
+export const partnersCarouselSectionSchema = z.object({
+	heading: z.string().max(200).optional(),
+	logos: z.array(partnerLogoSchema).optional(),
+});
+
 export const sectionVisibilitySchema = z.object({
 	hero: z.boolean().optional(),
 	introSection: z.boolean().optional(),
+	integrationSection: z.boolean().optional(),
+	sponsorsSection: z.boolean().optional(),
+	volunteeringSection: z.boolean().optional(),
+	partnersCarousel: z.boolean().optional(),
 	categoryShowcase: z.boolean().optional(),
 	productCarousel: z.boolean().optional(),
 	promoBanner: z.boolean().optional(),
@@ -324,6 +370,10 @@ export const updateHomePageSchema = z.object({
 	aboutSection: aboutSectionExtendedSchema.partial().optional(),
 	testimonialsSection: testimonialsSectionSchema.partial().optional(),
 	ctaSection: ctaSectionSchema.partial().optional(),
+	integrationSection: integrationSectionSchema.partial().optional(),
+	sponsorsSection: sponsorsSectionSchema.partial().optional(),
+	volunteeringSection: volunteeringSectionSchema.partial().optional(),
+	partnersCarouselSection: partnersCarouselSectionSchema.partial().optional(),
 	seo: homePageSeoSchema.partial().optional(),
 	richContent: z.string().optional(),
 });

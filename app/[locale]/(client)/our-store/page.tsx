@@ -8,10 +8,10 @@ export const revalidate = 86400;
 export async function generateMetadata(): Promise<Metadata> {
 	const seo = await getStorePageSeo();
 
-	const title = seo?.title || "Store in Boxholm - Boxholm Zavd";
+	const title = seo?.title || "Our Office - ZAVD";
 	const description =
 		seo?.description ||
-		"Visit our zavd store in Boxholm. Taste and purchase our handcrafted artisan zavds directly from the source.";
+		"Visit the ZAVD community organization office. Learn about our services and how we support the Assyrian community in Germany.";
 
 	return {
 		title,

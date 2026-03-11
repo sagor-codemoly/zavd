@@ -202,7 +202,7 @@ export default function SettingsPage() {
 				banner: {
 					enabled: true,
 					backgroundImage: "",
-					badge: "DAIRY FARM",
+					badge: "COMMUNITY ORGANIZATION",
 					title: "We make the creative solutions for modern brands.",
 					ctaText: "About Us",
 					ctaHref: "/about",
@@ -310,7 +310,7 @@ export default function SettingsPage() {
 						banner: {
 							enabled: settings.footer?.banner?.enabled ?? true,
 							backgroundImage: settings.footer?.banner?.backgroundImage || "",
-							badge: settings.footer?.banner?.badge || "DAIRY FARM",
+							badge: settings.footer?.banner?.badge || "COMMUNITY ORGANIZATION",
 							title: settings.footer?.banner?.title || "We make the creative solutions for modern brands.",
 							ctaText: settings.footer?.banner?.ctaText || "About Us",
 							ctaHref: settings.footer?.banner?.ctaHref || "/about",
@@ -959,7 +959,7 @@ export default function SettingsPage() {
 												<FormItem>
 													<FormLabel>Site Name</FormLabel>
 													<FormControl>
-														<Input placeholder="Glada bonden mejeri" {...field} />
+														<Input placeholder="ZAVD" {...field} />
 													</FormControl>
 													<FormDescription>
 														Used in page titles and meta tags.
@@ -1255,7 +1255,7 @@ export default function SettingsPage() {
 												<FormItem>
 													<FormLabel>Badge Text</FormLabel>
 													<FormControl>
-														<Input placeholder="DAIRY FARM" {...field} />
+														<Input placeholder="COMMUNITY ORGANIZATION" {...field} />
 													</FormControl>
 													<FormDescription>
 														Small label shown above the title.
@@ -1922,7 +1922,7 @@ export default function SettingsPage() {
 											<FormItem>
 												<FormLabel>From Name</FormLabel>
 												<FormControl>
-													<Input placeholder="Glada Bonden Mejeri" {...field} />
+													<Input placeholder="ZAVD" {...field} />
 												</FormControl>
 												<FormDescription>Display name for outgoing emails.</FormDescription>
 												<FormMessage />

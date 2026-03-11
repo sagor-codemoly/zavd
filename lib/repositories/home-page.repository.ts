@@ -13,6 +13,10 @@ import {
 	type ISectionVisibility,
 	type ITestimonialsSection,
 	type IIntroSection,
+	IIntegrationSection,
+	ISponsorsSection,
+	IVolunteeringSection,
+	IPartnersCarouselSection,
 } from "@/models/home-page.model";
 
 /**
@@ -68,6 +72,10 @@ export interface UpdateHomePageInput {
 	aboutSection?: Partial<IAboutSection>;
 	testimonialsSection?: Partial<ITestimonialsSection>;
 	ctaSection?: Partial<ICtaSection>;
+	integrationSection?: Partial<IIntegrationSection>;
+	sponsorsSection?: Partial<ISponsorsSection>;
+	volunteeringSection?: Partial<IVolunteeringSection>;
+	partnersCarouselSection?: Partial<IPartnersCarouselSection>;
 	seo?: Partial<IHomePageSeo>;
 	richContent?: string;
 }
@@ -220,6 +228,38 @@ class HomePageRepository {
 			Object.entries(data.seo).forEach(([key, value]) => {
 				if (value !== undefined) {
 					updateData[`seo.${key}`] = value;
+				}
+			});
+		}
+
+		if (data.integrationSection) {
+			Object.entries(data.integrationSection).forEach(([key, value]) => {
+				if (value !== undefined) {
+					updateData[`integrationSection.${key}`] = value;
+				}
+			});
+		}
+
+		if (data.sponsorsSection) {
+			Object.entries(data.sponsorsSection).forEach(([key, value]) => {
+				if (value !== undefined) {
+					updateData[`sponsorsSection.${key}`] = value;
+				}
+			});
+		}
+
+		if (data.volunteeringSection) {
+			Object.entries(data.volunteeringSection).forEach(([key, value]) => {
+				if (value !== undefined) {
+					updateData[`volunteeringSection.${key}`] = value;
+				}
+			});
+		}
+
+		if (data.partnersCarouselSection) {
+			Object.entries(data.partnersCarouselSection).forEach(([key, value]) => {
+				if (value !== undefined) {
+					updateData[`partnersCarouselSection.${key}`] = value;
 				}
 			});
 		}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -97,24 +98,6 @@ const heroCertificationCardSchema = z.object({
 	progressPercentage: z.number().min(0).max(100).optional(),
 });
 
-// Product Showcase Item schema - optional fields
-const productShowcaseItemSchema = z.object({
-	name: z.string().optional(),
-	category: z.string().optional(),
-	description: z.string().optional(),
-	status: z.string().optional(),
-	image: z.string().optional(),
-	href: z.string().optional(),
-});
-
-// Product Showcase Section schema
-const productShowcaseSectionSchema = z.object({
-	title: z.string().optional(),
-	subtitle: z.string().optional(),
-	ctaText: z.string().optional(),
-	ctaHref: z.string().optional(),
-	products: z.array(productShowcaseItemSchema).optional(),
-});
 
 // Gallery Image schema - optional fields
 const galleryImageSchema = z.object({
@@ -142,10 +125,10 @@ const aboutCertificationBadgeSchema = z.object({
 
 // Testimonial Item schema - optional fields
 const testimonialItemSchema = z.object({
-	quote: z.string().optional(),
-	author: z.string().optional(),
-	role: z.string().optional(),
-	company: z.string().optional(),
+	title: z.string().optional(),
+	subtitle: z.string().optional(),
+	description: z.string().optional(),
+	image: z.string().optional(),
 });
 
 // Testimonials Section schema
@@ -172,6 +155,38 @@ const introSectionSchema = z.object({
 	ctaHref: z.string().optional(),
 	image: z.string().optional(),
 	partnerLogos: z.array(partnerLogoSchema).optional(),
+});
+
+// Integration Section schema
+const integrationSectionSchema = z.object({
+	heading: z.string().optional(),
+	quote: z.string().optional(),
+	description: z.string().optional(),
+	image: z.string().optional(),
+	readMoreLink: z.string().optional(),
+	partnerLogos: z.array(partnerLogoSchema).optional(),
+});
+
+// Sponsors Section schema
+const sponsorsSectionSchema = z.object({
+	heading: z.string().optional(),
+	description: z.string().optional(),
+	backgroundImage: z.string().optional(),
+	sponsors: z.array(partnerLogoSchema).optional(),
+});
+
+// Volunteering Section schema
+const volunteeringSectionSchema = z.object({
+	heading: z.string().optional(),
+	description: z.string().optional(),
+	image: z.string().optional(),
+	partnerLogos: z.array(partnerLogoSchema).optional(),
+});
+
+// Partners Carousel Section schema
+const partnersCarouselSectionSchema = z.object({
+	heading: z.string().optional(),
+	logos: z.array(partnerLogoSchema).optional(),
 });
 
 // Promo Banner Item schema
@@ -210,10 +225,13 @@ const featureBannerSectionSchema = z.object({
 const sectionVisibilitySchema = z.object({
 	hero: z.boolean().optional(),
 	introSection: z.boolean().optional(),
+	integrationSection: z.boolean().optional(),
+	sponsorsSection: z.boolean().optional(),
+	volunteeringSection: z.boolean().optional(),
+	partnersCarousel: z.boolean().optional(),
 	promoBanner: z.boolean().optional(),
 	featureBanner: z.boolean().optional(),
 	features: z.boolean().optional(),
-	productShowcase: z.boolean().optional(),
 	imageGallery: z.boolean().optional(),
 	about: z.boolean().optional(),
 	testimonials: z.boolean().optional(),
@@ -252,6 +270,18 @@ const homePageFormSchema = z.object({
 	// Intro Section
 	introSection: introSectionSchema.optional(),
 
+	// Integration Section
+	integrationSection: integrationSectionSchema.optional(),
+
+	// Sponsors Section
+	sponsorsSection: sponsorsSectionSchema.optional(),
+
+	// Volunteering Section
+	volunteeringSection: volunteeringSectionSchema.optional(),
+
+	// Partners Carousel Section
+	partnersCarouselSection: partnersCarouselSectionSchema.optional(),
+
 	// Promo Banner Section
 	promoBanner: promoBannerSectionSchema.optional(),
 
@@ -259,7 +289,6 @@ const homePageFormSchema = z.object({
 	featureBanner: featureBannerSectionSchema.optional(),
 
 	// Product Showcase
-	productShowcase: productShowcaseSectionSchema.optional(),
 
 	// Image Gallery
 	imageGallery: imageGallerySectionSchema.optional(),
@@ -314,6 +343,7 @@ const homePageFormSchema = z.object({
 type HomePageFormValues = z.infer<typeof homePageFormSchema>;
 
 export default function StartsidaPage() {
+	const router = useRouter();
 	const [loading, setLoading] = useState(true);
 	const [saving, setSaving] = useState(false);
 	const { confirm, ConfirmModal } = useConfirmModal({ variant: "destructive" });
@@ -324,10 +354,12 @@ export default function StartsidaPage() {
 			sectionVisibility: {
 				hero: true,
 				introSection: true,
+				integrationSection: true,
+				sponsorsSection: true,
+				volunteeringSection: true,
 				promoBanner: true,
 				featureBanner: true,
 				features: true,
-				productShowcase: true,
 				imageGallery: true,
 				about: true,
 				testimonials: true,
@@ -369,6 +401,30 @@ export default function StartsidaPage() {
 				image: "",
 				partnerLogos: [],
 			},
+			integrationSection: {
+				heading: "",
+				quote: "",
+				description: "",
+				image: "",
+				readMoreLink: "",
+				partnerLogos: [],
+			},
+			sponsorsSection: {
+				heading: "",
+				description: "",
+				backgroundImage: "",
+				sponsors: [],
+			},
+			volunteeringSection: {
+				heading: "",
+				description: "",
+				image: "",
+				partnerLogos: [],
+			},
+			partnersCarouselSection: {
+				heading: "",
+				logos: [],
+			},
 			promoBanner: {
 				leftBanner: {
 					badge: "",
@@ -394,13 +450,6 @@ export default function StartsidaPage() {
 				title: "",
 				titleHighlight: "",
 				features: [],
-			},
-			productShowcase: {
-				title: "",
-				subtitle: "",
-				ctaText: "",
-				ctaHref: "",
-				products: [],
 			},
 			imageGallery: {
 				badge: "",
@@ -461,14 +510,6 @@ export default function StartsidaPage() {
 		remove: removeTrustIndicator,
 	} = useFieldArray({ control: form.control, name: "hero.trustIndicators" });
 
-	const {
-		fields: productFields,
-		append: appendProduct,
-		remove: removeProduct,
-	} = useFieldArray({
-		control: form.control,
-		name: "productShowcase.products",
-	});
 
 	const {
 		fields: galleryImageFields,
@@ -492,6 +533,42 @@ export default function StartsidaPage() {
 	} = useFieldArray({
 		control: form.control,
 		name: "introSection.partnerLogos",
+	});
+
+	const {
+		fields: integrationLogoFields,
+		append: appendIntegrationLogo,
+		remove: removeIntegrationLogo,
+	} = useFieldArray({
+		control: form.control,
+		name: "integrationSection.partnerLogos",
+	});
+
+	const {
+		fields: sponsorFields,
+		append: appendSponsor,
+		remove: removeSponsor,
+	} = useFieldArray({
+		control: form.control,
+		name: "sponsorsSection.sponsors",
+	});
+
+	const {
+		fields: volunteeringLogoFields,
+		append: appendVolunteeringLogo,
+		remove: removeVolunteeringLogo,
+	} = useFieldArray({
+		control: form.control,
+		name: "volunteeringSection.partnerLogos",
+	});
+
+	const {
+		fields: partnerCarouselLogoFields,
+		append: appendPartnerCarouselLogo,
+		remove: removePartnerCarouselLogo,
+	} = useFieldArray({
+		control: form.control,
+		name: "partnersCarouselSection.logos",
 	});
 
 	// Benefits are simple strings, so we manage them manually
@@ -531,10 +608,13 @@ export default function StartsidaPage() {
 				const defaultVisibility = {
 					hero: true,
 					introSection: true,
+					integrationSection: true,
+					sponsorsSection: true,
+					volunteeringSection: true,
+					partnersCarousel: true,
 					promoBanner: true,
 					featureBanner: true,
 					features: true,
-					productShowcase: true,
 					imageGallery: true,
 					about: true,
 					testimonials: true,
@@ -544,6 +624,10 @@ export default function StartsidaPage() {
 				const sectionVisibility = {
 					hero: content.sectionVisibility?.hero ?? defaultVisibility.hero,
 					introSection: content.sectionVisibility?.introSection ?? true,
+					integrationSection: content.sectionVisibility?.integrationSection ?? true,
+					sponsorsSection: content.sectionVisibility?.sponsorsSection ?? true,
+					volunteeringSection: content.sectionVisibility?.volunteeringSection ?? true,
+					partnersCarousel: content.sectionVisibility?.partnersCarousel ?? true,
 					promoBanner:
 						content.sectionVisibility?.promoBanner ??
 						defaultVisibility.promoBanner,
@@ -553,9 +637,6 @@ export default function StartsidaPage() {
 					features:
 						content.sectionVisibility?.features ??
 						defaultVisibility.features,
-					productShowcase:
-						content.sectionVisibility?.productShowcase ??
-						defaultVisibility.productShowcase,
 					imageGallery:
 						content.sectionVisibility?.imageGallery ??
 						defaultVisibility.imageGallery,
@@ -618,6 +699,30 @@ export default function StartsidaPage() {
 						image: content.introSection?.image || "",
 						partnerLogos: content.introSection?.partnerLogos || [],
 					},
+					integrationSection: {
+						heading: content.integrationSection?.heading || "",
+						quote: content.integrationSection?.quote || "",
+						description: content.integrationSection?.description || "",
+						image: content.integrationSection?.image || "",
+						readMoreLink: content.integrationSection?.readMoreLink || "",
+						partnerLogos: content.integrationSection?.partnerLogos || [],
+					},
+					sponsorsSection: {
+						heading: content.sponsorsSection?.heading || "",
+						description: content.sponsorsSection?.description || "",
+						backgroundImage: content.sponsorsSection?.backgroundImage || "",
+						sponsors: content.sponsorsSection?.sponsors || [],
+					},
+					volunteeringSection: {
+						heading: content.volunteeringSection?.heading || "",
+						description: content.volunteeringSection?.description || "",
+						image: content.volunteeringSection?.image || "",
+						partnerLogos: content.volunteeringSection?.partnerLogos || [],
+					},
+					partnersCarouselSection: {
+						heading: content.partnersCarouselSection?.heading || "",
+						logos: content.partnersCarouselSection?.logos || [],
+					},
 					promoBanner: {
 						leftBanner: {
 							badge: content.promoBanner?.leftBanner?.badge || "",
@@ -643,13 +748,6 @@ export default function StartsidaPage() {
 						title: content.featureBanner?.title || "",
 						titleHighlight: content.featureBanner?.titleHighlight || "",
 						features: content.featureBanner?.features || [],
-					},
-					productShowcase: {
-						title: content.productShowcase?.title || "",
-						subtitle: content.productShowcase?.subtitle || "",
-						ctaText: content.productShowcase?.ctaText || "",
-						ctaHref: content.productShowcase?.ctaHref || "",
-						products: content.productShowcase?.products || [],
 					},
 					imageGallery: {
 						badge: content.imageGallery?.badge || "",
@@ -739,6 +837,7 @@ export default function StartsidaPage() {
 			}
 
 			toast.success("Home page content saved successfully");
+			router.refresh();
 		} catch (error) {
 			console.error("Error saving content:", error);
 			toast.error(
@@ -752,7 +851,6 @@ export default function StartsidaPage() {
 	// Friendly field name mapping
 	const fieldNameMap: Record<string, string> = {
 		hero: "Hero Section",
-		productShowcase: "Product Showcase",
 		imageGallery: "Image Gallery",
 		aboutSection: "About Section",
 		testimonialsSection: "Testimonials",
@@ -873,9 +971,12 @@ export default function StartsidaPage() {
 							<TabsTrigger value="settings">Settings</TabsTrigger>
 							<TabsTrigger value="hero">Hero</TabsTrigger>
 							<TabsTrigger value="intro-section">Intro</TabsTrigger>
+							<TabsTrigger value="integration">Integration</TabsTrigger>
+							<TabsTrigger value="sponsors">Sponsors</TabsTrigger>
+							<TabsTrigger value="volunteering">Volunteering</TabsTrigger>
+							<TabsTrigger value="partners-carousel">Partners</TabsTrigger>
 							<TabsTrigger value="promo-banner">Banner</TabsTrigger>
 							<TabsTrigger value="feature-banner">Feature Banner</TabsTrigger>
-							<TabsTrigger value="products">Products</TabsTrigger>
 							<TabsTrigger value="gallery">Gallery</TabsTrigger>
 							<TabsTrigger value="about">About</TabsTrigger>
 							<TabsTrigger value="testimonials">Testimonials</TabsTrigger>
@@ -942,6 +1043,94 @@ export default function StartsidaPage() {
 										/>
 										<FormField
 											control={form.control}
+											name="sectionVisibility.integrationSection"
+											render={({ field }) => (
+												<FormItem className="flex items-center justify-between rounded-lg border p-4">
+													<div className="space-y-0.5">
+														<FormLabel className="text-base">
+															Integration Section
+														</FormLabel>
+														<FormDescription>
+															ZAVD partnerships and integration info.
+														</FormDescription>
+													</div>
+													<FormControl>
+														<Switch
+															checked={field.value}
+															onCheckedChange={field.onChange}
+														/>
+													</FormControl>
+												</FormItem>
+											)}
+										/>
+										<FormField
+											control={form.control}
+											name="sectionVisibility.sponsorsSection"
+											render={({ field }) => (
+												<FormItem className="flex items-center justify-between rounded-lg border p-4">
+													<div className="space-y-0.5">
+														<FormLabel className="text-base">
+															Sponsors Section
+														</FormLabel>
+														<FormDescription>
+															Government sponsors and funding partners.
+														</FormDescription>
+													</div>
+													<FormControl>
+														<Switch
+															checked={field.value}
+															onCheckedChange={field.onChange}
+														/>
+													</FormControl>
+												</FormItem>
+											)}
+										/>
+										<FormField
+											control={form.control}
+											name="sectionVisibility.volunteeringSection"
+											render={({ field }) => (
+												<FormItem className="flex items-center justify-between rounded-lg border p-4">
+													<div className="space-y-0.5">
+														<FormLabel className="text-base">
+															Volunteering Section
+														</FormLabel>
+														<FormDescription>
+															Volunteering opportunities and partner logos.
+														</FormDescription>
+													</div>
+													<FormControl>
+														<Switch
+															checked={field.value}
+															onCheckedChange={field.onChange}
+														/>
+													</FormControl>
+												</FormItem>
+											)}
+										/>
+																	<FormField
+								control={form.control}
+								name="sectionVisibility.partnersCarousel"
+								render={({ field }) => (
+									<FormItem className="flex items-center justify-between rounded-lg border p-4">
+										<div className="space-y-0.5">
+											<FormLabel className="text-base">
+												Partners Carousel
+											</FormLabel>
+											<FormDescription>
+												Auto-scrolling partner logos carousel.
+											</FormDescription>
+										</div>
+										<FormControl>
+											<Switch
+												checked={field.value}
+												onCheckedChange={field.onChange}
+											/>
+										</FormControl>
+									</FormItem>
+								)}
+							/>
+							<FormField
+											control={form.control}
 											name="sectionVisibility.promoBanner"
 											render={({ field }) => (
 												<FormItem className="flex items-center justify-between rounded-lg border p-4">
@@ -973,28 +1162,6 @@ export default function StartsidaPage() {
 														</FormLabel>
 														<FormDescription>
 															Image with highlighted title and feature cards.
-														</FormDescription>
-													</div>
-													<FormControl>
-														<Switch
-															checked={field.value}
-															onCheckedChange={field.onChange}
-														/>
-													</FormControl>
-												</FormItem>
-											)}
-										/>
-										<FormField
-											control={form.control}
-											name="sectionVisibility.productShowcase"
-											render={({ field }) => (
-												<FormItem className="flex items-center justify-between rounded-lg border p-4">
-													<div className="space-y-0.5">
-														<FormLabel className="text-base">
-															Product Showcase
-														</FormLabel>
-														<FormDescription>
-															Featured products grid.
 														</FormDescription>
 													</div>
 													<FormControl>
@@ -1146,7 +1313,10 @@ export default function StartsidaPage() {
 															type="number"
 															{...field}
 															value={field.value || 5000}
-															onChange={(e) => field.onChange(Number(e.target.value))}
+															onChange={(e) => {
+																const val = Number(e.target.value);
+																field.onChange(val >= 1000 ? val : undefined);
+															}}
 															placeholder="5000"
 														/>
 													</FormControl>
@@ -1581,6 +1751,338 @@ export default function StartsidaPage() {
 								</CardContent>
 							</Card>
 						</TabsContent>
+						{/* Integration Section Tab */}
+						<TabsContent value="integration" className="space-y-6">
+							<Card>
+								<CardHeader>
+									<CardTitle>Integration Section</CardTitle>
+									<CardDescription>Manage the integration/partnership section content.</CardDescription>
+								</CardHeader>
+								<CardContent className="space-y-6">
+									<FormField control={form.control} name="integrationSection.heading" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Heading</FormLabel>
+											<FormControl><Input placeholder="Enter heading..." {...field} /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+									<FormField control={form.control} name="integrationSection.quote" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Quote / Highlighted Text</FormLabel>
+											<FormControl><Textarea placeholder="Enter quote..." rows={3} {...field} /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+									<FormField control={form.control} name="integrationSection.description" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Description</FormLabel>
+											<FormControl><Textarea placeholder="Enter description..." rows={5} {...field} /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+									<FormField control={form.control} name="integrationSection.readMoreLink" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Read More Link</FormLabel>
+											<FormControl><Input placeholder="/about" {...field} /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+									<FormField control={form.control} name="integrationSection.image" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Section Image</FormLabel>
+											<FormControl><MediaPicker type="image" value={field.value || ""} onChange={(url) => field.onChange(url || "")} showPreview /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+								</CardContent>
+							</Card>
+							<Card>
+								<CardHeader>
+									<div className="flex items-center justify-between">
+										<div>
+											<CardTitle>Partner Logos</CardTitle>
+											<CardDescription>Add partner/organization logos.</CardDescription>
+										</div>
+										<Button type="button" variant="outline" size="sm" onClick={() => appendIntegrationLogo({ image: '', name: '', href: '' })}>
+											<Plus className="mr-2 h-4 w-4" />Add Logo
+										</Button>
+									</div>
+								</CardHeader>
+								<CardContent className="space-y-4">
+									{integrationLogoFields.length === 0 ? (
+										<div className="text-center py-6 text-muted-foreground">No logos added yet.</div>
+									) : (
+										integrationLogoFields.map((logo, index) => (
+											<div key={logo.id} className="border rounded-lg p-4 space-y-3">
+												<div className="flex items-center justify-between">
+													<span className="text-sm font-medium">Logo {index + 1}</span>
+													<Button type="button" variant="ghost" size="icon" onClick={() => removeIntegrationLogo(index)}>
+														<Trash2 className="h-4 w-4 text-destructive" />
+													</Button>
+												</div>
+												<FormField control={form.control} name={`integrationSection.partnerLogos.${index}.image`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Logo Image</FormLabel>
+														<FormControl><MediaPicker type="image" value={field.value || ""} onChange={(url) => field.onChange(url || "")} showPreview /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+												<FormField control={form.control} name={`integrationSection.partnerLogos.${index}.name`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Name</FormLabel>
+														<FormControl><Input placeholder="Organization name" {...field} /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+												<FormField control={form.control} name={`integrationSection.partnerLogos.${index}.href`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Link URL</FormLabel>
+														<FormControl><Input placeholder="https://..." {...field} /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+											</div>
+										))
+									)}
+								</CardContent>
+							</Card>
+						</TabsContent>
+
+						{/* Sponsors Section Tab */}
+						<TabsContent value="sponsors" className="space-y-6">
+							<Card>
+								<CardHeader>
+									<CardTitle>Sponsors Section</CardTitle>
+									<CardDescription>Manage sponsors and funding partners content.</CardDescription>
+								</CardHeader>
+								<CardContent className="space-y-6">
+									<FormField control={form.control} name="sponsorsSection.heading" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Heading</FormLabel>
+											<FormControl><Input placeholder="Enter heading..." {...field} /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+									<FormField control={form.control} name="sponsorsSection.description" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Description</FormLabel>
+											<FormControl><Textarea placeholder="Enter description..." rows={4} {...field} /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+								<FormField control={form.control} name="sponsorsSection.backgroundImage" render={({ field }) => (
+									<FormItem>
+										<FormLabel>Background Image</FormLabel>
+										<FormControl><MediaPicker type="image" value={field.value || ""} onChange={(url) => field.onChange(url || "")} showPreview /></FormControl>
+										<FormMessage />
+									</FormItem>
+								)} />
+								</CardContent>
+							</Card>
+							<Card>
+								<CardHeader>
+									<div className="flex items-center justify-between">
+										<div>
+											<CardTitle>Sponsor Logos</CardTitle>
+											<CardDescription>Add sponsor/funder logos.</CardDescription>
+										</div>
+										<Button type="button" variant="outline" size="sm" onClick={() => appendSponsor({ image: '', name: '', href: '' })}>
+											<Plus className="mr-2 h-4 w-4" />Add Sponsor
+										</Button>
+									</div>
+								</CardHeader>
+								<CardContent className="space-y-4">
+									{sponsorFields.length === 0 ? (
+										<div className="text-center py-6 text-muted-foreground">No logos added yet.</div>
+									) : (
+										sponsorFields.map((logo, index) => (
+											<div key={logo.id} className="border rounded-lg p-4 space-y-3">
+												<div className="flex items-center justify-between">
+													<span className="text-sm font-medium">Logo {index + 1}</span>
+													<Button type="button" variant="ghost" size="icon" onClick={() => removeSponsor(index)}>
+														<Trash2 className="h-4 w-4 text-destructive" />
+													</Button>
+												</div>
+												<FormField control={form.control} name={`sponsorsSection.sponsors.${index}.image`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Logo Image</FormLabel>
+														<FormControl><MediaPicker type="image" value={field.value || ""} onChange={(url) => field.onChange(url || "")} showPreview /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+												<FormField control={form.control} name={`sponsorsSection.sponsors.${index}.name`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Name</FormLabel>
+														<FormControl><Input placeholder="Organization name" {...field} /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+												<FormField control={form.control} name={`sponsorsSection.sponsors.${index}.href`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Link URL</FormLabel>
+														<FormControl><Input placeholder="https://..." {...field} /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+											</div>
+										))
+									)}
+								</CardContent>
+							</Card>
+						</TabsContent>
+
+						{/* Volunteering Section Tab */}
+						<TabsContent value="volunteering" className="space-y-6">
+							<Card>
+								<CardHeader>
+									<CardTitle>Volunteering Section</CardTitle>
+									<CardDescription>Manage the volunteering section content and partner logos.</CardDescription>
+								</CardHeader>
+								<CardContent className="space-y-6">
+									<FormField control={form.control} name="volunteeringSection.heading" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Heading</FormLabel>
+											<FormControl><Input placeholder="Enter heading..." {...field} /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+									<FormField control={form.control} name="volunteeringSection.description" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Description</FormLabel>
+											<FormControl><Textarea placeholder="Enter description..." rows={5} {...field} /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+									<FormField control={form.control} name="volunteeringSection.image" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Section Image</FormLabel>
+											<FormControl><MediaPicker type="image" value={field.value || ""} onChange={(url) => field.onChange(url || "")} showPreview /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+								</CardContent>
+							</Card>
+							<Card>
+								<CardHeader>
+									<div className="flex items-center justify-between">
+										<div>
+											<CardTitle>Partner Logos</CardTitle>
+											<CardDescription>Add volunteering partner logos.</CardDescription>
+										</div>
+										<Button type="button" variant="outline" size="sm" onClick={() => appendVolunteeringLogo({ image: '', name: '', href: '' })}>
+											<Plus className="mr-2 h-4 w-4" />Add Logo
+										</Button>
+									</div>
+								</CardHeader>
+								<CardContent className="space-y-4">
+									{volunteeringLogoFields.length === 0 ? (
+										<div className="text-center py-6 text-muted-foreground">No logos added yet.</div>
+									) : (
+										volunteeringLogoFields.map((logo, index) => (
+											<div key={logo.id} className="border rounded-lg p-4 space-y-3">
+												<div className="flex items-center justify-between">
+													<span className="text-sm font-medium">Logo {index + 1}</span>
+													<Button type="button" variant="ghost" size="icon" onClick={() => removeVolunteeringLogo(index)}>
+														<Trash2 className="h-4 w-4 text-destructive" />
+													</Button>
+												</div>
+												<FormField control={form.control} name={`volunteeringSection.partnerLogos.${index}.image`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Logo Image</FormLabel>
+														<FormControl><MediaPicker type="image" value={field.value || ""} onChange={(url) => field.onChange(url || "")} showPreview /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+												<FormField control={form.control} name={`volunteeringSection.partnerLogos.${index}.name`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Name</FormLabel>
+														<FormControl><Input placeholder="Organization name" {...field} /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+												<FormField control={form.control} name={`volunteeringSection.partnerLogos.${index}.href`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Link URL</FormLabel>
+														<FormControl><Input placeholder="https://..." {...field} /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+											</div>
+										))
+									)}
+								</CardContent>
+							</Card>
+						</TabsContent>
+
+						{/* Partners Carousel Tab */}
+						<TabsContent value="partners-carousel" className="space-y-6">
+							<Card>
+								<CardHeader>
+									<CardTitle>Partners Carousel</CardTitle>
+									<CardDescription>Auto-scrolling partner logos shown below the Volunteering section.</CardDescription>
+								</CardHeader>
+								<CardContent className="space-y-6">
+									<FormField control={form.control} name="partnersCarouselSection.heading" render={({ field }) => (
+										<FormItem>
+											<FormLabel>Label text (optional)</FormLabel>
+											<FormControl><Input placeholder="e.g. Our Partners" {...field} /></FormControl>
+											<FormMessage />
+										</FormItem>
+									)} />
+								</CardContent>
+							</Card>
+							<Card>
+								<CardHeader>
+									<div className="flex items-center justify-between">
+										<div>
+											<CardTitle>Partner Logos</CardTitle>
+											<CardDescription>Add partner/organization logos for the carousel.</CardDescription>
+										</div>
+										<Button type="button" variant="outline" size="sm" onClick={() => appendPartnerCarouselLogo({ image: '', name: '', href: '' })}>
+											<Plus className="h-4 w-4 mr-1" /> Add Logo
+										</Button>
+									</div>
+								</CardHeader>
+								<CardContent className="space-y-4">
+									{partnerCarouselLogoFields.length === 0 ? (
+										<p className="text-sm text-muted-foreground italic text-center py-4">No logos added yet.</p>
+									) : (
+										partnerCarouselLogoFields.map((logo, index) => (
+											<div key={logo.id} className="border rounded-lg p-4 space-y-4">
+												<div className="flex items-center justify-between">
+													<span className="text-sm font-medium">Logo {index + 1}</span>
+													<Button type="button" variant="ghost" size="icon" onClick={() => removePartnerCarouselLogo(index)}>
+														<Trash2 className="h-4 w-4 text-destructive" />
+													</Button>
+												</div>
+												<FormField control={form.control} name={`partnersCarouselSection.logos.${index}.image`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Logo Image</FormLabel>
+														<FormControl><MediaPicker type="image" value={field.value || ""} onChange={(url) => field.onChange(url || "")} showPreview /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+												<FormField control={form.control} name={`partnersCarouselSection.logos.${index}.name`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Organization Name</FormLabel>
+														<FormControl><Input placeholder="Organization name" {...field} /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+												<FormField control={form.control} name={`partnersCarouselSection.logos.${index}.href`} render={({ field }) => (
+													<FormItem>
+														<FormLabel>Link URL</FormLabel>
+														<FormControl><Input placeholder="https://..." {...field} /></FormControl>
+														<FormMessage />
+													</FormItem>
+												)} />
+											</div>
+										))
+									)}
+								</CardContent>
+							</Card>
+						</TabsContent>
+
 						{/* Promo Banner Tab */}
 						<TabsContent value="promo-banner" className="space-y-6">
 							{/* Left Banner */}
@@ -1640,7 +2142,7 @@ export default function StartsidaPage() {
 													<Input
 														{...field}
 														value={field.value || ""}
-														placeholder="Fresh Artisan Zavd"
+														placeholder="ZAVD Community Programs"
 													/>
 												</FormControl>
 												<FormMessage />
@@ -1742,7 +2244,7 @@ export default function StartsidaPage() {
 													<Input
 														{...field}
 														value={field.value || ""}
-														placeholder="Best Dairy Farm"
+														placeholder="Leading Community Organization"
 													/>
 												</FormControl>
 												<FormMessage />
@@ -1830,7 +2332,7 @@ export default function StartsidaPage() {
 													<Textarea
 														{...field}
 														value={field.value || ""}
-														placeholder="Our farm uses eco-friendly technologies and practices to minimize the environmental impact."
+														placeholder="Our organization uses modern approaches and best practices to maximize community impact."
 														rows={2}
 													/>
 												</FormControl>
@@ -1967,7 +2469,7 @@ export default function StartsidaPage() {
 																	<Textarea
 																		{...field}
 																		value={field.value || ""}
-																		placeholder="Guaranteed quality from our farm to your table"
+																		placeholder="Committed to serving our community with integrity and care"
 																		rows={2}
 																	/>
 																</FormControl>
@@ -1984,299 +2486,6 @@ export default function StartsidaPage() {
 						</TabsContent>
 
 						{/* Products Tab */}
-						<TabsContent value="products" className="space-y-6">
-							{/* Section Settings */}
-							<Card>
-								<CardHeader>
-									<CardTitle>Section Settings</CardTitle>
-									<CardDescription>
-										Title and CTA for the product showcase section.
-									</CardDescription>
-								</CardHeader>
-								<CardContent className="space-y-4">
-									<div className="grid gap-4 sm:grid-cols-2">
-										<FormField
-											control={form.control}
-											name="productShowcase.title"
-											render={({ field }) => (
-												<FormItem>
-													<FormLabel>Title</FormLabel>
-													<FormControl>
-														<Input
-															{...field}
-															value={field.value || ""}
-															placeholder="Premium Medical Equipment"
-														/>
-													</FormControl>
-													<FormMessage />
-												</FormItem>
-											)}
-										/>
-										<FormField
-											control={form.control}
-											name="productShowcase.ctaText"
-											render={({ field }) => (
-												<FormItem>
-													<FormLabel>CTA Button Text</FormLabel>
-													<FormControl>
-														<Input
-															{...field}
-															value={field.value || ""}
-															placeholder="View Full Catalog"
-														/>
-													</FormControl>
-													<FormMessage />
-												</FormItem>
-											)}
-										/>
-									</div>
-									<FormField
-										control={form.control}
-										name="productShowcase.subtitle"
-										render={({ field }) => (
-											<FormItem>
-												<FormLabel>Subtitle</FormLabel>
-												<FormControl>
-													<Textarea
-														{...field}
-														value={field.value || ""}
-														placeholder="Explore our catalog of certified, high-performance medical devices..."
-														rows={2}
-													/>
-												</FormControl>
-												<FormMessage />
-											</FormItem>
-										)}
-									/>
-									<FormField
-										control={form.control}
-										name="productShowcase.ctaHref"
-										render={({ field }) => (
-											<FormItem>
-												<FormLabel>CTA Button Link</FormLabel>
-												<FormControl>
-													<Input
-														{...field}
-														value={field.value || ""}
-														placeholder="/produkter"
-													/>
-												</FormControl>
-												<FormMessage />
-											</FormItem>
-										)}
-									/>
-								</CardContent>
-							</Card>
-
-							{/* Products List */}
-							<Card>
-								<CardHeader>
-									<CardTitle className="flex items-center justify-between">
-										<span>Featured Products</span>
-										<Button
-											type="button"
-											variant="outline"
-											size="sm"
-											onClick={() =>
-												appendProduct({
-													name: "",
-													category: "",
-													description: "",
-													status: "In Stock",
-													image: "",
-													href: "",
-												})
-											}
-										>
-											<Plus className="h-4 w-4 mr-1" />
-											Add Product
-										</Button>
-									</CardTitle>
-									<CardDescription>
-										Products displayed in the showcase section.
-									</CardDescription>
-								</CardHeader>
-								<CardContent className="space-y-4">
-									{productFields.length === 0 ? (
-										<div className="text-center py-8 text-muted-foreground">
-											No products added. Click &quot;Add
-											Product&quot; to add one.
-										</div>
-									) : (
-										productFields.map((field, index) => (
-											<Card key={field.id} className="border-dashed">
-												<CardHeader className="pb-3">
-													<div className="flex items-center justify-between">
-														<CardTitle className="text-base">
-															Product {index + 1}
-														</CardTitle>
-														<Button
-															type="button"
-															variant="ghost"
-															size="sm"
-															onClick={async () => {
-																const confirmed = await confirm({
-																	title: "Remove Product",
-																	description: "Are you sure you want to remove this product?",
-																	confirmText: "Remove",
-																});
-																if (confirmed) removeProduct(index);
-															}}
-															className="text-destructive hover:text-destructive"
-														>
-															<Trash2 className="h-4 w-4" />
-														</Button>
-													</div>
-												</CardHeader>
-												<CardContent className="space-y-4">
-													<div className="grid gap-4 sm:grid-cols-2">
-														<FormField
-															control={form.control}
-															name={`productShowcase.products.${index}.name`}
-															render={({ field }) => (
-																<FormItem>
-																	<FormLabel>Name</FormLabel>
-																	<FormControl>
-																		<Input
-																			{...field}
-																			value={field.value || ""}
-																			placeholder="Advanced MRI Scanner X1"
-																		/>
-																	</FormControl>
-																	<FormMessage />
-																</FormItem>
-															)}
-														/>
-														<FormField
-															control={form.control}
-															name={`productShowcase.products.${index}.category`}
-															render={({ field }) => (
-																<FormItem>
-																	<FormLabel>
-																		Category
-																	</FormLabel>
-																	<FormControl>
-																		<Input
-																			{...field}
-																			value={field.value || ""}
-																			placeholder="Imaging"
-																		/>
-																	</FormControl>
-																	<FormMessage />
-																</FormItem>
-															)}
-														/>
-													</div>
-													<FormField
-														control={form.control}
-														name={`productShowcase.products.${index}.description`}
-														render={({ field }) => (
-															<FormItem>
-																<FormLabel>
-																	Description
-																</FormLabel>
-																<FormControl>
-																	<Textarea
-																		{...field}
-																		value={field.value || ""}
-																		placeholder="Professional grade equipment..."
-																		rows={2}
-																	/>
-																</FormControl>
-																<FormMessage />
-															</FormItem>
-														)}
-													/>
-													<div className="grid gap-4 sm:grid-cols-2">
-														<FormField
-															control={form.control}
-															name={`productShowcase.products.${index}.status`}
-															render={({ field }) => (
-																<FormItem>
-																	<FormLabel>Status</FormLabel>
-																	<Select
-																		onValueChange={
-																			field.onChange
-																		}
-																		value={field.value}
-																	>
-																		<FormControl>
-																			<SelectTrigger>
-																				<SelectValue placeholder="Select status" />
-																			</SelectTrigger>
-																		</FormControl>
-																		<SelectContent>
-																			<SelectItem value="In Stock">
-																				In Stock
-																			</SelectItem>
-																			<SelectItem value="Low Stock">
-																				Low Stock
-																			</SelectItem>
-																			<SelectItem value="Pre-order">
-																				Pre-order
-																			</SelectItem>
-																			<SelectItem value="Out of Stock">
-																				Out of Stock
-																			</SelectItem>
-																		</SelectContent>
-																	</Select>
-																	<FormMessage />
-																</FormItem>
-															)}
-														/>
-														<FormField
-															control={form.control}
-															name={`productShowcase.products.${index}.href`}
-															render={({ field }) => (
-																<FormItem>
-																	<FormLabel>
-																		Link (optional)
-																	</FormLabel>
-																	<FormControl>
-																		<Input
-																			{...field}
-																			value={field.value || ""}
-																			placeholder="/produkter/product-slug"
-																		/>
-																	</FormControl>
-																	<FormMessage />
-																</FormItem>
-															)}
-														/>
-													</div>
-													<FormField
-														control={form.control}
-														name={`productShowcase.products.${index}.image`}
-														render={({ field }) => (
-															<FormItem>
-																<FormLabel>Image</FormLabel>
-																<FormControl>
-																	<MediaPicker
-																		type="image"
-																		value={
-																			field.value || null
-																		}
-																		onChange={(url) =>
-																			field.onChange(
-																				url || ""
-																			)
-																		}
-																		placeholder="Select product image"
-																		galleryTitle="Select Product Image"
-																	/>
-																</FormControl>
-																<FormMessage />
-															</FormItem>
-														)}
-													/>
-												</CardContent>
-											</Card>
-										))
-									)}
-								</CardContent>
-							</Card>
-						</TabsContent>
-
 						{/* Gallery Tab */}
 						<TabsContent value="gallery" className="space-y-6">
 							{/* Section Settings */}
@@ -2889,7 +3098,7 @@ export default function StartsidaPage() {
 								<CardHeader>
 									<CardTitle>Section Settings</CardTitle>
 									<CardDescription>
-										Optional heading shown above the partner logos grid.
+										Optional heading and subtitle shown above the testimonials.
 									</CardDescription>
 								</CardHeader>
 								<CardContent className="space-y-4">
@@ -2931,36 +3140,36 @@ export default function StartsidaPage() {
 								</CardContent>
 							</Card>
 
-							{/* Partner Logos List */}
+							{/* Testimonials List */}
 							<Card>
 								<CardHeader>
 									<CardTitle className="flex items-center justify-between">
-										<span>Partner Logos</span>
+										<span>Testimonials</span>
 										<Button
 											type="button"
 											variant="outline"
 											size="sm"
 											onClick={() =>
 												appendTestimonial({
-													quote: "",
-													author: "",
-													role: "",
-													company: "",
+													title: "",
+													subtitle: "",
+													description: "",
+													image: "",
 												})
 											}
 										>
 											<Plus className="h-4 w-4 mr-1" />
-											Add Partner
+											Add Testimonial
 										</Button>
 									</CardTitle>
 									<CardDescription>
-										Partner / organization logos displayed in a grid row on the landing page.
+										Testimonial cards displayed between Volunteering and Partners Carousel sections.
 									</CardDescription>
 								</CardHeader>
 								<CardContent className="space-y-4">
 									{testimonialFields.length === 0 ? (
 										<div className="text-center py-8 text-muted-foreground">
-											No partners added yet. Click &quot;Add Partner&quot; to add one.
+											No testimonials added yet. Click &quot;Add Testimonial&quot; to add one.
 										</div>
 									) : (
 										testimonialFields.map((field, index) => (
@@ -2976,8 +3185,8 @@ export default function StartsidaPage() {
 															size="sm"
 															onClick={async () => {
 																const confirmed = await confirm({
-																	title: "Remove Partner",
-																	description: "Are you sure you want to remove this partner?",
+																	title: "Remove Testimonial",
+																	description: "Are you sure you want to remove this testimonial?",
 																	confirmText: "Remove",
 																});
 																if (confirmed) removeTestimonial(index);
@@ -3008,21 +3217,57 @@ export default function StartsidaPage() {
 															</FormItem>
 														)}
 													/>
-													{/* Organization Name */}
+													{/* Title */}
 													<FormField
 														control={form.control}
-														name={`testimonialsSection.testimonials.${index}.author`}
+														name={`testimonialsSection.testimonials.${index}.title`}
 														render={({ field }) => (
 															<FormItem>
-																<FormLabel>Organization Name</FormLabel>
+																<FormLabel>Title</FormLabel>
 																<FormControl>
 																	<Input
 																		{...field}
 																		value={field.value || ""}
-																		placeholder="Deutsches Rotes Kreuz"
+																		placeholder="e.g. Bundesministerium für Familie"
 																	/>
 																</FormControl>
-																<FormDescription>Shown below the logo image (optional).</FormDescription>
+																<FormMessage />
+															</FormItem>
+														)}
+													/>
+													{/* Subtitle */}
+													<FormField
+														control={form.control}
+														name={`testimonialsSection.testimonials.${index}.subtitle`}
+														render={({ field }) => (
+															<FormItem>
+																<FormLabel>Subtitle</FormLabel>
+																<FormControl>
+																	<Input
+																		{...field}
+																		value={field.value || ""}
+																		placeholder="e.g. Federal Ministry"
+																	/>
+																</FormControl>
+																<FormMessage />
+															</FormItem>
+														)}
+													/>
+													{/* Description */}
+													<FormField
+														control={form.control}
+														name={`testimonialsSection.testimonials.${index}.description`}
+														render={({ field }) => (
+															<FormItem>
+																<FormLabel>Description</FormLabel>
+																<FormControl>
+																	<Textarea
+																		{...field}
+																		value={field.value || ""}
+																		placeholder="A short description..."
+																		rows={3}
+																	/>
+																</FormControl>
 																<FormMessage />
 															</FormItem>
 														)}

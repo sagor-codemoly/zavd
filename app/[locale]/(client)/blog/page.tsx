@@ -23,20 +23,20 @@ export async function generateMetadata(): Promise<Metadata> {
 	return {
 		title: `Blog | ${siteConfig.name}`,
 		description:
-			"Read our latest articles about zavd making, dairy farming, and the tradition behind our artisan zavd products.",
+			"Read our latest articles about ZAVD community initiatives, Assyrian culture, and news from our organization.",
 		keywords: [
 			"blog",
 			"articles",
-			"zavd",
-			"dairy",
-			"artisan",
-			"zavd making",
-			"tradition",
+			"ZAVD",
+			"Assyrian community",
+			"NGO",
+			"community news",
+			"Germany",
 		],
 		openGraph: {
 			title: `Blog | ${siteConfig.name}`,
 			description:
-				"Read our latest articles about zavd making, dairy farming, and the tradition behind our artisan zavd products.",
+				"Read our latest articles about ZAVD community initiatives, Assyrian culture, and news from our organization.",
 			url: `${siteConfig.url}/blog`,
 			siteName: siteConfig.name,
 			images: [
@@ -54,7 +54,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			card: "summary_large_image",
 			title: `Blog | ${siteConfig.name}`,
 			description:
-				"Read our latest articles about zavd making, dairy farming, and the tradition behind our artisan zavd products.",
+				"Read our latest articles about ZAVD community initiatives, Assyrian culture, and news from our organization.",
 			images: [`${siteConfig.url}/images/og/blog.jpg`],
 		},
 		alternates: {
@@ -79,7 +79,7 @@ export default async function BlogPage() {
 						"@type": "Blog",
 						name: `${siteConfig.name} Blog`,
 						description:
-							"Articles about zavd making, dairy farming, and artisan zavd products.",
+							"Articles about ZAVD community initiatives, Assyrian culture, and organization news.",
 						url: `${siteConfig.url}/blog`,
 						publisher: {
 							"@type": "Organization",

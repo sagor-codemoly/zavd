@@ -173,10 +173,9 @@ export interface IAboutCertificationBadge {
  * Testimonial Item interface - all fields optional
  */
 export interface ITestimonialItem {
-	quote?: string;
-	author?: string;
-	role?: string;
-	company?: string;
+	title?: string;
+	subtitle?: string;
+	description?: string;
 	image?: string;
 }
 
@@ -273,9 +272,18 @@ export interface IIntroSection {
 /**
  * Section Visibility Settings interface
  */
+export interface IPartnersCarouselSection {
+	heading?: string;
+	logos?: IPartnerLogo[];
+}
+
 export interface ISectionVisibility {
 	hero?: boolean;
 	introSection?: boolean;
+	integrationSection?: boolean;
+	sponsorsSection?: boolean;
+	volunteeringSection?: boolean;
+	partnersCarousel?: boolean;
 	categoryShowcase?: boolean;
 	productCarousel?: boolean;
 	promoBanner?: boolean;
@@ -287,6 +295,38 @@ export interface ISectionVisibility {
 	testimonials?: boolean;
 	cta?: boolean;
 	richContent?: boolean;
+}
+
+/**
+ * Integration Section interface
+ */
+export interface IIntegrationSection {
+	heading?: string;
+	quote?: string;
+	description?: string;
+	image?: string;
+	readMoreLink?: string;
+	partnerLogos?: IPartnerLogo[];
+}
+
+/**
+ * Sponsors Section interface
+ */
+export interface ISponsorsSection {
+	heading?: string;
+	description?: string;
+	backgroundImage?: string;
+	sponsors?: IPartnerLogo[];
+}
+
+/**
+ * Volunteering Section interface
+ */
+export interface IVolunteeringSection {
+	heading?: string;
+	description?: string;
+	image?: string;
+	partnerLogos?: IPartnerLogo[];
 }
 
 /**
@@ -343,6 +383,12 @@ export interface IHomePage extends Document {
 
 	// CTA Section
 	ctaSection: ICtaSection;
+
+	// ZAVD Sections
+	integrationSection: IIntegrationSection;
+	sponsorsSection: ISponsorsSection;
+	volunteeringSection: IVolunteeringSection;
+	partnersCarouselSection: IPartnersCarouselSection;
 
 	// Rich Content (HTML from text editor)
 	richContent?: string;
@@ -581,10 +627,9 @@ const HomePageSeoSchema = new Schema<IHomePageSeo>(
  */
 const TestimonialItemSchema = new Schema<ITestimonialItem>(
 	{
-		quote: { type: String, trim: true },
-		author: { type: String, trim: true },
-		role: { type: String, trim: true },
-		company: { type: String, trim: true },
+		title: { type: String, trim: true },
+		subtitle: { type: String, trim: true },
+		description: { type: String, trim: true },
 		image: { type: String, trim: true },
 	},
 	{ _id: false }
@@ -708,12 +753,68 @@ const IntroSectionSchema = new Schema<IIntroSection>(
 );
 
 /**
+ * Integration Section sub-schema
+ */
+const IntegrationSectionSchema = new Schema<IIntegrationSection>(
+	{
+		heading: { type: String, trim: true },
+		quote: { type: String, trim: true },
+		description: { type: String, trim: true },
+		image: { type: String, trim: true },
+		readMoreLink: { type: String, trim: true },
+		partnerLogos: { type: [PartnerLogoSchema], default: [] },
+	},
+	{ _id: false }
+);
+
+/**
+ * Sponsors Section sub-schema
+ */
+const SponsorsSectionSchema = new Schema<ISponsorsSection>(
+	{
+		heading: { type: String, trim: true },
+		description: { type: String, trim: true },
+		backgroundImage: { type: String, trim: true },
+		sponsors: { type: [PartnerLogoSchema], default: [] },
+	},
+	{ _id: false }
+);
+
+/**
+ * Volunteering Section sub-schema
+ */
+const VolunteeringSectionSchema = new Schema<IVolunteeringSection>(
+	{
+		heading: { type: String, trim: true },
+		description: { type: String, trim: true },
+		image: { type: String, trim: true },
+		partnerLogos: { type: [PartnerLogoSchema], default: [] },
+	},
+	{ _id: false }
+);
+
+/**
+ * Partners Carousel Section sub-schema
+ */
+const PartnersCarouselSectionSchema = new Schema<IPartnersCarouselSection>(
+	{
+		heading: { type: String, trim: true },
+		logos: { type: [PartnerLogoSchema], default: [] },
+	},
+	{ _id: false }
+);
+
+/**
  * Section Visibility sub-schema
  */
 const SectionVisibilitySchema = new Schema<ISectionVisibility>(
 	{
 		hero: { type: Boolean, default: true },
 		introSection: { type: Boolean, default: true },
+		integrationSection: { type: Boolean, default: true },
+		sponsorsSection: { type: Boolean, default: true },
+		volunteeringSection: { type: Boolean, default: true },
+		partnersCarousel: { type: Boolean, default: true },
 		categoryShowcase: { type: Boolean, default: true },
 		productCarousel: { type: Boolean, default: true },
 		promoBanner: { type: Boolean, default: true },
@@ -810,6 +911,22 @@ const HomePageSchema = new Schema<IHomePage>(
 			type: CtaSectionSchema,
 			default: {},
 		},
+		integrationSection: {
+			type: IntegrationSectionSchema,
+			default: {},
+		},
+		sponsorsSection: {
+			type: SponsorsSectionSchema,
+			default: {},
+		},
+		volunteeringSection: {
+			type: VolunteeringSectionSchema,
+			default: {},
+		},
+		partnersCarouselSection: {
+			type: PartnersCarouselSectionSchema,
+			default: {},
+		},
 		richContent: {
 			type: String,
 			default: "",
@@ -844,6 +961,11 @@ HomePageSchema.set("toObject", { virtuals: true });
 export const getHomePageModel = async (): Promise<Model<IHomePage>> => {
 	await connectMongoose();
 
+	// In development, delete cached model on hot reload so schema changes are picked up
+	if (process.env.NODE_ENV !== "production" && mongoose.models.HomePage) {
+		mongoose.deleteModel("HomePage");
+	}
+
 	return (
 		(mongoose.models.HomePage as Model<IHomePage>) ||
 		mongoose.model<IHomePage>("HomePage", HomePageSchema)
@@ -855,6 +977,11 @@ export const getHomePageModel = async (): Promise<Model<IHomePage>> => {
  * Note: Ensure connectMongoose is called before using this
  */
 export function getHomePageModelSync(): Model<IHomePage> {
+	// In development, delete cached model on hot reload so schema changes are picked up
+	if (process.env.NODE_ENV !== "production" && mongoose.models.HomePage) {
+		mongoose.deleteModel("HomePage");
+	}
+
 	return (
 		(mongoose.models.HomePage as Model<IHomePage>) ||
 		mongoose.model<IHomePage>("HomePage", HomePageSchema)

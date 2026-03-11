@@ -43,11 +43,11 @@ export async function generateMetadata(): Promise<Metadata> {
 	return {
 		title: `Products | ${siteConfig.name}`,
 		description:
-			"Premium artisan zavd crafted with tradition and passion. Explore our selection of handcrafted Swedish zavds made in Boxholm.",
+			"Explore ZAVD programs and services. Find the support and resources you need from our community organization.",
 		openGraph: {
 			title: `Products | ${siteConfig.name}`,
 			description:
-				"Premium artisan zavd crafted with tradition and passion.",
+				"Explore ZAVD programs and services for the Assyrian community.",
 			url: `${siteConfig.url}/products`,
 			siteName: siteConfig.name,
 			locale: "en_US",
@@ -175,7 +175,7 @@ function ProductSidebar({
 				</CardHeader>
 				<CardContent className="space-y-3">
 					<p className="text-sm text-foreground">
-						Our experts can help you find the perfect zavd for your needs.
+						Our team can help you find the right program or service for your needs.
 					</p>
 					<Link
 						href="/contact-us"
@@ -324,8 +324,7 @@ export default async function ProductsPage() {
 						Our Products
 					</h1>
 					<p className="max-w-3xl text-lg text-muted-foreground">
-						Premium artisan zavd crafted with tradition and passion.
-						Explore our selection of handcrafted Swedish zavds made in Boxholm.
+						Explore ZAVD programs, services, and resources supporting the Assyrian community in Germany.
 					</p>
 				</div>
 

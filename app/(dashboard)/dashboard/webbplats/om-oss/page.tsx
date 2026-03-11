@@ -810,7 +810,7 @@ export default function AboutPageCMS() {
 								<Label>Section Title/Description</Label>
 								<Textarea
 									{...form.register("gallery.title")}
-									placeholder="e.g., Our farm is not just a production facility but also an open space for visitors..."
+									placeholder="e.g., Our organization is not just an administrative body but also an open space for the community..."
 									rows={3}
 								/>
 							</div>

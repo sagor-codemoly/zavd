@@ -40,7 +40,7 @@ export function Hero({ data }: HeroProps) {
 	useSetNavbarVariant(isDarkBackground ? "dark-hero" : "default");
 
 	return (
-		<section className={`relative w-full overflow-hidden padding-top pb-16 lg:pb-32 min-h-[100svh] lg:min-h-0 ${
+		<section className={`relative w-full overflow-hidden pt-20 lg:pt-24 pb-10 lg:pb-14 ${
 			isDarkBackground ? 'bg-secondary' : 'bg-background'
 		}`}>
 			{/* Background Image - if provided from CMS */}
@@ -175,7 +175,7 @@ export function Hero({ data }: HeroProps) {
 
 				{/* Right Content - Hybrid Image Grid - Only show if we have main image */}
 				{hasMainImage && (
-					<div className="relative h-[500px] lg:h-[600px] w-full hidden lg:block">
+					<div className="relative h-[320px] lg:h-[380px] w-full hidden lg:block">
 						{/* Main Image */}
 						<motion.div
 							initial={{ opacity: 0, scale: 0.95 }}

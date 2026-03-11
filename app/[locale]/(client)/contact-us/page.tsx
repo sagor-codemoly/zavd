@@ -16,11 +16,11 @@ export async function generateMetadata(): Promise<Metadata> {
 		getSiteSettings(),
 	]);
 
-	const siteName = siteSettings.seo?.siteName || "Milatte Farm";
+	const siteName = siteSettings.seo?.siteName || "ZAVD";
 	const title = seo?.title || `Contact Us - ${siteName}`;
 	const description =
 		seo?.description ||
-		`Contact ${siteName} for questions about our artisan zavd, dairy products, or farm visits.`;
+		`Contact ${siteName} for questions about our community programs, services, or organization.`;
 
 	return {
 		title,
