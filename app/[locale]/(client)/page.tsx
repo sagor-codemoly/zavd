@@ -4,20 +4,23 @@ import { Hero } from "@/components/home/Hero";
 import { IntroSection } from "@/components/home/IntroSection";
 import { PromoBanner } from "@/components/home/PromoBanner";
 import { FeatureBanner } from "@/components/home/FeatureBanner";
-import { ProductShowcase } from "@/components/home/ProductShowcase";
 import { ImageGallery } from "@/components/home/ImageGallery";
 import { Testimonials } from "@/components/home/Testimonials";
 import AboutSection from "@/components/home/AboutSection";
 import CtaSection from "@/components/home/CtaSection";
+import { IntegrationSection } from "@/components/home/IntegrationSection";
+import { SponsorsSection } from "@/components/home/SponsorsSection";
+import { VolunteeringSection } from "@/components/home/VolunteeringSection";
+import { PartnersCarousel } from "@/components/home/PartnersCarousel";
 import { getHomePage, getHomePageSeo } from "@/lib/services/home-page.service";
 import { getSiteSettings } from "@/lib/services/site-settings.service";
 import { searchService } from "@/lib/services/search.service";
 import { SearchPageClient } from "./search-page";
 import { SearchPageSkeleton } from "@/components/search/SearchSkeleton";
 
-// ISR: Revalidate every 24 hours
-// Note: Search mode uses searchParams which makes those requests dynamic
-export const revalidate = 86400;
+// Dynamic rendering: always fetch fresh data from DB on each request
+// This ensures dashboard changes are reflected immediately
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
 	const [seo, siteSettings] = await Promise.all([
@@ -25,12 +28,12 @@ export async function generateMetadata(): Promise<Metadata> {
 		getSiteSettings(),
 	]);
 
-	const siteName = siteSettings.seo?.siteName || "Milatte Farm";
+	const siteName = siteSettings.seo?.siteName || "ZAVD";
 	const siteDescription =
 		siteSettings.seo?.siteDescription ||
-		"Premium artisan zavds and natural dairy products from our family farm";
+		"Zentralverband der Assyrischen Vereinigungen in Deutschland und europäischen Sektionen.";
 
-	const title = seo?.title || `${siteName} - Artisan Zavd & Dairy`;
+	const title = seo?.title || `${siteName} - Zentralverband Assyrischer Vereinigungen`;
 	const description = seo?.description || siteDescription;
 
 	return {
@@ -104,9 +107,12 @@ export default async function Home({ searchParams }: HomeProps) {
 	const defaultVisibility = {
 		hero: true,
 		introSection: true,
+		integrationSection: true,
+		sponsorsSection: true,
+		volunteeringSection: true,
+		partnersCarousel: true,
 		promoBanner: true,
 		featureBanner: true,
-		productShowcase: true,
 		imageGallery: true,
 		about: true,
 		testimonials: true,
@@ -117,6 +123,10 @@ export default async function Home({ searchParams }: HomeProps) {
 		...homePage.sectionVisibility,
 		promoBanner: homePage.sectionVisibility?.promoBanner ?? true,
 		featureBanner: homePage.sectionVisibility?.featureBanner ?? true,
+		integrationSection: homePage.sectionVisibility?.integrationSection ?? true,
+		sponsorsSection: homePage.sectionVisibility?.sponsorsSection ?? true,
+		volunteeringSection: homePage.sectionVisibility?.volunteeringSection ?? true,
+		partnersCarousel: homePage.sectionVisibility?.partnersCarousel ?? true,
 	};
 
 	return (
@@ -124,29 +134,20 @@ export default async function Home({ searchParams }: HomeProps) {
 			{/* Hero Section */}
 			{visibility.hero && homePage.hero && <Hero data={homePage.hero} />}
 
-			{/* Intro Section */}
-			{visibility.introSection && homePage.introSection && (
-				<IntroSection data={homePage.introSection} />
+			{/* Integration Section */}
+			{visibility.integrationSection && (
+				<IntegrationSection data={homePage.integrationSection} />
 			)}
 
-			{/* Promo Banner Section */}
-			{visibility.promoBanner && homePage.promoBanner && (
-				<PromoBanner
-					leftBanner={homePage.promoBanner.leftBanner}
-					rightBanner={homePage.promoBanner.rightBanner}
-				/>
+			{/* Sponsors Section */}
+			{visibility.sponsorsSection && (
+				<SponsorsSection data={homePage.sponsorsSection} />
 			)}
 
-			{/* Feature Banner Section - After Promo Banner */}
-			{visibility.featureBanner && homePage.featureBanner && (
-				<FeatureBanner data={homePage.featureBanner} />
+			{/* Volunteering Section */}
+			{visibility.volunteeringSection && (
+				<VolunteeringSection data={homePage.volunteeringSection} />
 			)}
-
-			{/* Product Showcase Section */}
-			{visibility.productShowcase &&
-				(homePage.productShowcase?.products?.length ?? 0) > 0 && (
-					<ProductShowcase data={homePage.productShowcase} />
-				)}
 
 			{/* Image Gallery */}
 			{visibility.imageGallery &&
@@ -154,16 +155,16 @@ export default async function Home({ searchParams }: HomeProps) {
 					<ImageGallery data={homePage.imageGallery} />
 				)}
 
-			{/* About Section */}
-			{visibility.about && homePage.aboutSection && (
-				<AboutSection data={homePage.aboutSection} />
-			)}
-
 			{/* Testimonials */}
 			{visibility.testimonials &&
 				(homePage.testimonialsSection?.testimonials?.length ?? 0) > 0 && (
 					<Testimonials data={homePage.testimonialsSection} />
 				)}
+
+			{/* Partners Carousel Section */}
+			{visibility.partnersCarousel && (
+				<PartnersCarousel data={homePage.partnersCarouselSection} />
+			)}
 
 			{/* CTA Section */}
 			{visibility.cta && homePage.ctaSection && (

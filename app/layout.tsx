@@ -26,15 +26,13 @@ const inter = Inter({
 
 // Default keywords as fallback
 const DEFAULT_KEYWORDS = [
-	"artisan zavd",
-	"dairy farm",
-	"natural dairy products",
-	"handcrafted zavd",
-	"farm fresh",
-	"organic dairy",
-	"zavd making",
-	"dairy products",
-	"traditional zavd",
+	"ZAVD",
+	"Assyrian association Germany",
+	"refugee support",
+	"integration Germany",
+	"asylum counseling",
+	"volunteering",
+	"Zentralverband Assyrischer Vereinigungen",
 ];
 
 /**
@@ -48,17 +46,17 @@ export async function generateMetadata(): Promise<Metadata> {
 		process.env.BETTER_AUTH_URL ||
 		"http://localhost:3000";
 
-	const siteName = settings.seo?.siteName || "Glada bonden mejeri";
-	const siteTagline = settings.seo?.siteTagline || "Ost från Boxholm";
+	const siteName = settings.seo?.siteName || "ZAVD";
+	const siteTagline = settings.seo?.siteTagline || "Zentralverband Assyrischer Vereinigungen in Deutschland";
 	const siteDescription =
 		settings.seo?.siteDescription ||
-		"Bakom tillverkningen står Glada Bonden, en kraftfull allians av och med svenska mjölkproducenter, som driver tillverkningen som ett steg i att utveckla den";
+		"Zentralverband der Assyrischen Vereinigungen in Deutschland und europäischen Sektionen.";
 	const ogImage = settings.seo?.ogImage || "/og-image.jpg";
 	const keywords =
 		settings.seo?.keywords && settings.seo.keywords.length > 0
 			? settings.seo.keywords
 			: DEFAULT_KEYWORDS;
-	const companyName = settings.companyName || "Glada bonden mejeri";
+	const companyName = settings.companyName || "ZAVD";
 
 	return {
 		metadataBase: new URL(siteUrl),

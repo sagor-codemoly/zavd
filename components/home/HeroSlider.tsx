@@ -53,7 +53,7 @@ export function HeroSlider({ data }: HeroSliderProps) {
 	const activeSlide = slides[currentSlide];
 
 	return (
-		<section className="relative w-full h-screen overflow-hidden bg-black">
+		<section className="relative w-full h-[75vh] overflow-hidden bg-black">
 			{/* Background Image */}
 			<AnimatePresence mode="wait">
 				<motion.div
@@ -83,8 +83,8 @@ export function HeroSlider({ data }: HeroSliderProps) {
 
 			{/* Content - left aligned */}
 			<div className="relative z-10 h-full flex items-center">
-				<div className="w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
-					<div className="max-w-2xl">
+				<div className="w-full pl-[5%] sm:pl-[8%] lg:pl-[16%] xl:pl-[18%] pr-6 sm:pr-10">
+					<div className="max-w-xl">
 						<AnimatePresence mode="wait">
 							<motion.div
 								key={`content-${currentSlide}`}
@@ -150,7 +150,7 @@ export function HeroSlider({ data }: HeroSliderProps) {
 				</div>
 
 				{/* Scroll Down - right side vertical */}
-				<div className="absolute bottom-20 right-8 hidden lg:flex flex-col items-center gap-3">
+				<div className="absolute bottom-10 right-8 hidden lg:flex flex-col items-center gap-3">
 					<span
 						className="text-white/50 text-[10px] tracking-[0.25em] uppercase"
 						style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
@@ -183,7 +183,7 @@ export function HeroSlider({ data }: HeroSliderProps) {
 
 			{/* Slide Indicators */}
 			{slides.length > 1 && (
-				<div className="absolute bottom-10 left-6 md:left-12 lg:left-16 z-20 flex items-center gap-3">
+				<div className="absolute bottom-6 left-6 md:left-12 lg:left-16 z-20 flex items-center gap-3">
 					{slides.map((_, index) => (
 						<button
 							key={index}

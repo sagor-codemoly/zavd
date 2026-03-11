@@ -20,19 +20,12 @@ import type {
 export const HOME_PAGE_CACHE_TAG = "home-page";
 
 /**
- * Get home page content with caching
- * Cached for 1 hour, revalidated on-demand when content is updated
+ * Get home page content - fetches directly from DB (no cache)
+ * Page uses force-dynamic so every request gets fresh data
  */
-export const getHomePage = unstable_cache(
-	async (): Promise<HomePageData> => {
-		return homePageRepository.get();
-	},
-	["home-page"],
-	{
-		tags: [HOME_PAGE_CACHE_TAG],
-		revalidate: 3600, // 1 hour
-	}
-);
+export const getHomePage = async (): Promise<HomePageData> => {
+	return homePageRepository.get();
+};
 
 /**
  * Get hero section only
@@ -121,13 +114,6 @@ export const getCtaSection = unstable_cache(
 /**
  * Get SEO settings only
  */
-export const getHomePageSeo = unstable_cache(
-	async (): Promise<IHomePageSeo> => {
-		return homePageRepository.getSeo();
-	},
-	["home-page-seo"],
-	{
-		tags: [HOME_PAGE_CACHE_TAG],
-		revalidate: 3600,
-	}
-);
+export const getHomePageSeo = async (): Promise<IHomePageSeo> => {
+	return homePageRepository.getSeo();
+};

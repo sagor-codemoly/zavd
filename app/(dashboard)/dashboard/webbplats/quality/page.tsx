@@ -635,8 +635,8 @@ export default function QualityAdminPage() {
 											description: form.watch("seo.description") || "Add a description",
 											slug: "quality",
 											ogImage: form.watch("seo.ogImage") || null,
-											siteName: "Milatte Farm",
-											siteUrl: "www.milatte.com",
+											siteName: "ZAVD",
+											siteUrl: "www.zavd.de",
 										}}
 									/>
 								</CardContent>

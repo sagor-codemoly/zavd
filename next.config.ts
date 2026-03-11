@@ -4,6 +4,10 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
+	// Don't cache dynamic pages in client router — ensures fresh data after dashboard saves
+	staleTimes: {
+		dynamic: 0,
+	},
 	// Empty turbopack config to silence the webpack/turbopack warning in Next.js 16
 	turbopack: {},
 	// Ignore nul file (Windows reserved device name issue)
@@ -122,6 +126,14 @@ const nextConfig: NextConfig = {
 	},
 	images: {
 		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "zavd.de",
+			},
+			{
+				protocol: "https",
+				hostname: "www.zavd.de",
+			},
 			{
 				protocol: "https",
 				hostname: "images.unsplash.com",

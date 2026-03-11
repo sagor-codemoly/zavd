@@ -113,29 +113,29 @@
 	},
 	"home": {
 		"hero": {
-			"badge": "Premium Artisan Zavd",
-			"title": "Crafted with",
-			"titleHighlight": "Tradition",
-			"subtitle": "Experience the finest artisan zavd, made with passion and centuries-old techniques from our family farm in Sweden.",
-			"cta": "Explore Products",
-			"secondaryCta": "Our Story"
+			"badge": "Welcome to ZAVD",
+			"title": "Welcome to",
+			"titleHighlight": "ZAVD",
+			"subtitle": "Central Association of Assyrian Associations in Germany and European Sections.",
+			"cta": "Our Projects",
+			"secondaryCta": "About Us"
 		},
 		"categories": {
-			"badge": "Popular Categories",
+			"badge": "Our Programs",
 			"title": "Explore Our",
-			"titleHighlight": "Categories",
-			"subtitle": "Discover our wide range of premium dairy products."
+			"titleHighlight": "Programs",
+			"subtitle": "Discover our wide range of integration and support programs."
 		},
 		"featured": {
-			"badge": "Featured Products",
+			"badge": "Featured Projects",
 			"title": "Our",
-			"titleHighlight": "Best Sellers",
-			"subtitle": "Discover our most loved zavd varieties."
+			"titleHighlight": "Projects",
+			"subtitle": "Discover our most impactful community projects."
 		}
 	},
 	"products": {
-		"title": "Our Products",
-		"subtitle": "Discover our complete range of artisan zavd and dairy products.",
+		"title": "Our Projects",
+		"subtitle": "Discover our complete range of integration and community programs.",
 		"filterBy": "Filter by",
 		"sortBy": "Sort by",
 		"noProducts": "No products found",
@@ -149,7 +149,7 @@
 	},
 	"blog": {
 		"title": "Blog",
-		"subtitle": "Discover the world of traditional zavd making, dairy farming stories, delicious recipes, and the latest news.",
+		"subtitle": "Discover the latest news, events, and updates from ZAVD and the Assyrian community in Germany.",
 		"badge": "News & Articles",
 		"readMore": "Read More",
 		"publishedOn": "Published on",
@@ -194,8 +194,8 @@
 	},
 	"store": {
 		"badge": "Visit Us",
-		"title": "Our Store",
-		"subtitle": "Experience our artisan zavd in person. Visit our store and taste the tradition.",
+		"title": "Our Office",
+		"subtitle": "Visit our office. We are here to help and support the community.",
 		"getDirections": "Get Directions",
 		"openingHours": "Opening Hours",
 		"location": "Location",

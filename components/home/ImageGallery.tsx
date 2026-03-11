@@ -65,8 +65,8 @@ export function ImageGallery({ data }: ImageGalleryProps) {
 					<div className="max-w-xl">
 						{hasBadge && (
 							<div className="flex items-center gap-3 mb-3">
-								<span className="w-8 h-[2px] bg-amber-500 block" />
-								<span className="text-amber-600 text-sm font-medium tracking-wide">
+								<span className="w-8 h-[2px] bg-primary block" />
+								<span className="text-primary text-sm font-medium tracking-wide">
 									{data.badge}
 								</span>
 							</div>
@@ -85,7 +85,7 @@ export function ImageGallery({ data }: ImageGalleryProps) {
 								onClick={prev}
 								disabled={page === 0}
 								aria-label="Previous"
-								className="w-11 h-11 rounded-full border border-amber-400 flex items-center justify-center text-amber-600 hover:bg-amber-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+								className="w-11 h-11 rounded-full border border-primary/50 flex items-center justify-center text-primary hover:bg-primary/5 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
 							>
 								<ChevronLeft className="w-5 h-5" />
 							</button>
@@ -93,7 +93,7 @@ export function ImageGallery({ data }: ImageGalleryProps) {
 								onClick={next}
 								disabled={page === totalPages - 1}
 								aria-label="Next"
-								className="w-11 h-11 rounded-full border border-amber-400 flex items-center justify-center text-amber-600 hover:bg-amber-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+								className="w-11 h-11 rounded-full border border-primary/50 flex items-center justify-center text-primary hover:bg-primary/5 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
 							>
 								<ChevronRight className="w-5 h-5" />
 							</button>
@@ -155,8 +155,8 @@ export function ImageGallery({ data }: ImageGalleryProps) {
 								aria-label={`Page ${i + 1}`}
 								className={`w-2.5 h-2.5 rounded-full border transition-all duration-300 ${
 									i === page
-										? "bg-amber-500 border-amber-500 scale-110"
-										: "bg-transparent border-amber-300 hover:border-amber-500"
+										? "bg-primary border-primary scale-110"
+										: "bg-transparent border-primary/30 hover:border-primary"
 								}`}
 							/>
 						))}
