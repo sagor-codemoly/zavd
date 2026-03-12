@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { AnimatedHero } from "./_components/animated-hero";
-import { ContactSection } from "./_components/contact-section";
-import { ContactMap } from "./_components/contact-map";
+import { ContactSection } from "@/components/shared/ContactSection";
+import { ContactMap } from "@/components/shared/ContactMap";
 import {
 	getKontaktPage,
 	getKontaktPageSeo,
